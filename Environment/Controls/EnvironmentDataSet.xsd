@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EnvironmentDataSet" targetNamespace="http://tempuri.org/EnvironmentDataSet.xsd" xmlns:mstns="http://tempuri.org/EnvironmentDataSet.xsd" xmlns="http://tempuri.org/EnvironmentDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EnvironmentDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EnvironmentDataSet" msprop:Generator_UserDSName="EnvironmentDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MaterialSearch" msprop:Generator_TableClassName="MaterialSearchDataTable" msprop:Generator_TableVarName="tableMaterialSearch" msprop:Generator_TablePropName="MaterialSearch" msprop:Generator_RowDeletingName="MaterialSearchRowDeleting" msprop:Generator_RowChangingName="MaterialSearchRowChanging" msprop:Generator_RowEvHandlerName="MaterialSearchRowChangeEventHandler" msprop:Generator_RowDeletedName="MaterialSearchRowDeleted" msprop:Generator_UserTableName="MaterialSearch" msprop:Generator_RowChangedName="MaterialSearchRowChanged" msprop:Generator_RowEvArgName="MaterialSearchRowChangeEvent" msprop:Generator_RowClassName="MaterialSearchRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="用途單位" msprop:Generator_ColumnVarNameInTable="column用途單位" msprop:Generator_ColumnPropNameInRow="用途單位" msprop:Generator_ColumnPropNameInTable="用途單位Column" msprop:Generator_UserColumnName="用途單位" type="xs:string" minOccurs="0" />
+              <xs:element name="料號" msprop:Generator_ColumnVarNameInTable="column料號" msprop:Generator_ColumnPropNameInRow="料號" msprop:Generator_ColumnPropNameInTable="料號Column" msprop:Generator_UserColumnName="料號" type="xs:string" minOccurs="0" />
+              <xs:element name="年月" msprop:Generator_ColumnVarNameInTable="column年月" msprop:Generator_ColumnPropNameInRow="年月" msprop:Generator_ColumnPropNameInTable="年月Column" msprop:Generator_UserColumnName="年月" type="xs:string" minOccurs="0" />
+              <xs:element name="品名" msprop:Generator_ColumnVarNameInTable="column品名" msprop:Generator_ColumnPropNameInRow="品名" msprop:Generator_ColumnPropNameInTable="品名Column" msprop:Generator_UserColumnName="品名" type="xs:string" minOccurs="0" />
+              <xs:element name="規範" msprop:Generator_ColumnVarNameInTable="column規範" msprop:Generator_ColumnPropNameInRow="規範" msprop:Generator_ColumnPropNameInTable="規範Column" msprop:Generator_UserColumnName="規範" type="xs:string" minOccurs="0" />
+              <xs:element name="計量單位" msprop:Generator_ColumnVarNameInTable="column計量單位" msprop:Generator_ColumnPropNameInRow="計量單位" msprop:Generator_ColumnPropNameInTable="計量單位Column" msprop:Generator_UserColumnName="計量單位" type="xs:string" minOccurs="0" />
+              <xs:element name="實收數量" msprop:Generator_ColumnVarNameInTable="column實收數量" msprop:Generator_ColumnPropNameInRow="實收數量" msprop:Generator_ColumnPropNameInTable="實收數量Column" msprop:Generator_UserColumnName="實收數量" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

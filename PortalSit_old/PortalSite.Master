@@ -1,0 +1,114 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="PortalSite.master.vb" Inherits="PortalSit.PortalSite" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+
+    <title>未命名頁面</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+    .style1
+    {
+            width:118px;
+     	    vertical-align:top;
+    }
+    .TitleText
+    {
+	    font-family: Arial, Helvetica, sans-serif;
+	    font-size: xx-large;
+	    text-align: center;
+	    vertical-align: middle;
+	    padding-top: 50px;
+	    Color: #0000FF;
+	    font-style: normal;
+    }
+    .BackGround
+    {
+        Color:#000000;
+    }
+    </style>
+</head>
+<body>
+    <form runat="server" class="BackGround" >
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+                       <asp:Label ID="Label2"  runat="server" CssClass="TitleText" Text="唐榮公司內部作業入口網站" 
+                           Width="100%"></asp:Label>
+        <table style="width:100%;">
+            <tr>
+                <td class="style1">
+                    <asp:Menu ID="Menu1" runat="server" Width="114px" BackColor="#E3EAEB" 
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                        ForeColor="#666666" StaticSubMenuIndent="10px" CssClass="style1">
+                        <StaticSelectedStyle BackColor="#1C5E55" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#E3EAEB" />
+                        <DynamicSelectedStyle BackColor="#1C5E55" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem Text="煉鋼" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                                <asp:MenuItem Text="EAF作業" Value="1-1,EAF01" 
+                                    PopOutImageUrl="~/Icons/16-arrow-right.png">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="分光室作業" Value="1-2,Smp01" 
+                                    PopOutImageUrl="~/Icons/16-arrow-right.png"></asp:MenuItem>
+                                <asp:MenuItem 
+                                    PopOutImageUrl="~/Icons/16-arrow-right.png" Text="鋼胚查詢" 
+                                    Value="1-3,Stock01">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="分光室工作區" 
+                                    Value="1-4,SMPWRK01"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="品管組" 
+                                
+                                Value="2,QTYCTL01">
+                            </asp:MenuItem>
+                            <asp:MenuItem PopOutImageUrl="~/Icons/16-arrow-right.png" Text="庫存統計" 
+                                Value="3,Stock01"></asp:MenuItem>
+                            <asp:MenuItem Text="冷軋現場作業" Value="4,COLD01"></asp:MenuItem>
+                            <asp:MenuItem PopOutImageUrl="~/Icons/16-arrow-right.png" Text="會計系統" 
+                                Value="5,ACC01">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="財務" 
+                                Value="6,FIN01">
+                            </asp:MenuItem>
+                            <asp:MenuItem PopOutImageUrl="~/Icons/16-arrow-right.png" Text="業務" 
+                                Value="7,BUS01">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="固定資產" 
+                                Value="8,AST01">
+                            </asp:MenuItem>
+                            <asp:MenuItem PopOutImageUrl="~/Icons/16-arrow-right.png" Text="即時通訊系統" 
+                                Value="9,IM01">
+                            </asp:MenuItem>
+                            <asp:MenuItem PopOutImageUrl="~/Icons/16-arrow-right.png" Text="其它作業" 
+                                Value="10,Other01">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="系統權限管理" Value="99,Auth01" 
+                                PopOutImageUrl="~/Icons/16-arrow-right.png"></asp:MenuItem>
+                        </Items>
+                        <StaticItemTemplate>
+                            <%# Eval("Text") %>
+                        </StaticItemTemplate>
+                    </asp:Menu>
+                    <br />
+                </td>
+                <td>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

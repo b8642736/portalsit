@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="STK">
+  <DataContextMoniker Name="/STKDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4ccf5888-a4d9-4c0b-b6eb-d777c52385c4" absoluteBounds="1.125, 1.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/STKDataContext/ToWeight" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f4ca7db-cc0a-430f-bb7a-1a650bbf1212" absoluteBounds="1.1400000000000001, 2.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

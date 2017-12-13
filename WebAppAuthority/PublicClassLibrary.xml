@@ -1,0 +1,221 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+PublicClassLibrary
+</name>
+</assembly>
+<members>
+<member name="M:PublicClassLibrary.AS400SQLQueryRecord.SelectQueryAndRecord(System.Web.UI.Page,System.String)">
+	<summary>
+ SQLSelect查詢
+ </summary>
+	<param name="SetSourceQueryString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.AS400SQLQueryRecord.ExecuteNonQueryAndRecord(System.Web.UI.Page,System.String)">
+	<summary>
+ SQLExecute查詢
+ </summary>
+	<param name="SetSourceQueryString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.MISMail.RunSMTPClient">
+	<summary>
+ SMTP用戶端
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.MISMail.RunMailMessage">
+	<summary>
+ Mail訊息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.MISMail.FromMailAddress">
+	<summary>
+ 寄件位置
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.MISMail.ToMailAddress">
+	<summary>
+ 收件位置
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.MISMail.SendMail(System.String,System.String,System.Collections.Generic.List{System.Net.Mail.MailAddress})">
+	<summary>
+ 傳送Email
+ </summary>
+	<param name="Subject"></param>
+	<param name="Body"></param>
+	<param name="ToAddress"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.MISMail.SendMail(System.String,System.String,System.Net.Mail.MailAddress[])">
+	<summary>
+  傳送Email
+ </summary>
+	<param name="Subject"></param>
+	<param name="Body"></param>
+	<param name="ToAddress"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.MISMail.SendMail(System.String,System.String)">
+	<summary>
+ 傳送Email
+ </summary>
+	<param name="Subject"></param>
+	<param name="Body"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.MISMail.QuickSendMail(System.String,System.String,System.String[])">
+	<summary>
+ 快速傳Email
+ </summary>
+	<param name="Subject"></param>
+	<param name="Body"></param>
+	<param name="ToAddress"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.MISMail.QuickSendMail(System.String,System.String,System.Net.Mail.MailAddress[])">
+	<summary>
+ 快速傳Email
+ </summary>
+	<param name="Subject"></param>
+	<param name="Body"></param>
+	<param name="ToAddress"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.My.Resources.Resources.ResourceManager">
+	<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member><member name="P:PublicClassLibrary.My.Resources.Resources.Culture">
+	<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強型別資源類別的資源查閱。
+</summary>
+</member><member name="T:PublicClassLibrary.My.Resources.Resources">
+	<summary>
+  用於查詢當地語系化字串等的強型別資源類別
+</summary>
+</member><member name="M:PublicClassLibrary.ModTools.NoNull(System.Object,System.Object)">
+	<summary>
+ 把Null轉成非Null
+ </summary>
+	<param name="fromData">傳入資料</param>
+	<param name="NullValue">Null替代資料</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.ModTools.showSpace(System.Int32)">
+	<summary>
+ 補足Html空白長度
+ </summary>
+	<param name="fromNum"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.DataConvertExcel.FileName">
+	<summary>
+ 檔案名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.DataConvertExcel.ConvertColumnNames">
+	<summary>
+ 欄位轉換集合
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.DataConvertExcel.SourceData">
+	<summary>
+ 資料來源
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.DataConvertExcel.CurrentUseWorkBook">
+	<summary>
+ 現在使用ExcelWorkBook
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.DataConvertExcel.DownloadEXCELFile(System.Web.HttpResponse)">
+	<summary>
+ 下載檔案(快速版) 
+ </summary>
+	<param name="Response"></param>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.DataConvertExcel.DownloadEXCELFile_V1(System.Web.HttpResponse)">
+	<summary>
+ 下載檔案(快速版) ：產生HTML文字檔後將副檔名改為.XLS，在非微軟Office的Excel會無法開啟
+ </summary>
+	<param name="Response"></param>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.DataConvertExcel.DownloadEXCELFile_V2(System.Web.HttpResponse)">
+	<summary>
+ 下載檔案(快速版) ：透過NPOI元件產生EXCEL檔，在非微軟的Office可以正常開啟
+ </summary>
+	<param name="Response"></param>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.DataConvertExcel.DownloadEXCELFile(System.Web.UI.Page)">
+	<summary>
+ 下載檔案
+ </summary>
+	<param name="SourceWebPage"></param>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.DataConvertExcel.ConvertToExcelSheet(System.String)">
+	<summary>
+ 轉換DataTable成ExcelWorkBook
+ </summary>
+	<returns>回傳轉換後的檔案路徑(含檔名)</returns>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.ConvertColumnName.CreatDataTable(System.Collections.Generic.List{PublicClassLibrary.ConvertColumnName})">
+	<summary>
+ 產生資料表
+ </summary>
+	<param name="ConvertSoure"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.ConvertColumnName.SourceFieldName">
+	<summary>
+ 欄位名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.ConvertColumnName.DisplayFieldName">
+	<summary>
+ 顯示名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:PublicClassLibrary.ConvertColumnName.DataType">
+	<summary>
+ 欄位資料形別
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:PublicClassLibrary.ConvertColumnName">
+	<summary>
+ 欄位轉換
+ </summary>
+	<remarks></remarks>
+</member><member name="M:PublicClassLibrary.TextFileDownload.Download(System.String,System.String,System.Web.UI.Page)">
+	<summary>
+ 下載VB文字程式碼檔
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

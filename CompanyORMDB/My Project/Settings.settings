@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="CompanyORMDB_Portalsit2_WSDBSQLQuery" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.4.31/CompanyWebService/wsdbsqlquery.asmx</Value>
+    </Setting>
+    <Setting Name="CompanyORMDB_Server04m_WSDBSQLQuery" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.4.6/CompanyWebService/wsdbsqlquery.asmx</Value>
+    </Setting>
+    <Setting Name="CompanyORMDB_Server0bm_WSDBSQLQuery" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.4.12/CompanyWebService/wsdbsqlquery.asmx</Value>
+    </Setting>
+    <Setting Name="AS400" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Dsn=AS400;uid=pgmrodbc;pwd=tangeng;;QueryTimeOut=0;</Value>
+    </Setting>
+    <Setting Name="Server0sm" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=10.1.4.16;Initial Catalog=QCdb01;Persist Security Info=True;User ID=test01;Password=testPW&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=10.1.4.16;Initial Catalog=QCdb01;Persist Security Info=True;User ID=test01;Password=testPW</Value>
+    </Setting>
+    <Setting Name="Server04m" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=10.1.4.6;Initial Catalog=QCdb01;Persist Security Info=True;User ID=WebLoginUser;Password="w;6bj/6@ej03"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=10.1.4.6;Initial Catalog=QCdb01;Persist Security Info=True;User ID=WebLoginUser;Password="w;6bj/6@ej03"</Value>
+    </Setting>
+    <Setting Name="ServerSPM" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=10.1.4.27;Initial Catalog=SPM;Persist Security Info=True;User ID=WebLoginUser;Password="w;6bj/6@ej03"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=10.1.4.27;Initial Catalog=SPM;Persist Security Info=True;User ID=WebLoginUser;Password="w;6bj/6@ej03"</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

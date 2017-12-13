@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ChangeDBServer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetDBServerConnectString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeDBServerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ChangeDBServerResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ChangeDBServerSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeDBServer" />
+  </wsdl:message>
+  <wsdl:message name="ChangeDBServerSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeDBServerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SMPChangeDBServiceSoap">
+    <wsdl:operation name="ChangeDBServer">
+      <wsdl:input message="tns:ChangeDBServerSoapIn" />
+      <wsdl:output message="tns:ChangeDBServerSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SMPChangeDBServiceSoap" type="tns:SMPChangeDBServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ChangeDBServer">
+      <soap:operation soapAction="http://tempuri.org/ChangeDBServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMPChangeDBServiceSoap12" type="tns:SMPChangeDBServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ChangeDBServer">
+      <soap12:operation soapAction="http://tempuri.org/ChangeDBServer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SMPChangeDBService">
+    <wsdl:port name="SMPChangeDBServiceSoap" binding="tns:SMPChangeDBServiceSoap">
+      <soap:address location="http://localhost/SMP/WebService/SMPChangeDBService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMPChangeDBServiceSoap12" binding="tns:SMPChangeDBServiceSoap12">
+      <soap12:address location="http://localhost/SMP/WebService/SMPChangeDBService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

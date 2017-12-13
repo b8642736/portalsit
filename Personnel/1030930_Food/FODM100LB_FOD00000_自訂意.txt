@@ -1,0 +1,746 @@
+#Region "出勤資訊"
+
+        Public Sub queryPQDM03PF()
+            Dim queryCDBMemberName As String = CDBMemberName.ToUpper.Replace("FOD", "")
+            Dim queryEEEMM As Integer
+            If Integer.TryParse(queryCDBMemberName, queryEEEMM) = False Then Exit Sub
+
+
+            Dim queryEEE As Integer = -Fix(-queryEEEMM / 100)
+            Dim queryMM As Integer = queryEEEMM Mod 100
+            Dim SQL As New System.Text.StringBuilder
+            SQL.Append("SELECT * " & vbNewLine)
+            SQL.Append("FROM @#PLT000LB.PQDM03PF " & vbNewLine)
+            SQL.Append("WHERE 1=1 " & vbNewLine)
+            SQL.Append("   AND qd3001='" & Me.FD001 & "' " & vbNewLine)
+            SQL.Append("   AND qd3007=" & queryEEE & vbNewLine)
+            SQL.Append("   AND qd3008=" & queryMM & vbNewLine)
+
+            Dim queryList As List(Of PLT000LB.PQDM03PF) = PLT000LB.PQDM03PF.CDBSelect(Of PLT000LB.PQDM03PF)(SQL.ToString, CompanyORMDB.AS400SQLQueryAdapter.ConnectionMoeEnum.ODBC)
+
+            Dim show出勤時間 As String
+            For Each eachItem As PLT000LB.PQDM03PF In queryList
+
+                show出勤時間 = eachItem.QD3012.Trim
+                If show出勤時間 <> "" Then show出勤時間 &= "~"
+                show出勤時間 &= eachItem.QD3013.Trim
+
+                pubClassFieldValue("出勤班別" & String.Format("{0:00}", Integer.Parse(eachItem.QD3009)), eachItem.QD3033)
+                pubClassFieldValue("出勤時間" & String.Format("{0:00}", Integer.Parse(eachItem.QD3009)), show出勤時間)
+
+            Next
+
+        End Sub
+
+
+        Private Sub pubClassFieldValue(ByVal FieldName As String, ByVal SetValue As Object, _
+                                                                                                              Optional ByVal AttributeNIndex As Object() = Nothing)
+            '設定資料庫類別所有'屬性'之值
+            Dim myPropertyInfo As PropertyInfo = Nothing
+            For Each EachItem As PropertyInfo In Me.GetType.GetProperties
+                If EachItem.Name = FieldName Then
+                    myPropertyInfo = EachItem
+                    Exit For
+                End If
+            Next
+            If myPropertyInfo Is Nothing Then Exit Sub
+
+            myPropertyInfo.SetValue(Me, SetValue, AttributeNIndex)
+        End Sub
+
+
+
+        Private _出勤班別01 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別01() As System.String
+            Get
+                Return _出勤班別01
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別01 = value
+            End Set
+        End Property
+
+        Private _出勤時間01 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間01() As System.String
+            Get
+                Return _出勤時間01
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間01 = value
+            End Set
+        End Property
+
+        Private _出勤班別02 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別02() As System.String
+            Get
+                Return _出勤班別02
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別02 = value
+            End Set
+        End Property
+
+        Private _出勤時間02 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間02() As System.String
+            Get
+                Return _出勤時間02
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間02 = value
+            End Set
+        End Property
+
+        Private _出勤班別03 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別03() As System.String
+            Get
+                Return _出勤班別03
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別03 = value
+            End Set
+        End Property
+
+        Private _出勤時間03 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間03() As System.String
+            Get
+                Return _出勤時間03
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間03 = value
+            End Set
+        End Property
+
+        Private _出勤班別04 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別04() As System.String
+            Get
+                Return _出勤班別04
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別04 = value
+            End Set
+        End Property
+
+        Private _出勤時間04 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間04() As System.String
+            Get
+                Return _出勤時間04
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間04 = value
+            End Set
+        End Property
+
+        Private _出勤班別05 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別05() As System.String
+            Get
+                Return _出勤班別05
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別05 = value
+            End Set
+        End Property
+
+        Private _出勤時間05 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間05() As System.String
+            Get
+                Return _出勤時間05
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間05 = value
+            End Set
+        End Property
+
+        Private _出勤班別06 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別06() As System.String
+            Get
+                Return _出勤班別06
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別06 = value
+            End Set
+        End Property
+
+        Private _出勤時間06 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間06() As System.String
+            Get
+                Return _出勤時間06
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間06 = value
+            End Set
+        End Property
+
+        Private _出勤班別07 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別07() As System.String
+            Get
+                Return _出勤班別07
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別07 = value
+            End Set
+        End Property
+
+        Private _出勤時間07 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間07() As System.String
+            Get
+                Return _出勤時間07
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間07 = value
+            End Set
+        End Property
+
+        Private _出勤班別08 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別08() As System.String
+            Get
+                Return _出勤班別08
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別08 = value
+            End Set
+        End Property
+
+        Private _出勤時間08 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間08() As System.String
+            Get
+                Return _出勤時間08
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間08 = value
+            End Set
+        End Property
+
+        Private _出勤班別09 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別09() As System.String
+            Get
+                Return _出勤班別09
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別09 = value
+            End Set
+        End Property
+
+        Private _出勤時間09 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間09() As System.String
+            Get
+                Return _出勤時間09
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間09 = value
+            End Set
+        End Property
+
+        Private _出勤班別10 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別10() As System.String
+            Get
+                Return _出勤班別10
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別10 = value
+            End Set
+        End Property
+
+        Private _出勤時間10 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間10() As System.String
+            Get
+                Return _出勤時間10
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間10 = value
+            End Set
+        End Property
+
+        Private _出勤班別11 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別11() As System.String
+            Get
+                Return _出勤班別11
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別11 = value
+            End Set
+        End Property
+
+        Private _出勤時間11 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間11() As System.String
+            Get
+                Return _出勤時間11
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間11 = value
+            End Set
+        End Property
+
+        Private _出勤班別12 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別12() As System.String
+            Get
+                Return _出勤班別12
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別12 = value
+            End Set
+        End Property
+
+        Private _出勤時間12 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間12() As System.String
+            Get
+                Return _出勤時間12
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間12 = value
+            End Set
+        End Property
+
+        Private _出勤班別13 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別13() As System.String
+            Get
+                Return _出勤班別13
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別13 = value
+            End Set
+        End Property
+
+        Private _出勤時間13 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間13() As System.String
+            Get
+                Return _出勤時間13
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間13 = value
+            End Set
+        End Property
+
+        Private _出勤班別14 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別14() As System.String
+            Get
+                Return _出勤班別14
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別14 = value
+            End Set
+        End Property
+
+        Private _出勤時間14 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間14() As System.String
+            Get
+                Return _出勤時間14
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間14 = value
+            End Set
+        End Property
+
+        Private _出勤班別15 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別15() As System.String
+            Get
+                Return _出勤班別15
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別15 = value
+            End Set
+        End Property
+
+        Private _出勤時間15 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間15() As System.String
+            Get
+                Return _出勤時間15
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間15 = value
+            End Set
+        End Property
+
+        Private _出勤班別16 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別16() As System.String
+            Get
+                Return _出勤班別16
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別16 = value
+            End Set
+        End Property
+
+        Private _出勤時間16 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間16() As System.String
+            Get
+                Return _出勤時間16
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間16 = value
+            End Set
+        End Property
+
+        Private _出勤班別17 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別17() As System.String
+            Get
+                Return _出勤班別17
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別17 = value
+            End Set
+        End Property
+
+        Private _出勤時間17 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間17() As System.String
+            Get
+                Return _出勤時間17
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間17 = value
+            End Set
+        End Property
+
+        Private _出勤班別18 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別18() As System.String
+            Get
+                Return _出勤班別18
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別18 = value
+            End Set
+        End Property
+
+        Private _出勤時間18 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間18() As System.String
+            Get
+                Return _出勤時間18
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間18 = value
+            End Set
+        End Property
+
+        Private _出勤班別19 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別19() As System.String
+            Get
+                Return _出勤班別19
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別19 = value
+            End Set
+        End Property
+
+        Private _出勤時間19 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間19() As System.String
+            Get
+                Return _出勤時間19
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間19 = value
+            End Set
+        End Property
+
+        Private _出勤班別20 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別20() As System.String
+            Get
+                Return _出勤班別20
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別20 = value
+            End Set
+        End Property
+
+        Private _出勤時間20 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間20() As System.String
+            Get
+                Return _出勤時間20
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間20 = value
+            End Set
+        End Property
+
+        Private _出勤班別21 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別21() As System.String
+            Get
+                Return _出勤班別21
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別21 = value
+            End Set
+        End Property
+
+        Private _出勤時間21 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間21() As System.String
+            Get
+                Return _出勤時間21
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間21 = value
+            End Set
+        End Property
+
+        Private _出勤班別22 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別22() As System.String
+            Get
+                Return _出勤班別22
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別22 = value
+            End Set
+        End Property
+
+        Private _出勤時間22 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間22() As System.String
+            Get
+                Return _出勤時間22
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間22 = value
+            End Set
+        End Property
+
+        Private _出勤班別23 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別23() As System.String
+            Get
+                Return _出勤班別23
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別23 = value
+            End Set
+        End Property
+
+        Private _出勤時間23 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間23() As System.String
+            Get
+                Return _出勤時間23
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間23 = value
+            End Set
+        End Property
+
+        Private _出勤班別24 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別24() As System.String
+            Get
+                Return _出勤班別24
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別24 = value
+            End Set
+        End Property
+
+        Private _出勤時間24 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間24() As System.String
+            Get
+                Return _出勤時間24
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間24 = value
+            End Set
+        End Property
+
+        Private _出勤班別25 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別25() As System.String
+            Get
+                Return _出勤班別25
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別25 = value
+            End Set
+        End Property
+
+        Private _出勤時間25 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間25() As System.String
+            Get
+                Return _出勤時間25
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間25 = value
+            End Set
+        End Property
+
+        Private _出勤班別26 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別26() As System.String
+            Get
+                Return _出勤班別26
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別26 = value
+            End Set
+        End Property
+
+        Private _出勤時間26 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間26() As System.String
+            Get
+                Return _出勤時間26
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間26 = value
+            End Set
+        End Property
+
+        Private _出勤班別27 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別27() As System.String
+            Get
+                Return _出勤班別27
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別27 = value
+            End Set
+        End Property
+
+        Private _出勤時間27 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間27() As System.String
+            Get
+                Return _出勤時間27
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間27 = value
+            End Set
+        End Property
+
+        Private _出勤班別28 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別28() As System.String
+            Get
+                Return _出勤班別28
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別28 = value
+            End Set
+        End Property
+
+        Private _出勤時間28 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間28() As System.String
+            Get
+                Return _出勤時間28
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間28 = value
+            End Set
+        End Property
+
+        Private _出勤班別29 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別29() As System.String
+            Get
+                Return _出勤班別29
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別29 = value
+            End Set
+        End Property
+
+        Private _出勤時間29 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間29() As System.String
+            Get
+                Return _出勤時間29
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間29 = value
+            End Set
+        End Property
+
+
+        Private _出勤班別30 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別30() As System.String
+            Get
+                Return _出勤班別30
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別30 = value
+            End Set
+        End Property
+
+        Private _出勤時間30 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間30() As System.String
+            Get
+                Return _出勤時間30
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間30 = value
+            End Set
+        End Property
+
+        Private _出勤班別31 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤班別31() As System.String
+            Get
+                Return _出勤班別31
+            End Get
+            Set(ByVal value As System.String)
+                _出勤班別31 = value
+            End Set
+        End Property
+
+        Private _出勤時間31 As System.String
+        <SetCDBField(SetCDBFieldAttribute.FieldTypeEnum.NotField)> _
+        Public Property 出勤時間31() As System.String
+            Get
+                Return _出勤時間31
+            End Get
+            Set(ByVal value As System.String)
+                _出勤時間31 = value
+            End Set
+        End Property
+
+
+
+
+
+
+
+
+
+
+
+#End Region

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="QCdb02" Class="EAFClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LOCALHOST;Initial Catalog=QCdb02;Integrated Security=True" SettingsObjectName="UserControl.My.MySettings" SettingsPropertyName="QCdb02ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EAFT1" Member="EAFT1">
+    <Type Name="EAFT1">
+      <Column Name="ID" Type="System.String" DbType="Char(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StoveNumber" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Rector" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="SetElecticOnUser" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Monitor" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Class" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="SteelKind" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="DataDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LDWeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DolomiteWeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CaOWeight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FettlingWeight" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TapFrequency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoveCoverFequency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StoveWallFequency" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="StoveBottomFequency" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SteelOutputWeight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MoltenSteelWeight" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="ResidueWeight" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="StartElectricPower" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="EndElectricPower" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Allocate_C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Allocate_Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Allocate_Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Allocate_P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Allocate_S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Allocate_Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Allocate_Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Allocate_Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Allocate_Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ConvertFileName" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Association Name="EAFT1_EAFT3" Member="EAFT3" OtherKey="FK_EAF1ID" Type="EAFT3" />
+      <Association Name="EAFT1_EAFT2" Member="EAFT2" OtherKey="FK_EAF1ID" Type="EAFT2" />
+      <Association Name="EAFT1_EAFT2_Analysis" Member="EAFT2_Analysis" OtherKey="FK_EAF1ID" Type="EAFT2_Analysis" />
+      <Association Name="EAFT1_EAFT2_Wait" Member="EAFT2_Wait" OtherKey="FK_EAF1ID" Type="EAFT2_Wait" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EAFT3" Member="EAFT3">
+    <Type Name="EAFT3">
+      <Column Name="FK_EAF1ID" Type="System.String" DbType="Char(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SampleNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="C" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="Si" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="Mn" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="P" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="S" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="Cr" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="Ni" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="Cu" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="Mo" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="Sn" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="Pb" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="Co" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Association Name="EAFT1_EAFT3" Member="EAFT1" ThisKey="FK_EAF1ID" Type="EAFT1" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EAFT2" Member="EAFT2">
+    <Type Name="EAFT2">
+      <Column Name="FK_EAF1ID" Type="System.String" DbType="Char(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OperatorOrder" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FK_OperatorTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Voltage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ElectricCurrentPercentage" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ElectricPower" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Thermograph" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Oxygen" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemoItem" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MemoMetal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemoDregs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsInputStartTime" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="EAFT1_EAFT2" Member="EAFT1" ThisKey="FK_EAF1ID" Type="EAFT1" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="EAFT2_OperatorType_EAFT2" Member="EAFT2_OperatorType" ThisKey="FK_OperatorTypeID" Type="EAFT2_OperatorType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EAFT2_Analysis" Member="EAFT2_Analysis">
+    <Type Name="EAFT2_Analysis">
+      <Column Name="FK_EAF1ID" Type="System.String" DbType="Char(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_OperatorTypeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TONValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Bucket" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="EAFT1_EAFT2_Analysis" Member="EAFT1" ThisKey="FK_EAF1ID" Type="EAFT1" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="EAFT2_OperatorType_EAFT2_Analysis" Member="EAFT2_OperatorType" ThisKey="FK_OperatorTypeID" Type="EAFT2_OperatorType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EAFT2_OperatorType" Member="EAFT2_OperatorType">
+    <Type Name="EAFT2_OperatorType">
+      <Column Name="OperatorTypeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OperatorTypeName" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="OperatorOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="EAFT2_OperatorType_EAFT2" Member="EAFT2" OtherKey="FK_OperatorTypeID" Type="EAFT2" />
+      <Association Name="EAFT2_OperatorType_EAFT2_Analysis" Member="EAFT2_Analysis" OtherKey="FK_OperatorTypeID" Type="EAFT2_Analysis" />
+      <Association Name="EAFT2_OperatorType_EAFT2_Wait" Member="EAFT2_Wait" OtherKey="FK_OperatorTypeID" Type="EAFT2_Wait" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EAFT2_Wait" Member="EAFT2_Wait">
+    <Type Name="EAFT2_Wait">
+      <Column Name="FK_EAF1ID" Type="System.String" DbType="Char(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_OperatorTypeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EventNumber" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="WaitReason" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Association Name="EAFT1_EAFT2_Wait" Member="EAFT1" ThisKey="FK_EAF1ID" Type="EAFT1" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="EAFT2_OperatorType_EAFT2_Wait" Member="EAFT2_OperatorType" ThisKey="FK_OperatorTypeID" Type="EAFT2_OperatorType" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

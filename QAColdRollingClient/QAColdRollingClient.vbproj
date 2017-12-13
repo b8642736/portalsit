@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77EB7E8B-89A7-438C-AA20-E66BB9494070}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>QAColdRollingClient.My.MyApplication</StartupObject>
+    <RootNamespace>QAColdRollingClient</RootNamespace>
+    <AssemblyName>QAColdRollingClient</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>C:\WebRunning\QAColdRollingClient\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://10.1.4.12/QAColdRollingClient/</InstallUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>QAColdRollingClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>QAColdRollingClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3ADE37337E0A00191487AECC532B58ED3AB052BC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>QAColdRollingClient_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Kepware.ClientAce.KEPServerExControls">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Kepware Technologies\ClientAce\V4.0\Kepware.ClientAce.KEPServerExControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Kepware.ClientAce.OpcClient, Version=4.0.2.3, Culture=neutral, PublicKeyToken=8c3093bd8fa54956, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Kepware Technologies\ClientAce\V4.0\Kepware.ClientAce.OpcClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\ReportViewer\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CompanyORMDB.SQLServer.PPS100LB" />
+    <Import Include="Kepware.ClientAce.OpcDaClient" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Net.Mail" />
+    <Import Include="System.Text" />
+    <Import Include="System.Threading" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\APL1OthersEdit.Designer.vb">
+      <DependentUpon>APL1OthersEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\APL1OthersEdit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\APL2OthersEdit.Designer.vb">
+      <DependentUpon>APL2OthersEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\APL2OthersEdit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BALOthersEdit.Designer.vb">
+      <DependentUpon>BALOthersEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BALOthersEdit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BugItemEdit.Designer.vb">
+      <DependentUpon>BugItemEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BugItemEdit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BugItemEdit_LengthInput.Designer.vb">
+      <DependentUpon>BugItemEdit_LengthInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BugItemEdit_LengthInput.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BugItemGroupEdit.Designer.vb">
+      <DependentUpon>BugItemGroupEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BugItemGroupEdit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BugItemMinDisplay.Designer.vb">
+      <DependentUpon>BugItemMinDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BugItemMinDisplay.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BugItemEdit_BugInput.Designer.vb">
+      <DependentUpon>BugItemEdit_BugInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BugItemEdit_BugInput.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EnblishKeyboard.Designer.vb">
+      <DependentUpon>EnblishKeyboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EnblishKeyboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\IxxxOthersEdit.vb" />
+    <Compile Include="Controls\L2Talk\L2Message1.vb" />
+    <Compile Include="Controls\L2Talk\ReceiveL2Message.vb" />
+    <Compile Include="Controls\MainControl.Designer.vb">
+      <DependentUpon>MainControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainControl_CoilNumberInput.Designer.vb">
+      <DependentUpon>MainControl_CoilNumberInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainControl_CoilNumberInput.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MainControl_UserLogin.Designer.vb">
+      <DependentUpon>MainControl_UserLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainControl_UserLogin.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NumberKeyboard.Designer.vb">
+      <DependentUpon>NumberKeyboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NumberKeyboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OPCUAAdapter.vb" />
+    <Compile Include="Controls\Report\DBDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Report\DBDataSet.vb">
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Report\RDLCDirectPrint.vb" />
+    <Compile Include="Controls\ThickItemEdit.Designer.vb">
+      <DependentUpon>ThickItemEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ThickItemEdit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ThickItemMinDisplay.Designer.vb">
+      <DependentUpon>ThickItemMinDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ThickItemMinDisplay.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\APL1OthersEdit.resx">
+      <DependentUpon>APL1OthersEdit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\APL2OthersEdit.resx">
+      <DependentUpon>APL2OthersEdit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BALOthersEdit.resx">
+      <DependentUpon>BALOthersEdit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BugItemEdit.resx">
+      <DependentUpon>BugItemEdit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BugItemEdit_LengthInput.resx">
+      <DependentUpon>BugItemEdit_LengthInput.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BugItemGroupEdit.resx">
+      <DependentUpon>BugItemGroupEdit.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BugItemMinDisplay.resx">
+      <DependentUpon>BugItemMinDisplay.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\BugItemEdit_BugInput.resx">
+      <DependentUpon>BugItemEdit_BugInput.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EnblishKeyboard.resx">
+      <DependentUpon>EnblishKeyboard.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainControl.resx">
+      <DependentUpon>MainControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainControl_CoilNumberInput.resx">
+      <DependentUpon>MainControl_CoilNumberInput.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MainControl_UserLogin.resx">
+      <DependentUpon>MainControl_UserLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NumberKeyboard.resx">
+      <DependentUpon>NumberKeyboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Report\APL2.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Report\BAL.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Report\APL.rdlc">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ThickItemEdit.resx">
+      <DependentUpon>ThickItemEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ThickItemMinDisplay.resx">
+      <DependentUpon>ThickItemMinDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Controls\Report\DBDataSet.xsc">
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Controls\Report\DBDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Controls\Report\DBDataSet.xss">
+      <DependentUpon>DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="QAColdRollingClient_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyORMDB\CompanyORMDB.vbproj">
+      <Project>{ac01c38e-b385-4af8-b595-10e78ce211ad}</Project>
+      <Name>CompanyORMDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicClassLibrary\PublicClassLibrary.vbproj">
+      <Project>{c30fb035-8308-4aaa-a9dc-3453a08f5411}</Project>
+      <Name>PublicClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client,KB2468871">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29 以及適用於 .NET Framework 4 的更新 %28KB2468871%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L2MsgGet.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\L2MsgGet.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Report\QCSideDescript.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+
+
+
+
+
+
+
+
+
+"C:\Program Files (x86)\Kepware Technologies\ClientAce\Sign\sign.exe" "$(TargetPath)" "$(TargetName).lic"
+"C:\Program Files (x86)\Kepware Technologies\ClientAce\Sign\sign.exe" "$(TargetDir)$(TargetName).vshost.exe" "$(TargetName).vshost.lic"</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties signed="active" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

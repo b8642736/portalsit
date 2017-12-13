@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="CompanyWSAdapter_Server0bm_WSDBSQLQuery" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.4.12/CompanyWebService/wsdbsqlquery.asmx</Value>
+    </Setting>
+    <Setting Name="CompanyWSAdapter_Server04m_WSDBSQLQuery" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.4.6/CompanyWebService/wsdbsqlquery.asmx</Value>
+    </Setting>
+    <Setting Name="CompanyWSAdapter_Portalsit2_WSDBSQLQuery" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.4.31/CompanyWebService/wsdbsqlquery.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

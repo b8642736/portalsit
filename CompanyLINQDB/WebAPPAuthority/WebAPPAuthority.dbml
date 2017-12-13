@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="QCdb01" Class="WebAPPAuthorityDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=Server0sm;Initial Catalog=QCdb01;Persist Security Info=True;User ID=test01" SettingsObjectName="CompanyLINQDB.My.MySettings" SettingsPropertyName="Server1_QCdb01" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.WebDepartmentAuthority" Member="WebDepartmentAuthority">
+    <Type Name="WebDepartmentAuthority">
+      <Column Name="DepartmentCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DepartmentName" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="IsDepartmentAuthorityManager" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="FK_SystemCode" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="FK_SystemFunctionCode" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Association Name="WebSystemFunction_WebDepartmentAuthority" Member="WebSystemFunction" ThisKey="FK_SystemFunctionCode,FK_SystemCode" OtherKey="FunctionCode,SystemCode" Type="WebSystemFunction" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebUserAuthority" Member="WebUserAuthority">
+    <Type Name="WebUserAuthority">
+      <Column Name="FKWebLoginAccount_WindowLoginName" Type="System.String" DbType="Char(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_SystemCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_SystemFunctionCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Association Name="WebSystemFunction_WebUserAuthority" Member="WebSystemFunction" ThisKey="FK_SystemFunctionCode,FK_SystemCode" OtherKey="FunctionCode,SystemCode" Type="WebSystemFunction" IsForeignKey="true" />
+      <Association Name="WebLoginAccount_WebUserAuthority" Member="WebLoginAccount" ThisKey="FKWebLoginAccount_WindowLoginName" OtherKey="WindowLoginName" Type="WebLoginAccount" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebSystem" Member="WebSystem">
+    <Type Name="WebSystem">
+      <Column Name="SystemCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SystemName" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Association Name="WebSystem_WebSystemFunction" Member="WebSystemFunction" ThisKey="SystemCode" OtherKey="SystemCode" Type="WebSystemFunction" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebSystemFunction" Member="WebSystemFunction">
+    <Type Name="WebSystemFunction">
+      <Column Name="FunctionCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SystemCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FunctionName" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Association Name="WebSystemFunction_WebDepartmentAuthority" Member="WebDepartmentAuthority" ThisKey="FunctionCode,SystemCode" OtherKey="FK_SystemFunctionCode,FK_SystemCode" Type="WebDepartmentAuthority" />
+      <Association Name="WebSystemFunction_WebUserAuthority" Member="WebUserAuthority" ThisKey="FunctionCode,SystemCode" OtherKey="FK_SystemFunctionCode,FK_SystemCode" Type="WebUserAuthority" />
+      <Association Name="WebSystemFunction_WebClientPCAuthority" Member="WebClientPCAuthority" ThisKey="FunctionCode,SystemCode" OtherKey="FK_SystemFunctionCode,FK_SystemCode" Type="WebClientPCAuthority" />
+      <Association Name="WebSystemFunction_WebGroupAuthority" Member="WebGroupAuthority" ThisKey="FunctionCode,SystemCode" OtherKey="FK_SystemFunctionCode,FK_SystemCode" Type="WebGroupAuthority" />
+      <Association Name="WebSystem_WebSystemFunction" Member="WebSystem" ThisKey="SystemCode" OtherKey="SystemCode" Type="WebSystem" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebClientPCAuthority" Member="WebClientPCAuthority">
+    <Type Name="WebClientPCAuthority">
+      <Column Name="FKWebClientPCAccount_ClientIP" Type="System.String" DbType="Char(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_SystemCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_SystemFunctionCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Association Name="WebSystemFunction_WebClientPCAuthority" Member="WebSystemFunction" ThisKey="FK_SystemFunctionCode,FK_SystemCode" OtherKey="FunctionCode,SystemCode" Type="WebSystemFunction" IsForeignKey="true" />
+      <Association Name="WebClientPCAccount_WebClientPCAuthority" Member="WebClientPCAccount" ThisKey="FKWebClientPCAccount_ClientIP" OtherKey="ClientIP" Type="WebClientPCAccount" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SMPClientPCMonitor" Member="SMPClientPCMonitor">
+    <Type Name="SMPClientPCMonitor">
+      <Column Name="ClientPCIP" Type="System.String" DbType="Char(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PingTimeOutSeconds" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebGroupAccount" Member="WebGroupAccount">
+    <Type Name="WebGroupAccount">
+      <Column Name="GroupCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="Memo1" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Association Name="WebGroupAccount_WebClientPCAccountTOWebGroupAccount" Member="WebClientPCAccountTOWebGroupAccount" ThisKey="GroupCode" OtherKey="GroupCode" Type="WebClientPCAccountTOWebGroupAccount" />
+      <Association Name="WebGroupAccount_WebLoginAccountToWebGroupAccount" Member="WebLoginAccountToWebGroupAccount" ThisKey="GroupCode" OtherKey="GroupCode" Type="WebLoginAccountToWebGroupAccount" />
+      <Association Name="WebGroupAccount_WebGroupAuthority" Member="WebGroupAuthority" ThisKey="GroupCode" OtherKey="GroupCode" Type="WebGroupAuthority" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebClientPCAccountTOWebGroupAccount" Member="WebClientPCAccountTOWebGroupAccount">
+    <Type Name="WebClientPCAccountTOWebGroupAccount">
+      <Column Name="ClientIP" Type="System.String" DbType="Char(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Memo1" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="WebGroupAccount_WebClientPCAccountTOWebGroupAccount" Member="WebGroupAccount" ThisKey="GroupCode" OtherKey="GroupCode" Type="WebGroupAccount" IsForeignKey="true" />
+      <Association Name="WebClientPCAccount_WebClientPCAccountTOWebGroupAccount" Member="WebClientPCAccount" ThisKey="ClientIP" OtherKey="ClientIP" Type="WebClientPCAccount" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebLoginAccountToWebGroupAccount" Member="WebLoginAccountToWebGroupAccount">
+    <Type Name="WebLoginAccountToWebGroupAccount">
+      <Column Name="WindowLoginName" Type="System.String" DbType="Char(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Memo1" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="WebGroupAccount_WebLoginAccountToWebGroupAccount" Member="WebGroupAccount" ThisKey="GroupCode" OtherKey="GroupCode" Type="WebGroupAccount" IsForeignKey="true" />
+      <Association Name="WebLoginAccount_WebLoginAccountToWebGroupAccount" Member="WebLoginAccount" ThisKey="WindowLoginName" OtherKey="WindowLoginName" Type="WebLoginAccount" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebGroupAuthority" Member="WebGroupAuthority">
+    <Type Name="WebGroupAuthority">
+      <Column Name="GroupCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_SystemCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_SystemFunctionCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Association Name="WebGroupAccount_WebGroupAuthority" Member="WebGroupAccount" ThisKey="GroupCode" OtherKey="GroupCode" Type="WebGroupAccount" IsForeignKey="true" />
+      <Association Name="WebSystemFunction_WebGroupAuthority" Member="WebSystemFunction" ThisKey="FK_SystemFunctionCode,FK_SystemCode" OtherKey="FunctionCode,SystemCode" Type="WebSystemFunction" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebClientPCAccount" Member="WebClientPCAccount">
+    <Type Name="WebClientPCAccount">
+      <Column Name="ClientIP" Type="System.String" DbType="Char(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PCName" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Memo1" Type="System.String" DbType="Char(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Association Name="WebClientPCAccount_WebClientPCAuthority" Member="WebClientPCAuthority" ThisKey="ClientIP" OtherKey="FKWebClientPCAccount_ClientIP" Type="WebClientPCAuthority" />
+      <Association Name="WebClientPCAccount_WebClientPCAccountTOWebGroupAccount" Member="WebClientPCAccountTOWebGroupAccount" ThisKey="ClientIP" OtherKey="ClientIP" Type="WebClientPCAccountTOWebGroupAccount" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebLoginAccount" Member="WebLoginAccount">
+    <Type Name="WebLoginAccount">
+      <Column Name="WindowLoginName" Type="System.String" DbType="Char(13) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="Memo1" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Email" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Association Name="WebLoginAccount_WebUserAuthority" Member="WebUserAuthority" ThisKey="WindowLoginName" OtherKey="FKWebLoginAccount_WindowLoginName" Type="WebUserAuthority" />
+      <Association Name="WebLoginAccount_WebLoginAccountToWebGroupAccount" Member="WebLoginAccountToWebGroupAccount" ThisKey="WindowLoginName" OtherKey="WindowLoginName" Type="WebLoginAccountToWebGroupAccount" />
+    </Type>
+  </Table>
+</Database>

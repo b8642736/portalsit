@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{C3ADD949-DF88-449F-BF08-017B52E33989}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ColdRollingProcess</RootNamespace>
+    <AssemblyName>ColdRollingProcess</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <TargetFrameworkProfile />
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ColdRollingProcess.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>ColdRollingProcess.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AppAuthority, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AppAuthority\bin\Debug\AppAuthority.dll</HintPath>
+    </Reference>
+    <Reference Include="CompanyORMDB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CompanyORMDB\bin\Debug\CompanyORMDB.dll</HintPath>
+    </Reference>
+    <Reference Include="PublicClassLibrary">
+      <HintPath>..\PublicClassLibrary\bin\Debug\PublicClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CompanyORMDB" />
+    <Import Include="CompanyORMDB.SQLServer.PPS100LB" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BlackCoilUnDoSearchForm.aspx" />
+    <Content Include="CoilStationStateSearchForm.aspx" />
+    <Content Include="Controls\BlackCoilUnDoSearch.ascx" />
+    <Content Include="Controls\CoilStationStateSearch.ascx" />
+    <Content Include="Controls\InOutOperationLineNameEdit.ascx" />
+    <Content Include="Controls\LineWeightStatistics.ascx" />
+    <Content Include="Controls\PackSearch.ascx" />
+    <Content Include="Controls\ProcessSchedualEdit.ascx" />
+    <Content Include="Controls\ProcessToInOutOperationLineNameEdit.ascx" />
+    <Content Include="Controls\ProductionNoOnwerEdit.ascx" />
+    <Content Include="Controls\ProductionStartCmdEdit.ascx" />
+    <Content Include="Controls\RGSGrindRecordEdit.ascx" />
+    <Content Include="Controls\StationClient\StationClient.ascx" />
+    <Content Include="Controls\StationEdit.ascx" />
+    <Content Include="Controls\StationToWebClientPCAccountEdit.ascx" />
+    <Content Include="Controls\SystemNote.ascx" />
+    <Content Include="Controls\ZmlReplaceHistory.ascx" />
+    <Content Include="CSS\TabContainer.css" />
+    <Content Include="CSS\Default.css" />
+    <Content Include="CSS\MainMaster.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Icons\16-arrow-right.png" />
+    <Content Include="Icons\16-circle-blue.png" />
+    <Content Include="Icons\collapse.jpg" />
+    <Content Include="Icons\expand.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InOutOperationLineNameEditForm.aspx" />
+    <Content Include="LineWeightStatisticsForm.aspx" />
+    <Content Include="PackSearchForm.aspx" />
+    <Content Include="ProcessSchedualEditForm.aspx" />
+    <Content Include="ProductionNoOnwerEditForm.aspx" />
+    <Content Include="ProductionStartCmdEditbForm.aspx" />
+    <Content Include="RGSGrindRecordEditForm.aspx" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="StationEditForm.aspx" />
+    <Content Include="SystemNoteEditForm.aspx" />
+    <Content Include="SystemNoteEditForm_Financial_InvoiceOfReceivables.aspx" />
+    <Content Include="SystemNoteEditForm_ProductionNoOnwerEdit.aspx" />
+    <Content Include="SystemNoteEditForm_WebAppAuthority_CCMail.aspx" />
+    <Content Include="SystemNoteEditForm_QualityControl_NonRadioactive.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="ZmlReplaceHistoryEditForm.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlackCoilUnDoSearchForm.aspx.designer.vb">
+      <DependentUpon>BlackCoilUnDoSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlackCoilUnDoSearchForm.aspx.vb">
+      <DependentUpon>BlackCoilUnDoSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilStationStateSearchForm.aspx.designer.vb">
+      <DependentUpon>CoilStationStateSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilStationStateSearchForm.aspx.vb">
+      <DependentUpon>CoilStationStateSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackCoilUnDoSearch.ascx.designer.vb">
+      <DependentUpon>BlackCoilUnDoSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BlackCoilUnDoSearch.ascx.vb">
+      <DependentUpon>BlackCoilUnDoSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ColdRollingProcessDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColdRollingProcessDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilStationStateSearch.ascx.designer.vb">
+      <DependentUpon>CoilStationStateSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilStationStateSearch.ascx.vb">
+      <DependentUpon>CoilStationStateSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InOutOperationLineNameEdit.ascx.designer.vb">
+      <DependentUpon>InOutOperationLineNameEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InOutOperationLineNameEdit.ascx.vb">
+      <DependentUpon>InOutOperationLineNameEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LineWeightStatistics.ascx.designer.vb">
+      <DependentUpon>LineWeightStatistics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LineWeightStatistics.ascx.vb">
+      <DependentUpon>LineWeightStatistics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PackSearch.ascx.designer.vb">
+      <DependentUpon>PackSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackSearch.ascx.vb">
+      <DependentUpon>PackSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProcessSchedualEdit.ascx.designer.vb">
+      <DependentUpon>ProcessSchedualEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProcessSchedualEdit.ascx.vb">
+      <DependentUpon>ProcessSchedualEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProcessToInOutOperationLineNameEdit.ascx.designer.vb">
+      <DependentUpon>ProcessToInOutOperationLineNameEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProcessToInOutOperationLineNameEdit.ascx.vb">
+      <DependentUpon>ProcessToInOutOperationLineNameEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductionNoOnwerEdit.ascx.designer.vb">
+      <DependentUpon>ProductionNoOnwerEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductionNoOnwerEdit.ascx.vb">
+      <DependentUpon>ProductionNoOnwerEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductionStartCmdEdit.ascx.designer.vb">
+      <DependentUpon>ProductionStartCmdEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductionStartCmdEdit.ascx.vb">
+      <DependentUpon>ProductionStartCmdEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RGSGrindRecordEdit.ascx.designer.vb">
+      <DependentUpon>RGSGrindRecordEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RGSGrindRecordEdit.ascx.vb">
+      <DependentUpon>RGSGrindRecordEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StationClient\StationClient.ascx.designer.vb">
+      <DependentUpon>StationClient.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationClient\StationClient.ascx.vb">
+      <DependentUpon>StationClient.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StationEdit.ascx.designer.vb">
+      <DependentUpon>StationEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationEdit.ascx.vb">
+      <DependentUpon>StationEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StationToWebClientPCAccountEdit.ascx.designer.vb">
+      <DependentUpon>StationToWebClientPCAccountEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationToWebClientPCAccountEdit.ascx.vb">
+      <DependentUpon>StationToWebClientPCAccountEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SystemNote.ascx.designer.vb">
+      <DependentUpon>SystemNote.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SystemNote.ascx.vb">
+      <DependentUpon>SystemNote.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ZmlReplaceHistory.ascx.designer.vb">
+      <DependentUpon>ZmlReplaceHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ZmlReplaceHistory.ascx.vb">
+      <DependentUpon>ZmlReplaceHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InOutOperationLineNameEditForm.aspx.designer.vb">
+      <DependentUpon>InOutOperationLineNameEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InOutOperationLineNameEditForm.aspx.vb">
+      <DependentUpon>InOutOperationLineNameEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LineWeightStatisticsForm.aspx.designer.vb">
+      <DependentUpon>LineWeightStatisticsForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LineWeightStatisticsForm.aspx.vb">
+      <DependentUpon>LineWeightStatisticsForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MainSite.Master.designer.vb">
+      <DependentUpon>MainSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MainSite.Master.vb">
+      <DependentUpon>MainSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PackSearchForm.aspx.designer.vb">
+      <DependentUpon>PackSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PackSearchForm.aspx.vb">
+      <DependentUpon>PackSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProcessSchedualEditForm.aspx.designer.vb">
+      <DependentUpon>ProcessSchedualEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessSchedualEditForm.aspx.vb">
+      <DependentUpon>ProcessSchedualEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProductionNoOnwerEditForm.aspx.designer.vb">
+      <DependentUpon>ProductionNoOnwerEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionNoOnwerEditForm.aspx.vb">
+      <DependentUpon>ProductionNoOnwerEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProductionStartCmdEditbForm.aspx.designer.vb">
+      <DependentUpon>ProductionStartCmdEditbForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionStartCmdEditbForm.aspx.vb">
+      <DependentUpon>ProductionStartCmdEditbForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RGSGrindRecordEditForm.aspx.designer.vb">
+      <DependentUpon>RGSGrindRecordEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RGSGrindRecordEditForm.aspx.vb">
+      <DependentUpon>RGSGrindRecordEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="StationEditForm.aspx.designer.vb">
+      <DependentUpon>StationEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StationEditForm.aspx.vb">
+      <DependentUpon>StationEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SystemNoteEditForm.aspx.designer.vb">
+      <DependentUpon>SystemNoteEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemNoteEditForm.aspx.vb">
+      <DependentUpon>SystemNoteEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SystemNoteEditForm_Financial_InvoiceOfReceivables.aspx.designer.vb">
+      <DependentUpon>SystemNoteEditForm_Financial_InvoiceOfReceivables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemNoteEditForm_Financial_InvoiceOfReceivables.aspx.vb">
+      <DependentUpon>SystemNoteEditForm_Financial_InvoiceOfReceivables.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SystemNoteEditForm_ProductionNoOnwerEdit.aspx.designer.vb">
+      <DependentUpon>SystemNoteEditForm_ProductionNoOnwerEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemNoteEditForm_ProductionNoOnwerEdit.aspx.vb">
+      <DependentUpon>SystemNoteEditForm_ProductionNoOnwerEdit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SystemNoteEditForm_WebAppAuthority_CCMail.aspx.designer.vb">
+      <DependentUpon>SystemNoteEditForm_WebAppAuthority_CCMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemNoteEditForm_WebAppAuthority_CCMail.aspx.vb">
+      <DependentUpon>SystemNoteEditForm_WebAppAuthority_CCMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemNoteEditForm_QualityControl_NonRadioactive.aspx.designer.vb">
+      <DependentUpon>SystemNoteEditForm_QualityControl_NonRadioactive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemNoteEditForm_QualityControl_NonRadioactive.aspx.vb">
+      <DependentUpon>SystemNoteEditForm_QualityControl_NonRadioactive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZmlReplaceHistoryEditForm.aspx.designer.vb">
+      <DependentUpon>ZmlReplaceHistoryEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZmlReplaceHistoryEditForm.aspx.vb">
+      <DependentUpon>ZmlReplaceHistoryEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MainSite.Master" />
+    <None Include="Controls\ColdRollingProcessDataSet.xsc">
+      <DependentUpon>ColdRollingProcessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Controls\ColdRollingProcessDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ColdRollingProcessDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Controls\ColdRollingProcessDataSet.xss">
+      <DependentUpon>ColdRollingProcessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\設定檔1.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UCAjaxServerControl1\UCAjaxServerControl1.vbproj">
+      <Project>{2790148a-6bbf-49cf-b2f3-e3966798bced}</Project>
+      <Name>UCAjaxServerControl1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebAppAuthority\WebAppAuthority.vbproj">
+      <Project>{a2648750-fb34-452a-b768-fe800ff6622a}</Project>
+      <Name>WebAppAuthority</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7076</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:7076/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

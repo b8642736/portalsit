@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.5, 11.5" name="WebAPPAuthority">
+  <DataContextMoniker Name="/WebAPPAuthorityDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a3caa2b5-b7ae-48ef-988a-e4ba78339701" absoluteBounds="6.25, 4.625, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebDepartmentAuthority" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e53d9895-6f30-44ed-ad41-0af0e891720d" absoluteBounds="6.265, 5.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="445d2a5b-8bc7-4b39-ac3c-629aaebd96ed" absoluteBounds="6.25, 1.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebUserAuthority" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93980719-daea-4e8d-864d-0036bfa82981" absoluteBounds="6.265, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="edeec6cf-d2fa-4ff1-8dbd-f3b16b374673" absoluteBounds="0.75, 4, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebSystem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c6a8fcc-1aeb-44a0-9d7a-a9847a0cf4d5" absoluteBounds="0.765, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c0ff1673-b95f-4e80-8aa5-e4d3fedfbd74" absoluteBounds="3.5, 3.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebSystemFunction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a2f5f17-f64b-4305-86db-95b24bd259d7" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 5.03929768880208); (5.69791666666667 : 5.03929768880208 : JumpStart); (5.86458333333333 : 5.03929768880208 : JumpEnd); (6.25 : 5.03929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebSystemFunction/WebSystemFunction_WebDepartmentAuthority" />
+      <nodes>
+        <classShapeMoniker Id="c0ff1673-b95f-4e80-8aa5-e4d3fedfbd74" />
+        <classShapeMoniker Id="a3caa2b5-b7ae-48ef-988a-e4ba78339701" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.71875 : 3.875); (3.71875 : 3.10984537760417); (5.69791666666667 : 3.10984537760417 : JumpStart); (5.86458333333333 : 3.10984537760417 : JumpEnd); (6.25 : 3.10984537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebSystemFunction/WebSystemFunction_WebUserAuthority" />
+      <nodes>
+        <classShapeMoniker Id="c0ff1673-b95f-4e80-8aa5-e4d3fedfbd74" />
+        <classShapeMoniker Id="445d2a5b-8bc7-4b39-ac3c-629aaebd96ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.69314697265625); (3.5 : 4.69314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebSystem/WebSystem_WebSystemFunction" />
+      <nodes>
+        <classShapeMoniker Id="edeec6cf-d2fa-4ff1-8dbd-f3b16b374673" />
+        <classShapeMoniker Id="c0ff1673-b95f-4e80-8aa5-e4d3fedfbd74" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="991245cb-9ec9-4720-b60f-0c2135d0f9f2" absoluteBounds="9.125, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebClientPCAuthority" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb7768c9-21ee-4c51-9cd1-4fd8610963ba" absoluteBounds="9.14, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.2500025); (5.69791666666667 : 4.2500025 : JumpStart); (5.86458333333333 : 4.2500025 : JumpEnd); (9.125 : 4.2500025)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebSystemFunction/WebSystemFunction_WebClientPCAuthority" />
+      <nodes>
+        <classShapeMoniker Id="c0ff1673-b95f-4e80-8aa5-e4d3fedfbd74" />
+        <classShapeMoniker Id="991245cb-9ec9-4720-b60f-0c2135d0f9f2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0fe81d0d-ad2a-46e9-8f4f-bed84cb00237" absoluteBounds="7.25, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/SMPClientPCMonitor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86f2d425-e188-469a-8ce9-22c638350c8b" absoluteBounds="7.2650000000000006, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c3cdb5a3-c0ff-4099-bc2b-215f9b9d95df" absoluteBounds="6.5, 8, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebGroupAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bef906d5-0f98-4ad8-93e0-af961a8d3cf9" absoluteBounds="6.515, 8.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16f841da-6e22-46f2-b060-acd824f2dd68" absoluteBounds="1, 7.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebClientPCAccountTOWebGroupAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bbbc064f-229c-4c52-849c-7218d7cddec8" absoluteBounds="1.0150000000000001, 8.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.5 : 8.97722045898437); (5.86458333333333 : 8.97722045898437 : JumpStart); (5.69791666666667 : 8.97722045898437 : JumpEnd); (3 : 8.97722045898437)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebGroupAccount/WebGroupAccount_WebClientPCAccountTOWebGroupAccount" />
+      <nodes>
+        <classShapeMoniker Id="c3cdb5a3-c0ff-4099-bc2b-215f9b9d95df" />
+        <classShapeMoniker Id="16f841da-6e22-46f2-b060-acd824f2dd68" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a2656af0-50e1-4d6d-bf70-a61e9f5ac17f" absoluteBounds="1.625, 9.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebLoginAccountToWebGroupAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ae04a45-87ea-4f63-b23e-f25ff15e61f4" absoluteBounds="1.6400000000000001, 10.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.5 : 9.3550439453125); (5.86458333333333 : 9.3550439453125 : JumpStart); (5.69791666666667 : 9.3550439453125 : JumpEnd); (3.21875 : 9.3550439453125); (3.21875 : 9.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebGroupAccount/WebGroupAccount_WebLoginAccountToWebGroupAccount" />
+      <nodes>
+        <classShapeMoniker Id="c3cdb5a3-c0ff-4099-bc2b-215f9b9d95df" />
+        <classShapeMoniker Id="a2656af0-50e1-4d6d-bf70-a61e9f5ac17f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="25ff2eb6-9902-4bac-af92-bdf65577449e" absoluteBounds="9.75, 7.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebGroupAuthority" />
+      <nestedChildShapes>
+        <elementListCompartment Id="659a63c4-d62e-4e57-b47b-2e17efecdfae" absoluteBounds="9.765, 7.8350000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 8.47679768880208); (9.75 : 8.47679768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebGroupAccount/WebGroupAccount_WebGroupAuthority" />
+      <nodes>
+        <classShapeMoniker Id="c3cdb5a3-c0ff-4099-bc2b-215f9b9d95df" />
+        <classShapeMoniker Id="25ff2eb6-9902-4bac-af92-bdf65577449e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 5.45359537760417); (4.5 : 7.5625); (5.69791666666667 : 7.5625 : JumpStart); (5.86458333333333 : 7.5625 : JumpEnd); (9.75 : 7.5625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebSystemFunction/WebSystemFunction_WebGroupAuthority" />
+      <nodes>
+        <classShapeMoniker Id="c0ff1673-b95f-4e80-8aa5-e4d3fedfbd74" />
+        <classShapeMoniker Id="25ff2eb6-9902-4bac-af92-bdf65577449e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9a14150a-27cb-48b7-af54-cda6ed8e4aa5" absoluteBounds="10.25, 0.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebClientPCAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="abacc404-ff3e-4059-92c1-71b209463e02" absoluteBounds="10.265, 1.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.6875 : 2.45359537760417); (10.6875 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebClientPCAccount/WebClientPCAccount_WebClientPCAuthority" />
+      <nodes>
+        <classShapeMoniker Id="9a14150a-27cb-48b7-af54-cda6ed8e4aa5" />
+        <classShapeMoniker Id="991245cb-9ec9-4720-b60f-0c2135d0f9f2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.500002 : 2.45359537760417); (11.500002 : 3.5); (10.7708333333333 : 3.5 : JumpStart); (10.6041666666667 : 3.5 : JumpEnd); (8.75 : 3.5); (8.75 : 7.75); (5.86458333333333 : 7.75 : JumpStart); (5.69791666666667 : 7.75 : JumpEnd); (3.375 : 7.75); (3.375 : 8.56814697265625); (3 : 8.56814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebClientPCAccount/WebClientPCAccount_WebClientPCAccountTOWebGroupAccount" />
+      <nodes>
+        <classShapeMoniker Id="9a14150a-27cb-48b7-af54-cda6ed8e4aa5" />
+        <classShapeMoniker Id="16f841da-6e22-46f2-b060-acd824f2dd68" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="f86c782c-8a7b-44a8-9210-77f11da2a5a4" absoluteBounds="4, 1.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/WebAPPAuthorityDataContext/WebLoginAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc2174b3-444e-4e67-9297-353d300679fe" absoluteBounds="4.015, 1.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6 : 2.28929768880208); (6.25 : 2.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebLoginAccount/WebLoginAccount_WebUserAuthority" />
+      <nodes>
+        <classShapeMoniker Id="f86c782c-8a7b-44a8-9210-77f11da2a5a4" />
+        <classShapeMoniker Id="445d2a5b-8bc7-4b39-ac3c-629aaebd96ed" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.78125 : 2.70359537760417); (5.78125 : 10.5681469726562); (3.625 : 10.5681469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/WebAPPAuthorityDataContext/WebLoginAccount/WebLoginAccount_WebLoginAccountToWebGroupAccount" />
+      <nodes>
+        <classShapeMoniker Id="f86c782c-8a7b-44a8-9210-77f11da2a5a4" />
+        <classShapeMoniker Id="a2656af0-50e1-4d6d-bf70-a61e9f5ac17f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

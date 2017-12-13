@@ -1,0 +1,72 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainMaster.master.vb" Inherits="AST500LB.MainMaster" %>
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+            <cc1:ucauthorizebutton ID="UcAuthorizeButton1" runat="server" 
+                    OpenControlPath="Portalsit@StartContent.aspx" Text="返回主選單" 
+                    CssClass="Button1" />
+            <cc1:ucauthorizebutton ID="UcAuthorizeButton2" runat="server" 
+                    OpenControlPath="AST500LB@Default.aspx" Text="返回系統選單" 
+                CssClass="Button1" />
+        <%--<asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Height="18px">
+            <Items>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="查詢" 
+                    Value="查詢" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem Text="資產移轉及狀態查詢" Value="1,AST01@AST0101" 
+                        ImageUrl="~/Icons/16-circle-blue.png" 
+                        PopOutImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                    <asp:MenuItem Text="折舊預測估算" Value="AST01@AST0103" 
+                        ImageUrl="~/Icons/16-circle-blue.png" 
+                        PopOutImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="固定資產保險明細查詢" 
+                        Value="AST01@AST0108"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" 
+                    PopOutImageUrl="~/Icons/16-arrow-right.png" Text="編修" Value="編修">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" 
+                        PopOutImageUrl="~/Icons/16-circle-blue.png" Text="固定資產移轉作業" 
+                        Value="AST01@AST0102"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="主設備與備品設備編修" 
+                        Value="AST01@AST0104"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="資產保險查詢編修" 
+                        Value="AST01@AST0107"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="固定資產報廢備註編修" 
+                        Value="AST01@AST0112"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" 
+                    PopOutImageUrl="~/Icons/16-arrow-right.png" Text="報表" Value="報表">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="財產盤點清冊" 
+                        Value="AST01@AST0105"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="資產保險續保調查表" 
+                        Value="AST01@AST0106"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="固定資產結存" 
+                        Value="AST01@AST0109"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="財產報廢單" 
+                        Value="AST01@AST0110"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="財產驗收入帳單" 
+                        Value="AST01@AST0111"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="返回首頁" 
+                    
+                    Value="99,Stock01"></asp:MenuItem>
+            </Items>
+        </asp:Menu>--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

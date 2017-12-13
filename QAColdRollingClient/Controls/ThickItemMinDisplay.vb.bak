@@ -1,0 +1,159 @@
+﻿Public Class ThickItemMinDisplay
+
+#Region "父控主制項 屬性:ParentMainControl"
+    Private _ParentMainControl As MainControl
+    ''' <summary>
+    ''' 父控主制項
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Property ParentMainControl As MainControl
+        Get
+            Return _ParentMainControl
+        End Get
+        Set(value As MainControl)
+            _ParentMainControl = value
+        End Set
+    End Property
+#End Region
+#Region "缺陷資料 屬性:QAThicknessRecordData"
+    Private _QAThicknessRecordData As QAThickness
+    ''' <summary>
+    ''' 缺陷資料
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Property QAThicknessRecordData As QAThickness
+        Get
+            Return _QAThicknessRecordData
+        End Get
+        Set(value As QAThickness)
+            _QAThicknessRecordData = value
+            If IsNothing(_QAThicknessRecordData) Then
+                lbItemNumber.Text = "--"
+                lbthickness.Text = "--"
+                lbthickness60.Text = "--"
+                lbWidth.Text = "--"
+                lbLength.Text = "--"
+            Else
+                With _QAThicknessRecordData
+                    lbthickness.Text = .Thick
+                    lbthickness60.Text = .Thick60
+                    lbWidth.Text = .Width
+                    lbLength.Text = .Length
+                End With
+            End If
+        End Set
+    End Property
+
+#End Region
+#Region "項次 屬性:ItemNumber"
+    ''' <summary>
+    ''' 項次
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Property ItemNumber As String
+        Get
+            Return lbItemNumber.Text
+        End Get
+        Set(value As String)
+            lbItemNumber.Text = value
+        End Set
+    End Property
+#End Region
+#Region "是否要顯示抬頭 屬性:IsWillShowTitle"
+    Private _IsWillShowTitle As Boolean = True
+    Public Property IsWillShowTitle As Boolean
+        Get
+            Return _IsWillShowTitle
+        End Get
+        Set(value As Boolean)
+            _IsWillShowTitle = value
+            If _IsWillShowTitle Then
+                TableLayoutPanel1.RowStyles(0).Height = 50
+            Else
+                TableLayoutPanel1.RowStyles(0).Height = 0
+            End If
+        End Set
+    End Property
+#End Region
+#Region "是否可以編修 屬性:IsCanEdit"
+    Private _IsCanEdit As Boolean = False
+    ''' <summary>
+    ''' 是否可以編修
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Property IsCanEdit As Boolean
+        Get
+            Return _IsCanEdit
+        End Get
+        Set(value As Boolean)
+            _IsCanEdit = value
+            If _IsCanEdit Then
+                Me.BackColor = Color.LightGreen
+            Else
+                Me.BackColor = Color.LightGray
+            End If
+        End Set
+    End Property
+#End Region
+
+#Region "傳送按鈕命令 列舉:ButtonTypeEnum"
+    ''' <summary>
+    ''' 傳送按鈕命令
+    ''' </summary>
+    ''' <remarks></remarks>
+    Public Enum ButtonTypeEnum
+        ThickButton = 1
+        WidtheButton = 2
+        LengthButton = 3
+        ThickButton60 = 4
+    End Enum
+#End Region
+
+    Public Event ControlMouseDownClick(ByVal Sender As ThickItemMinDisplay, e As MouseEventArgs, ByVal SendButtonType As ButtonTypeEnum)
+
+    Sub New(ByVal SetQAThickness As QAThickness, ByVal SetParentMainControl As MainControl)
+        ' 此為設計工具所需的呼叫。
+        InitializeComponent()
+
+        ' 在 InitializeComponent() 呼叫之後加入任何初始設定。
+        Me.IsCanEdit = False
+        Me.ParentMainControl = SetParentMainControl
+        Me.QAThicknessRecordData = SetQAThickness
+        lbthickness.Visible = Not ({"BAL", "APL2"}.Contains(ParentMainControl.EditStationName))
+        lb25.Text = IIf(lbthickness.Visible, "距邊25厚", "-----")
+    End Sub
+
+    Private Sub ThickItemMinDisplay_Load(sender As Object, e As EventArgs) Handles Me.Load
+        For Each EachControl As Control In TableLayoutPanel1.Controls
+            AddHandler EachControl.MouseDown, AddressOf ThickItemMinDisplay_MouseDown
+        Next
+        AddHandler TableLayoutPanel1.MouseDown, AddressOf ThickItemMinDisplay_MouseDown
+
+    End Sub
+
+    Private Sub ThickItemMinDisplay_MouseDown(sender As Object, e As MouseEventArgs) Handles Me.MouseDown
+        If Not IsCanEdit Then
+            Exit Sub
+        End If
+        Select Case True
+            Case sender Is lbthickness
+                RaiseEvent ControlMouseDownClick(Me, e, ButtonTypeEnum.ThickButton)
+            Case sender Is lbthickness60
+                RaiseEvent ControlMouseDownClick(Me, e, ButtonTypeEnum.ThickButton60)
+            Case sender Is lbWidth
+                RaiseEvent ControlMouseDownClick(Me, e, ButtonTypeEnum.WidtheButton)
+            Case sender Is lbLength
+                RaiseEvent ControlMouseDownClick(Me, e, ButtonTypeEnum.LengthButton)
+        End Select
+    End Sub
+
+
+End Class

@@ -1,0 +1,60 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainMaster.master.vb" Inherits="IM.MainMaster" %>
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <cc1:ucAuthorizeButton ID="UcAuthorizeButton1" runat="server" 
+                OpenControlPath="Portalsit@StartContent.aspx" Text="返回主選單" 
+                CssClass="Button1" />
+        <cc1:ucAuthorizeButton ID="UcAuthorizeButton2" runat="server" 
+                OpenControlPath="IM@Default.aspx" Text="返回系統選單" CssClass="Button1" />
+<%--<asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Height="18px">
+                <Items>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="基本資料編修" 
+                    Value="基本資料編修" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="1.訊息定義編修" 
+                            Value="1,IM01@IM0104"></asp:MenuItem>
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="2.站台編修" 
+                            Value="1,IM01@IM0102"></asp:MenuItem>
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="3.站台群組編修" 
+                            Value="1,IM01@IM0103"></asp:MenuItem>
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="4.站台使用者編修" 
+                            Value="1,IM01@IM0101"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" 
+                        PopOutImageUrl="~/Icons/16-arrow-right.png" Text="對應" Value="對應">
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="5.站台群組對應站台" 
+                            Value="2,IM01@IM0107"></asp:MenuItem>
+                        <asp:MenuItem Text="6.站台群組對應訊息定義" Value="2,IM01@IM0105" 
+                            ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="發送訊息" 
+                        Value="3,IM01@IM0109"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="用戶設定即時通知變更" 
+                        Value="3,IM01@IM0110"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="返回首頁" 
+                    
+                        Value="99,IM01">
+                    </asp:MenuItem>
+                </Items>
+            </asp:Menu>--%>
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

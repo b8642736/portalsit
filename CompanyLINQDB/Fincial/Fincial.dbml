@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="FincialBackup" Class="FincialDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SERVER04M;Initial Catalog=Fincial;Persist Security Info=True;User ID=WebLoginUser" SettingsObjectName="CompanyLINQDB.My.MySettings" SettingsPropertyName="Server1_Fincial" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Borrow" Member="Borrow">
+    <Type Name="Borrow">
+      <Column Name="FK_BankNumber" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_ContractKind" Type="System.String" DbType="Char(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BorrowStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="BorrowEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="BorrowMoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="BorrowRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ExchangeRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ProcessEmployee" Type="System.String" DbType="Char(16)" CanBeNull="true" />
+      <Column Name="LCNumber" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="LCCaseNumber" Type="System.String" DbType="Char(14)" CanBeNull="true" />
+      <Column Name="LatePayMonths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RePaymentTimes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RePaymentBankNumber" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PayRateKind" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PayRateMoneyDayNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PayPrincipalMoneyDayNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Memo1" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="PayRateMoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Borrow_BorrowPayMoney" Member="BorrowPayMoney" ThisKey="FK_BankNumber,FK_ContractKind,FK_StartDate,ID" OtherKey="FK_BankNumber,FK_ContractKind,FK_StartDate,FK_BorrowID" Type="BorrowPayMoney" />
+      <Association Name="Borrow_BorrowLCBill" Member="BorrowLCBill" ThisKey="FK_BankNumber,FK_ContractKind,FK_StartDate,ID" OtherKey="FK_BankNumber,FK_ContractKind,FK_StartDate,FK_BorrowID" Type="BorrowLCBill" />
+      <Association Name="BorrowContract_Borrow" Member="BorrowContract" ThisKey="FK_BankNumber,FK_ContractKind,FK_StartDate" OtherKey="BankNumber,ContractKind,StartDate" Type="BorrowContract" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BorrowPayMoney" Member="BorrowPayMoney">
+    <Type Name="BorrowPayMoney">
+      <Column Name="FK_BankNumber" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_ContractKind" Type="System.String" DbType="Char(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_BorrowID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PayMoneyDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PayMoneyTool" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PayBankNumber" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PayToUser" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Column Name="PayUseMoney" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PayRateMoney" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="PayRateMoneyCritdialDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Memo1" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Borrow_BorrowPayMoney" Member="Borrow" ThisKey="FK_BankNumber,FK_ContractKind,FK_StartDate,FK_BorrowID" OtherKey="FK_BankNumber,FK_ContractKind,FK_StartDate,ID" Type="Borrow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BorrowContract" Member="BorrowContract">
+    <Type Name="BorrowContract">
+      <Column Name="BankNumber" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ContractKind" Type="System.String" DbType="Char(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreditMoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CreditMoneyKind" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="ProcessEmployee" Type="System.String" DbType="Char(16)" CanBeNull="true" />
+      <Column Name="LatePayMonths" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RepaymentMonths" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RePaymentTimes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PayRateKind" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayRateMoneyDayNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Memo1" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="RePaymentBankNumber" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="IsHaveParentBorrowContract" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FK_CompostBankNumber" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="FK_CompostContractKind" Type="System.String" DbType="Char(2)" CanBeNull="true" />
+      <Column Name="FK_CompostStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="BorrowContract_Borrow" Member="Borrow" ThisKey="BankNumber,ContractKind,StartDate" OtherKey="FK_BankNumber,FK_ContractKind,FK_StartDate" Type="Borrow" />
+      <Association Name="BorrowContract_BorrowContract" Member="BorrowContract1" ThisKey="BankNumber,ContractKind,StartDate" OtherKey="FK_CompostBankNumber,FK_CompostContractKind,FK_CompostStartDate" Type="BorrowContract" />
+      <Association Name="BorrowContract_BorrowContractRate" Member="BorrowContractRate" ThisKey="BankNumber,ContractKind,StartDate" OtherKey="BankNumber,ContractKind,StartDate" Type="BorrowContractRate" />
+      <Association Name="BorrowContract_BorrowContract" Member="BorrowContract" ThisKey="FK_CompostBankNumber,FK_CompostContractKind,FK_CompostStartDate" OtherKey="BankNumber,ContractKind,StartDate" Type="BorrowContract" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BorrowContractRate" Member="BorrowContractRate">
+    <Type Name="BorrowContractRate">
+      <Column Name="BankNumber" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ContractKind" Type="System.String" DbType="Char(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RateStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RateEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="BorrowContract_BorrowContractRate" Member="BorrowContract" ThisKey="BankNumber,ContractKind,StartDate" OtherKey="BankNumber,ContractKind,StartDate" Type="BorrowContract" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BorrowLCBill" Member="BorrowLCBill">
+    <Type Name="BorrowLCBill">
+      <Column Name="FK_BankNumber" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_ContractKind" Type="System.String" DbType="Char(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_BorrowID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DebtRaiseDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsReceiveBankNotify" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="BillStartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="BillEndDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UseMoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="BillRate" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ExchangeRage" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="BorrowLCBill_BorrowLCBillPayMoney" Member="BorrowLCBillPayMoney" ThisKey="FK_BankNumber,FK_ContractKind,FK_StartDate,FK_BorrowID,ID" OtherKey="FK_BankNumber,FK_ContractKind,FK_StartDate,FK_BorrowID,FK_BorrowLCBillID" Type="BorrowLCBillPayMoney" />
+      <Association Name="Borrow_BorrowLCBill" Member="Borrow" ThisKey="FK_BankNumber,FK_ContractKind,FK_StartDate,FK_BorrowID" OtherKey="FK_BankNumber,FK_ContractKind,FK_StartDate,ID" Type="Borrow" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BorrowLCBillPayMoney" Member="BorrowLCBillPayMoney">
+    <Type Name="BorrowLCBillPayMoney">
+      <Column Name="FK_BankNumber" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_ContractKind" Type="System.String" DbType="Char(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_BorrowID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_BorrowLCBillID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PayMoneyDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PayUseMoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PayRateMoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="PayRateMoneyCritdialDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ExchangeRate" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="IsNoPayMoneyAndUse" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="BorrowLCBill_BorrowLCBillPayMoney" Member="BorrowLCBill" ThisKey="FK_BankNumber,FK_ContractKind,FK_StartDate,FK_BorrowID,FK_BorrowLCBillID" OtherKey="FK_BankNumber,FK_ContractKind,FK_StartDate,FK_BorrowID,ID" Type="BorrowLCBill" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

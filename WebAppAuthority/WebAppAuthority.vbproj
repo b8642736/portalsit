@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2648750-FB34-452A-B768-FE800FF6622A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebAppAuthority</RootNamespace>
+    <AssemblyName>WebAppAuthority</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebAppAuthority.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebAppAuthority.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20229.20821, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CCMailExcuteForm.aspx" />
+    <Content Include="Control\CCMailExcute\CCMailExcute_LogView.ascx" />
+    <Content Include="Control\CCMailExcute\CCMailExcute_Edit.ascx" />
+    <Content Include="Control\CCMailExcute\CCMailExcute_Synchronize.ascx" />
+    <Content Include="Control\CCMailExcute\CCMailExcute_Main.ascx" />
+    <Content Include="Control\CCMailPWD\CCMailPWD_Main.ascx" />
+    <Content Include="Control\CCMailPWD\CCMailPWD_Edit.ascx" />
+    <Content Include="Control\Common.css" />
+    <Content Include="Control\EmployeeSearch.ascx" />
+    <Content Include="Control\SPMPasswordSearch.ascx" />
+    <Content Include="Control\WebSystemEdit.ascx" />
+    <Content Include="Control\WebSystemFunctionEdit.ascx" />
+    <Content Include="CSS\Default.css" />
+    <Content Include="CSS\MainMaster.css" />
+    <Content Include="CCMailPWDForm.aspx" />
+    <Content Include="SPMPasswordSearchForm.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCMailExcuteForm.aspx.designer.vb">
+      <DependentUpon>CCMailExcuteForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CCMailExcuteForm.aspx.vb">
+      <DependentUpon>CCMailExcuteForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ChangeWebSitByAuthority.vb" />
+    <Compile Include="Control\AllAuthoritySearch\AllAuthoritySearchDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllAuthoritySearchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Control\AllAuthoritySearch\WebUserOrIPAllAuthoritySearch.ascx.designer.vb">
+      <DependentUpon>WebUserOrIPAllAuthoritySearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\AllAuthoritySearch\WebUserOrIPAllAuthoritySearch.ascx.vb">
+      <DependentUpon>WebUserOrIPAllAuthoritySearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\CCMailExcute\CCMailExcute_LogView.ascx.designer.vb">
+      <DependentUpon>CCMailExcute_LogView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CCMailExcute\CCMailExcute_LogView.ascx.vb">
+      <DependentUpon>CCMailExcute_LogView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\CCMailExcute\CCMailExcute_Edit.ascx.designer.vb">
+      <DependentUpon>CCMailExcute_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CCMailExcute\CCMailExcute_Edit.ascx.vb">
+      <DependentUpon>CCMailExcute_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\CCMailExcute\CCMailExcute_Synchronize.ascx.designer.vb">
+      <DependentUpon>CCMailExcute_Synchronize.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CCMailExcute\CCMailExcute_Synchronize.ascx.vb">
+      <DependentUpon>CCMailExcute_Synchronize.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\CCMailExcute\CCMailExcute_Main.ascx.designer.vb">
+      <DependentUpon>CCMailExcute_Main.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CCMailExcute\CCMailExcute_Main.ascx.vb">
+      <DependentUpon>CCMailExcute_Main.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\CCMailPWD\CCMailPWD_Main.ascx.designer.vb">
+      <DependentUpon>CCMailPWD_Main.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CCMailPWD\CCMailPWD_Main.ascx.vb">
+      <DependentUpon>CCMailPWD_Main.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\CCMailPWD\CCMailPWD_Edit.ascx.designer.vb">
+      <DependentUpon>CCMailPWD_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\CCMailPWD\CCMailPWD_Edit.ascx.vb">
+      <DependentUpon>CCMailPWD_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\CCMail_Model.vb" />
+    <Compile Include="Control\ClassDBDataContext.vb" />
+    <Compile Include="Control\ClientPCSearch.ascx.designer.vb">
+      <DependentUpon>ClientPCSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ClientPCSearch.ascx.vb">
+      <DependentUpon>ClientPCSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\EmployeeSearch.ascx.designer.vb">
+      <DependentUpon>EmployeeSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\EmployeeSearch.ascx.vb">
+      <DependentUpon>EmployeeSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\GroupSearch.ascx.designer.vb">
+      <DependentUpon>GroupSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\GroupSearch.ascx.vb">
+      <DependentUpon>GroupSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\SPMPasswordSearch.ascx.designer.vb">
+      <DependentUpon>SPMPasswordSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SPMPasswordSearch.ascx.vb">
+      <DependentUpon>SPMPasswordSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\WebClientPCAuthorityEdit.ascx.designer.vb">
+      <DependentUpon>WebClientPCAuthorityEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebClientPCAuthorityEdit.ascx.vb">
+      <DependentUpon>WebClientPCAuthorityEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\WebClientPCEdit.ascx.designer.vb">
+      <DependentUpon>WebClientPCEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebClientPCEdit.ascx.vb">
+      <DependentUpon>WebClientPCEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\WebGroupAuthorityEdit.ascx.designer.vb">
+      <DependentUpon>WebGroupAuthorityEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebGroupAuthorityEdit.ascx.vb">
+      <DependentUpon>WebGroupAuthorityEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\WebGroupEdit.ascx.designer.vb">
+      <DependentUpon>WebGroupEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebGroupEdit.ascx.vb">
+      <DependentUpon>WebGroupEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\WebMemberForWebGroup.ascx.designer.vb">
+      <DependentUpon>WebMemberForWebGroup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebMemberForWebGroup.ascx.vb">
+      <DependentUpon>WebMemberForWebGroup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\WebUserAuthorityCopy.ascx.designer.vb">
+      <DependentUpon>WebUserAuthorityCopy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebUserAuthorityCopy.ascx.vb">
+      <DependentUpon>WebUserAuthorityCopy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\WebUserAuthorityEdit.ascx.designer.vb">
+      <DependentUpon>WebUserAuthorityEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebUserAuthorityEdit.ascx.vb">
+      <DependentUpon>WebUserAuthorityEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\WebUserEdit.ascx.designer.vb">
+      <DependentUpon>WebUserEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebUserEdit.ascx.vb">
+      <DependentUpon>WebUserEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FilterMenuForAuthority.vb" />
+    <Compile Include="CCMailPWDForm.aspx.designer.vb">
+      <DependentUpon>CCMailPWDForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CCMailPWDForm.aspx.vb">
+      <DependentUpon>CCMailPWDForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SPMPasswordSearchForm.aspx.designer.vb">
+      <DependentUpon>SPMPasswordSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SPMPasswordSearchForm.aspx.vb">
+      <DependentUpon>SPMPasswordSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UserDefineControl\ucAuthorizeButton.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValidAuthorityModule.vb" />
+    <Compile Include="WebAuthorityFailPage.aspx.designer.vb">
+      <DependentUpon>WebAuthorityFailPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAuthorityFailPage.aspx.vb">
+      <DependentUpon>WebAuthorityFailPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebClientPC.aspx.designer.vb">
+      <DependentUpon>WebClientPC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebClientPC.aspx.vb">
+      <DependentUpon>WebClientPC.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebClientPCAuthority.aspx.designer.vb">
+      <DependentUpon>WebClientPCAuthority.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebClientPCAuthority.aspx.vb">
+      <DependentUpon>WebClientPCAuthority.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebGroup.aspx.designer.vb">
+      <DependentUpon>WebGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebGroup.aspx.vb">
+      <DependentUpon>WebGroup.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebGroupAuthority.aspx.designer.vb">
+      <DependentUpon>WebGroupAuthority.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebGroupAuthority.aspx.vb">
+      <DependentUpon>WebGroupAuthority.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebMemberForGroup.aspx.designer.vb">
+      <DependentUpon>WebMemberForGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebMemberForGroup.aspx.vb">
+      <DependentUpon>WebMemberForGroup.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebService\WebAppAuthorityChangeDBService.asmx.vb">
+      <DependentUpon>WebAppAuthorityChangeDBService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebSystem.aspx.designer.vb">
+      <DependentUpon>WebSystem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebSystem.aspx.vb">
+      <DependentUpon>WebSystem.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Control\WebSystemEdit.ascx.designer.vb">
+      <DependentUpon>WebSystemEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebSystemEdit.ascx.vb">
+      <DependentUpon>WebSystemEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\WebSystemFunctionEdit.ascx.designer.vb">
+      <DependentUpon>WebSystemFunctionEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\WebSystemFunctionEdit.ascx.vb">
+      <DependentUpon>WebSystemFunctionEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WebAuthorityMaster.Master.designer.vb">
+      <DependentUpon>WebAuthorityMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebAuthorityMaster.Master.vb">
+      <DependentUpon>WebAuthorityMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebSystemFunction.aspx.designer.vb">
+      <DependentUpon>WebSystemFunction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebSystemFunction.aspx.vb">
+      <DependentUpon>WebSystemFunction.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebUser.aspx.designer.vb">
+      <DependentUpon>WebUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUser.aspx.vb">
+      <DependentUpon>WebUser.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebUserAuthority.aspx.designer.vb">
+      <DependentUpon>WebUserAuthority.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserAuthority.aspx.vb">
+      <DependentUpon>WebUserAuthority.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebUserAuthorityCopys.aspx.designer.vb">
+      <DependentUpon>WebUserAuthorityCopys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserAuthorityCopys.aspx.vb">
+      <DependentUpon>WebUserAuthorityCopys.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebUserOrIPAllAuthoritySearchForm.aspx.designer.vb">
+      <DependentUpon>WebUserOrIPAllAuthoritySearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebUserOrIPAllAuthoritySearchForm.aspx.vb">
+      <DependentUpon>WebUserOrIPAllAuthoritySearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Control\AllAuthoritySearch\AllAuthoritySearchDataSet.xsc">
+      <DependentUpon>AllAuthoritySearchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Control\AllAuthoritySearch\AllAuthoritySearchDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllAuthoritySearchDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Control\AllAuthoritySearch\AllAuthoritySearchDataSet.xss">
+      <DependentUpon>AllAuthoritySearchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\設定檔1.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Control\AllAuthoritySearch\WebUserOrIPAllAuthoritySearch.ascx" />
+    <Content Include="Control\ClientPCSearch.ascx" />
+    <Content Include="Control\GroupSearch.ascx" />
+    <Content Include="Control\WebClientPCAuthorityEdit.ascx" />
+    <Content Include="Control\WebClientPCEdit.ascx" />
+    <Content Include="Control\WebGroupAuthorityEdit.ascx" />
+    <Content Include="Control\WebGroupEdit.ascx" />
+    <Content Include="Control\WebMemberForWebGroup.ascx" />
+    <Content Include="Control\WebUserAuthorityCopy.ascx" />
+    <Content Include="Control\WebUserAuthorityEdit.ascx" />
+    <Content Include="Control\WebUserEdit.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="WebAuthorityFailPage.aspx" />
+    <Content Include="WebClientPC.aspx" />
+    <Content Include="WebClientPCAuthority.aspx" />
+    <Content Include="WebGroup.aspx" />
+    <Content Include="WebGroupAuthority.aspx" />
+    <Content Include="WebMemberForGroup.aspx" />
+    <Content Include="WebService\WebAppAuthorityChangeDBService.asmx" />
+    <Content Include="WebSystem.aspx" />
+    <Content Include="Icons\16-arrow-right.png" />
+    <Content Include="Icons\16-circle-blue.png" />
+    <Content Include="WebAuthorityMaster.Master" />
+    <Content Include="WebSystemFunction.aspx" />
+    <Content Include="WebUser.aspx" />
+    <Content Include="WebUserAuthority.aspx" />
+    <Content Include="WebUserAuthorityCopys.aspx" />
+    <Content Include="WebUserOrIPAllAuthoritySearchForm.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppAuthority\AppAuthority.vbproj">
+      <Project>{692d951b-281a-4558-a02b-be9c412754fb}</Project>
+      <Name>AppAuthority</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CompanyLINQDB\CompanyLINQDB.vbproj">
+      <Project>{F24E97F1-D320-4779-8C6C-8C7CC65E170D}</Project>
+      <Name>CompanyLINQDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CompanyORMDB\CompanyORMDB.vbproj">
+      <Project>{ac01c38e-b385-4af8-b595-10e78ce211ad}</Project>
+      <Name>CompanyORMDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicClassLibrary\PublicClassLibrary.vbproj">
+      <Project>{c30fb035-8308-4aaa-a9dc-3453a08f5411}</Project>
+      <Name>PublicClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UCAjaxServerControl1\UCAjaxServerControl1.vbproj">
+      <Project>{2790148a-6bbf-49cf-b2f3-e3966798bced}</Project>
+      <Name>UCAjaxServerControl1</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62814</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/WebAppAuthority</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

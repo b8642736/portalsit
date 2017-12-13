@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EISDataSet" targetNamespace="http://tempuri.org/EISDataSet.xsd" xmlns:mstns="http://tempuri.org/EISDataSet.xsd" xmlns="http://tempuri.org/EISDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EISDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EISDataSet" msprop:Generator_UserDSName="EISDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="StockStatic" msprop:Generator_TableClassName="StockStaticDataTable" msprop:Generator_TableVarName="tableStockStatic" msprop:Generator_RowChangedName="StockStaticRowChanged" msprop:Generator_TablePropName="StockStatic" msprop:Generator_RowDeletingName="StockStaticRowDeleting" msprop:Generator_RowChangingName="StockStaticRowChanging" msprop:Generator_RowEvHandlerName="StockStaticRowChangeEventHandler" msprop:Generator_RowDeletedName="StockStaticRowDeleted" msprop:Generator_RowClassName="StockStaticRow" msprop:Generator_UserTableName="StockStatic" msprop:Generator_RowEvArgName="StockStaticRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="鋼種" msprop:Generator_ColumnVarNameInTable="column鋼種" msprop:Generator_ColumnPropNameInRow="鋼種" msprop:Generator_ColumnPropNameInTable="鋼種Column" msprop:Generator_UserColumnName="鋼種" type="xs:string" minOccurs="0" />
+              <xs:element name="繳庫天數" msprop:Generator_ColumnVarNameInTable="column繳庫天數" msprop:Generator_ColumnPropNameInRow="繳庫天數" msprop:Generator_ColumnPropNameInTable="繳庫天數Column" msprop:Generator_UserColumnName="繳庫天數" type="xs:string" minOccurs="0" />
+              <xs:element name="有主內銷" msprop:Generator_ColumnVarNameInTable="column有主內銷" msprop:Generator_ColumnPropNameInRow="有主內銷" msprop:Generator_ColumnPropNameInTable="有主內銷Column" msprop:Generator_UserColumnName="有主內銷" type="xs:string" minOccurs="0" />
+              <xs:element name="有主外銷" msprop:Generator_ColumnVarNameInTable="column有主外銷" msprop:Generator_ColumnPropNameInRow="有主外銷" msprop:Generator_ColumnPropNameInTable="有主外銷Column" msprop:Generator_UserColumnName="有主外銷" type="xs:string" minOccurs="0" />
+              <xs:element name="有主小計" msprop:Generator_ColumnVarNameInTable="column有主小計" msprop:Generator_ColumnPropNameInRow="有主小計" msprop:Generator_ColumnPropNameInTable="有主小計Column" msprop:Generator_UserColumnName="有主小計" type="xs:string" minOccurs="0" />
+              <xs:element name="無主內銷" msprop:Generator_ColumnVarNameInTable="column無主內銷" msprop:Generator_ColumnPropNameInRow="無主內銷" msprop:Generator_ColumnPropNameInTable="無主內銷Column" msprop:Generator_UserColumnName="無主內銷" type="xs:string" minOccurs="0" />
+              <xs:element name="無主外銷" msprop:Generator_ColumnVarNameInTable="column無主外銷" msprop:Generator_ColumnPropNameInRow="無主外銷" msprop:Generator_ColumnPropNameInTable="無主外銷Column" msprop:Generator_UserColumnName="無主外銷" type="xs:string" minOccurs="0" />
+              <xs:element name="無主小計" msprop:Generator_ColumnVarNameInTable="column無主小計" msprop:Generator_ColumnPropNameInRow="無主小計" msprop:Generator_ColumnPropNameInTable="無主小計Column" msprop:Generator_UserColumnName="無主小計" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SellStatic" msprop:Generator_TableClassName="SellStaticDataTable" msprop:Generator_TableVarName="tableSellStatic" msprop:Generator_TablePropName="SellStatic" msprop:Generator_RowDeletingName="SellStaticRowDeleting" msprop:Generator_RowChangingName="SellStaticRowChanging" msprop:Generator_RowEvHandlerName="SellStaticRowChangeEventHandler" msprop:Generator_RowDeletedName="SellStaticRowDeleted" msprop:Generator_UserTableName="SellStatic" msprop:Generator_RowChangedName="SellStaticRowChanged" msprop:Generator_RowEvArgName="SellStaticRowChangeEvent" msprop:Generator_RowClassName="SellStaticRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="鋼種" msprop:Generator_ColumnVarNameInTable="column鋼種" msprop:Generator_ColumnPropNameInRow="鋼種" msprop:Generator_ColumnPropNameInTable="鋼種Column" msprop:Generator_UserColumnName="鋼種" type="xs:string" minOccurs="0" />
+              <xs:element name="CR_HR" msprop:Generator_ColumnVarNameInTable="columnCR_HR" msprop:Generator_ColumnPropNameInRow="CR_HR" msprop:Generator_ColumnPropNameInTable="CR_HRColumn" msprop:Generator_UserColumnName="CR_HR" type="xs:string" minOccurs="0" />
+              <xs:element name="數量" msprop:Generator_ColumnVarNameInTable="column數量" msprop:Generator_ColumnPropNameInRow="數量" msprop:Generator_ColumnPropNameInTable="數量Column" msprop:Generator_UserColumnName="數量" type="xs:string" minOccurs="0" />
+              <xs:element name="單價" msprop:Generator_ColumnVarNameInTable="column單價" msprop:Generator_ColumnPropNameInRow="單價" msprop:Generator_ColumnPropNameInTable="單價Column" msprop:Generator_UserColumnName="單價" type="xs:string" minOccurs="0" />
+              <xs:element name="金額" msprop:Generator_ColumnVarNameInTable="column金額" msprop:Generator_ColumnPropNameInRow="金額" msprop:Generator_ColumnPropNameInTable="金額Column" msprop:Generator_UserColumnName="金額" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

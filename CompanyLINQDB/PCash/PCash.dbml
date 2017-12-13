@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="QCdb01" Class="PCashDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=Server0sm;Initial Catalog=QCdb01;Persist Security Info=True;User ID=test01" SettingsObjectName="CompanyLINQDB.My.MySettings" SettingsPropertyName="Server1_QCdb01" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.PCash3" Member="PCash3">
+    <Type Name="PCash3">
+      <Column Name="PC1RecDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PC1Number" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PC2RecDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PC2Number" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="PCash2_PCash3" Member="PCash2" ThisKey="PC2RecDate,PC2Number" OtherKey="RecDate,Number" Type="PCash2" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PCash1_PCash3" Member="PCash1" ThisKey="PC1RecDate,PC1Number" OtherKey="RecDate,Number" Type="PCash1" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PCash2" Member="PCash2">
+    <Type Name="PCash2">
+      <Column Name="RecDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TicketNumber" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="ToCashDateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsToCashed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsNewYearStartTicket" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NewYearStartMoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SaveTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PCash2_PCash3" Member="PCash3" ThisKey="RecDate,Number" OtherKey="PC2RecDate,PC2Number" Type="PCash3" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PCash1" Member="PCash1">
+    <Type Name="PCash1">
+      <Column Name="RecDate" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Number" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DepCode" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Descript" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PutMoney" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="SaveTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PCash1_PCash3" Member="PCash3" ThisKey="RecDate,Number" OtherKey="PC1RecDate,PC1Number" Type="PCash3" />
+      <Association Name="PCash4_PCash1" Member="PCash4" ThisKey="DepCode" OtherKey="DepCode" Type="PCash4" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PCash4" Member="PCash4">
+    <Type Name="PCash4">
+      <Column Name="DepCode" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DepName" Type="System.String" DbType="Char(30)" CanBeNull="true" />
+      <Association Name="PCash4_PCash1" Member="PCash1" ThisKey="DepCode" OtherKey="DepCode" Type="PCash1" />
+    </Type>
+  </Table>
+</Database>

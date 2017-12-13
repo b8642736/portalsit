@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F24E97F1-D320-4779-8C6C-8C7CC65E170D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CompanyLINQDB</RootNamespace>
+    <AssemblyName>CompanyLINQDB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CompanyLINQDB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CompanyLINQDB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Reflection" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Business.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Business.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Business\GuestSues.vb" />
+    <Compile Include="Business\GuestSuesWatchRecord.vb" />
+    <Compile Include="EAF\EAF.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EAF.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EAF\EAFT1.vb" />
+    <Compile Include="EAF\EAFT2_Analysis.vb" />
+    <Compile Include="EAF\EAFT2_OperatorType.vb" />
+    <Compile Include="EAF\EAFT2_Wait.vb" />
+    <Compile Include="Fincial\Borrow.vb" />
+    <Compile Include="Fincial\BorrowContract.vb" />
+    <Compile Include="Fincial\BorrowContractRate.vb" />
+    <Compile Include="Fincial\BorrowLCBill.vb" />
+    <Compile Include="Fincial\BorrowLCBillPayMoney.vb" />
+    <Compile Include="Fincial\BorrowPayMoney.vb" />
+    <Compile Include="Fincial\Fincial.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fincial.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Fincial\Fincial.vb">
+      <DependentUpon>Fincial.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Fincial\IBorrowDBObject.vb" />
+    <Compile Include="Fincial\IBorrowPayMoneyDBObject.vb" />
+    <Compile Include="Qcdb01\MailMsgEdit.vb" />
+    <Compile Include="Qcdb01\Qcdb01.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Qcdb01.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="SMP\IM\IM.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IM.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="SMP\IM\MessageToSiteUsers.vb" />
+    <Compile Include="SMP\IM\RemoteServer.vb" />
+    <Compile Include="SMP\IM\SiteGroupToMessage.vb" />
+    <Compile Include="SMP\IM\SiteGroupToSite.vb" />
+    <Compile Include="SMP\IM\SiteUser.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OtherOperator\AS400QueryRecord.vb" />
+    <Compile Include="OtherOperator\MessageBoard.vb" />
+    <Compile Include="OtherOperator\OtherOperator.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OtherOperator.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PCash\PCash.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PCash.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PCash\PCash.vb">
+      <DependentUpon>PCash.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="PCash\PCash1.vb" />
+    <Compile Include="PublicModule1.vb" />
+    <Compile Include="SMP\SMP.designer.vb">
+      <DependentUpon>SMP.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SMP\SMP.vb">
+      <DependentUpon>SMP.dbml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SMP\SMPMethodToSMPStandardSample.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SMP\分析資料.vb" />
+    <Compile Include="SMP\標準樣本接收資料OneSample.vb" />
+    <Compile Include="SMP\標準樣本接收資料OX.vb" />
+    <Compile Include="SMP\製程判定.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SMP\標準樣本接收資料CS.vb" />
+    <Compile Include="STK\STK.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STK.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="WebAPPAuthority\WebAPPAuthority.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WebAPPAuthority.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="WebAPPAuthority\WebAPPAuthority.vb">
+      <DependentUpon>WebAPPAuthority.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="WebAPPAuthority\WebGroupAccount.vb" />
+    <Compile Include="WebAPPAuthority\WebLoginAccount.vb" />
+    <Compile Include="WebAPPAuthority\WebClientPCAccount.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Qcdb01\Qcdb01.dbml.layout">
+      <DependentUpon>Qcdb01.dbml</DependentUpon>
+    </None>
+    <None Include="Business\Business.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Business.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EAF\EAF.dbml.layout">
+      <DependentUpon>EAF.dbml</DependentUpon>
+    </None>
+    <None Include="Fincial\Fincial.dbml.layout">
+      <DependentUpon>Fincial.dbml</DependentUpon>
+    </None>
+    <None Include="Qcdb01\Qcdb01.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Qcdb01.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SMP\IM\IM.dbml.layout">
+      <DependentUpon>IM.dbml</DependentUpon>
+    </None>
+    <None Include="Business\Business.dbml.layout">
+      <DependentUpon>Business.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="STK\STK.dbml.layout">
+      <DependentUpon>STK.dbml</DependentUpon>
+    </None>
+    <None Include="PCash\PCash.dbml.layout">
+      <DependentUpon>PCash.dbml</DependentUpon>
+    </None>
+    <None Include="OtherOperator\OtherOperator.dbml.layout">
+      <DependentUpon>OtherOperator.dbml</DependentUpon>
+    </None>
+    <None Include="WebAPPAuthority\WebAPPAuthority.dbml.layout">
+      <DependentUpon>WebAPPAuthority.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="EAF\EAF.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EAF.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Fincial\Fincial.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Fincial.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="OtherOperator\OtherOperator.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OtherOperator.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PCash\PCash.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PCash.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="STK\STK.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>STK.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WebAPPAuthority\WebAPPAuthority.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>WebAPPAuthority.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SMP\IM\IM.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>IM.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\DataSources\System.Data.DataTable.datasource" />
+    <None Include="SMP\SMP.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SMP.designer.vb</LastGenOutput>
+    </None>
+    <None Include="SMP\SMP.dbml.layout">
+      <DependentUpon>SMP.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyORMDB\CompanyORMDB.vbproj">
+      <Project>{ac01c38e-b385-4af8-b595-10e78ce211ad}</Project>
+      <Name>CompanyORMDB</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

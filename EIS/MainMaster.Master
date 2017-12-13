@@ -1,0 +1,29 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainMaster.master.vb" Inherits="EIS.MainMaster" %>
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/Default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <%--<asp:ScriptManager ID="ScriptManager1" runat="server" />--%>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true"/>
+
+        <cc1:ucAuthorizeButton ID="ucAuthorizeButton1" runat="server" OpenControlPath="Portalsit@StartContent.aspx"
+            Text="返回主選單" CssClass="Button1"/>
+        <cc1:ucAuthorizeButton ID="ucAuthorizeButton2" runat="server" OpenControlPath="EIS@Default.aspx"
+            Text="返回系統選單" CssClass="Button1" />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

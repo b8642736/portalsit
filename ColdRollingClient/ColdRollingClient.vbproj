@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ECF9D0F3-AD68-4EE5-B981-CE26023DE1FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ColdRollingClient.My.MyApplication</StartupObject>
+    <RootNamespace>ColdRollingClient</RootNamespace>
+    <AssemblyName>ColdRollingClient</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <PublishUrl>C:\WebRunning\ColdRollingClient\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://10.1.4.12/ColdRollingClient/</InstallUrl>
+    <UpdateUrl>http://10.1.4.12/ColdRollingClient/</UpdateUrl>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>144</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ColdRollingClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ColdRollingClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9979FBA320E102736C24A6CDB591BB727A8C551F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CompanyORMDB.SQLServer.IM" />
+    <Import Include="CompanyORMDB.SQLServer.PPS100LB" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.Linq" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Linq.Expressions" />
+    <Import Include="System.Net.Mail" />
+    <Import Include="System.Text" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColdRollingClientDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ColdRollingClientDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ColdRollingClientDataSet.vb">
+      <DependentUpon>ColdRollingClientDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilAfterRunningProcess\CoilAfterRunningProcess.Designer.vb">
+      <DependentUpon>CoilAfterRunningProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilAfterRunningProcess\CoilAfterRunningProcess.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilBeforeRunningProcess.Designer.vb">
+      <DependentUpon>CoilBeforeRunningProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilBeforeRunningProcess.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilMoveStationEdit.Designer.vb">
+      <DependentUpon>CoilMoveStationEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilMoveStationEdit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilRunningItem.Designer.vb">
+      <DependentUpon>CoilRunningItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilRunningItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilScanAndMachineProcess.Designer.vb">
+      <DependentUpon>CoilScanAndMachineProcess.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilScanAndMachineProcess.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilScanedTreeNode.vb" />
+    <Compile Include="Controls\IStation.vb" />
+    <Compile Include="Controls\L2Talk\L2Message.vb" />
+    <Compile Include="Controls\L2Talk\L2PDOMessage.vb" />
+    <Compile Include="Controls\L2Talk\ReceiveL2PDOMessage.vb" />
+    <Compile Include="Controls\L2Talk\SendPDIToL2.vb" />
+    <Compile Include="Controls\L2Talk\SendStateToL2.vb" />
+    <Compile Include="Controls\L2Talk\ReceiveL2Message.vb" />
+    <Compile Include="Controls\Label\LabelPrint.Designer.vb">
+      <DependentUpon>LabelPrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Label\LabelPrint.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Label\RDLCDirectPrint.vb" />
+    <Compile Include="Controls\Label\ShowLabelPrintDialog.Designer.vb">
+      <DependentUpon>ShowLabelPrintDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Label\ShowLabelPrintDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Label\UnUIPrint.vb" />
+    <Compile Include="Controls\NewDataEdit.Designer.vb">
+      <DependentUpon>NewDataEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NewDataEdit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Older\ControlOlder.Designer.vb">
+      <DependentUpon>ControlOlder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Older\ControlOlder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProcessSchedualRadioButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\QC\IQCControl.vb" />
+    <Compile Include="Controls\QC\QCOthers.Designer.vb">
+      <DependentUpon>QCOthers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QC\QCOthers.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QC\QCSPL.Designer.vb">
+      <DependentUpon>QCSPL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QC\QCSPL.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QC\QCSBL.Designer.vb">
+      <DependentUpon>QCSBL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QC\QCSBL.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\QC\QCTLL.Designer.vb">
+      <DependentUpon>QCTLL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QC\QCTLL.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ShowHistoryProcessDialog.Designer.vb">
+      <DependentUpon>ShowHistoryProcessDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShowHistoryProcessDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ShowOrderDialog.Designer.vb">
+      <DependentUpon>ShowOrderDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShowOrderDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\StationClient.Designer.vb">
+      <DependentUpon>StationClient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationClient.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StationOperationPCRunningState\IStationOperationPCRunningState.vb" />
+    <Compile Include="Controls\StationOperationPCRunningState\ZMLOperationPCRunningState.Designer.vb">
+      <DependentUpon>ZMLOperationPCRunningState.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationOperationPCRunningState\ZMLOperationPCRunningState.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StationRadioButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\APL.Designer.vb">
+      <DependentUpon>APL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\APL.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\BAL.Designer.vb">
+      <DependentUpon>BAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\BAL.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\CPL.Designer.vb">
+      <DependentUpon>CPL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\CPL.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\GPL.Designer.vb">
+      <DependentUpon>GPL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\GPL.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\IStationRunningControl.vb" />
+    <Compile Include="Controls\StationRunningControls\SBL.Designer.vb">
+      <DependentUpon>SBL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\SBL.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\SPL.Designer.vb">
+      <DependentUpon>SPL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\SPL.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\TLL.Designer.vb">
+      <DependentUpon>TLL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\TLL.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\ZML.Designer.vb">
+      <DependentUpon>ZML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StationRunningControls\ZML.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SchedualInformation.Designer.vb">
+      <DependentUpon>SchedualInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SchedualInformation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.vb">
+      <DependentUpon>FormTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TLLForm.Designer.vb">
+      <DependentUpon>TLLForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TLLForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\CoilAfterRunningProcess\CoilAfterRunningProcess.resx">
+      <DependentUpon>CoilAfterRunningProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CoilBeforeRunningProcess.resx">
+      <DependentUpon>CoilBeforeRunningProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CoilMoveStationEdit.resx">
+      <DependentUpon>CoilMoveStationEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CoilRunningItem.resx">
+      <DependentUpon>CoilRunningItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CoilScanAndMachineProcess.resx">
+      <DependentUpon>CoilScanAndMachineProcess.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Label\CoilLabelForProduct.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Label\CoilLabel.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Label\LabelPrint.resx">
+      <DependentUpon>LabelPrint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Label\ShowLabelPrintDialog.resx">
+      <DependentUpon>ShowLabelPrintDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Label\CopyCoilLabel.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NewDataEdit.resx">
+      <DependentUpon>NewDataEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Older\ControlOlder.resx">
+      <DependentUpon>ControlOlder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QC\QCOthers.resx">
+      <DependentUpon>QCOthers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QC\QCSPL.resx">
+      <DependentUpon>QCSPL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QC\QCSBL.resx">
+      <DependentUpon>QCSBL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\QC\QCTLL.resx">
+      <DependentUpon>QCTLL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ShowHistoryProcessDialog.resx">
+      <DependentUpon>ShowHistoryProcessDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ShowOrderDialog.resx">
+      <DependentUpon>ShowOrderDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StationClient.resx">
+      <DependentUpon>StationClient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StationOperationPCRunningState\ZMLOperationPCRunningState.resx">
+      <DependentUpon>ZMLOperationPCRunningState.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StationRunningControls\APL.resx">
+      <DependentUpon>APL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StationRunningControls\BAL.resx">
+      <DependentUpon>BAL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StationRunningControls\CPL.resx">
+      <DependentUpon>CPL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StationRunningControls\GPL.resx">
+      <DependentUpon>GPL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StationRunningControls\SBL.resx">
+      <DependentUpon>SBL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StationRunningControls\SPL.resx">
+      <DependentUpon>SPL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StationRunningControls\TLL.resx">
+      <DependentUpon>TLL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StationRunningControls\ZML.resx">
+      <DependentUpon>ZML.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SchedualInformation.resx">
+      <DependentUpon>SchedualInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TLLForm.resx">
+      <DependentUpon>TLLForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ColdRollingClientDataSet.xsc">
+      <DependentUpon>ColdRollingClientDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ColdRollingClientDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ColdRollingClientDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="ColdRollingClientDataSet.xss">
+      <DependentUpon>ColdRollingClientDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\APL.datasource" />
+    <None Include="My Project\DataSources\CoilScanedTreeNode.datasource" />
+    <None Include="My Project\DataSources\ColdRollingClientDataSet.QCCheckDatasDataTable.datasource" />
+    <None Include="My Project\DataSources\CompanyORMDB.IPPS100LB.IPPSSHAPF.datasource" />
+    <None Include="My Project\DataSources\CompanyORMDB.SLS300LB.SL2CIWPF.datasource" />
+    <None Include="My Project\DataSources\CompanyORMDB.SQLServer.PPS100LB.CoilMoveState.datasource" />
+    <None Include="My Project\DataSources\CompanyORMDB.SQLServer.PPS100LB.OperationPCRunningState.datasource" />
+    <None Include="My Project\DataSources\CompanyORMDB.SQLServer.PPS100LB.PlanProductionDisplay.datasource" />
+    <None Include="My Project\DataSources\CompanyORMDB.SQLServer.PPS100LB.PPSSHAPF.datasource" />
+    <None Include="My Project\DataSources\CompanyORMDB.SQLServer.PPS100LB.RunProcessData.datasource" />
+    <None Include="My Project\DataSources\ControlOlder.datasource" />
+    <None Include="My Project\DataSources\NewDataEdit.datasource" />
+    <None Include="My Project\DataSources\SchedualInformation.datasource" />
+    <None Include="My Project\DataSources\ShowOrderDialog.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyORMDB\CompanyORMDB.vbproj">
+      <Project>{AC01C38E-B385-4AF8-B595-10E78CE211AD}</Project>
+      <Name>CompanyORMDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExWindowControlLibrary\ExWindowControlLibrary.vbproj">
+      <Project>{E1067EEC-8C48-43D0-B893-569679730A63}</Project>
+      <Name>ExWindowControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicClassLibrary\PublicClassLibrary.vbproj">
+      <Project>{c30fb035-8308-4aaa-a9dc-3453a08f5411}</Project>
+      <Name>PublicClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OutputImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barcode.png" />
+    <Content Include="Resources\Coil0.jpg" />
+    <Content Include="Resources\Coil1.jpg" />
+    <Content Include="Resources\Coil2.jpg" />
+    <Content Include="Resources\Coil3.jpg" />
+    <Content Include="Resources\Config1.jpg" />
+    <Content Include="Resources\Delete1.jpg" />
+    <Content Include="Resources\History1.jpg" />
+    <None Include="Resources\History2.jpg" />
+    <Content Include="Resources\Line1.jpg" />
+    <None Include="Resources\OutputImage0.jpg" />
+    <None Include="Resources\order.png" />
+    <Content Include="Resources\Process1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.11.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Report Viewer 2012 Runtime</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.11.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2012 %28%28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Prerequisite</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Prerequisite</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Prerequisite</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Prerequisite</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

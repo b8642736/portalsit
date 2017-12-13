@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CashierDataSet" targetNamespace="http://tempuri.org/CashierDataSet.xsd" xmlns:mstns="http://tempuri.org/CashierDataSet.xsd" xmlns="http://tempuri.org/CashierDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CashierDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CashierDataSet" msprop:Generator_UserDSName="CashierDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CashInDataTable" msprop:Generator_UserTableName="CashInDataTable" msprop:Generator_RowEvArgName="CashInDataTableRowChangeEvent" msprop:Generator_TableVarName="tableCashInDataTable" msprop:Generator_TablePropName="CashInDataTable" msprop:Generator_RowDeletingName="CashInDataTableRowDeleting" msprop:Generator_RowChangingName="CashInDataTableRowChanging" msprop:Generator_RowDeletedName="CashInDataTableRowDeleted" msprop:Generator_RowEvHandlerName="CashInDataTableRowChangeEventHandler" msprop:Generator_TableClassName="CashInDataTableDataTable" msprop:Generator_RowChangedName="CashInDataTableRowChanged" msprop:Generator_RowClassName="CashInDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="收入項目" msprop:Generator_ColumnVarNameInTable="column收入項目" msprop:Generator_ColumnPropNameInRow="收入項目" msprop:Generator_ColumnPropNameInTable="收入項目Column" msprop:Generator_UserColumnName="收入項目" type="xs:string" minOccurs="0" />
+              <xs:element name="六聯單編號" msprop:Generator_ColumnVarNameInTable="column六聯單編號" msprop:Generator_ColumnPropNameInRow="六聯單編號" msprop:Generator_ColumnPropNameInTable="六聯單編號Column" msprop:Generator_UserColumnName="六聯單編號" type="xs:string" minOccurs="0" />
+              <xs:element name="收入金額" msprop:Generator_ColumnVarNameInTable="column收入金額" msprop:Generator_ColumnPropNameInRow="收入金額" msprop:Generator_ColumnPropNameInTable="收入金額Column" msprop:Generator_UserColumnName="收入金額" type="xs:double" minOccurs="0" />
+              <xs:element name="財務收款日" msprop:Generator_ColumnVarNameInTable="column財務收款日" msprop:Generator_ColumnPropNameInRow="財務收款日" msprop:Generator_ColumnPropNameInTable="財務收款日Column" msprop:Generator_UserColumnName="財務收款日" type="xs:string" minOccurs="0" />
+              <xs:element name="摘要" msprop:Generator_ColumnVarNameInTable="column摘要" msprop:Generator_ColumnPropNameInRow="摘要" msprop:Generator_ColumnPropNameInTable="摘要Column" msprop:Generator_UserColumnName="摘要" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CashOutDataTable" msprop:Generator_UserTableName="CashOutDataTable" msprop:Generator_RowEvArgName="CashOutDataTableRowChangeEvent" msprop:Generator_TableVarName="tableCashOutDataTable" msprop:Generator_TablePropName="CashOutDataTable" msprop:Generator_RowDeletingName="CashOutDataTableRowDeleting" msprop:Generator_RowChangingName="CashOutDataTableRowChanging" msprop:Generator_RowDeletedName="CashOutDataTableRowDeleted" msprop:Generator_RowEvHandlerName="CashOutDataTableRowChangeEventHandler" msprop:Generator_TableClassName="CashOutDataTableDataTable" msprop:Generator_RowChangedName="CashOutDataTableRowChanged" msprop:Generator_RowClassName="CashOutDataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="支出科目" msprop:Generator_ColumnVarNameInTable="column支出科目" msprop:Generator_ColumnPropNameInRow="支出科目" msprop:Generator_ColumnPropNameInTable="支出科目Column" msprop:Generator_UserColumnName="支出科目" type="xs:string" minOccurs="0" />
+              <xs:element name="傳票" msprop:Generator_ColumnVarNameInTable="column傳票" msprop:Generator_ColumnPropNameInRow="傳票" msprop:Generator_ColumnPropNameInTable="傳票Column" msprop:Generator_UserColumnName="傳票" type="xs:string" minOccurs="0" />
+              <xs:element name="用途" msprop:Generator_ColumnVarNameInTable="column用途" msprop:Generator_ColumnPropNameInRow="用途" msprop:Generator_ColumnPropNameInTable="用途Column" msprop:Generator_UserColumnName="用途" type="xs:string" minOccurs="0" />
+              <xs:element name="支票金額" msprop:Generator_ColumnVarNameInTable="column支票金額" msprop:Generator_ColumnPropNameInRow="支票金額" msprop:Generator_ColumnPropNameInTable="支票金額Column" msprop:Generator_UserColumnName="支票金額" type="xs:double" minOccurs="0" />
+              <xs:element name="付款日" msprop:Generator_ColumnVarNameInTable="column付款日" msprop:Generator_ColumnPropNameInRow="付款日" msprop:Generator_ColumnPropNameInTable="付款日Column" msprop:Generator_UserColumnName="付款日" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

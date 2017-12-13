@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="IM" Class="IMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SERVER04M;Initial Catalog=IM;Persist Security Info=True;User ID=WebLoginUser" SettingsObjectName="CompanyLINQDB.My.MySettings" SettingsPropertyName="Server1_IM" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Message" Member="Message">
+    <Type Name="Message">
+      <Column Name="ID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MsgText" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsHaveFinalRecieveTime" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FinalRecieveMinuteSpan" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="IsHaveNotSendReplyTime" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NotSendReplyMinuteSpan" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="IsNeedSendEmail" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Message_SiteGroupToMessage" Member="SiteGroupToMessage" ThisKey="ID" OtherKey="FK_MessageID" Type="SiteGroupToMessage" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MessageToFiles" Member="MessageToFiles">
+    <Type Name="MessageToFiles">
+      <Column Name="ID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_MessageID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OrginFileName" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="SaveFileFullPath" Type="System.String" DbType="NChar(200) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Site" Member="Site">
+    <Type Name="Site">
+      <Column Name="ID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteName" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Association Name="Site_SiteGroupToSite" Member="SiteGroupToSite" ThisKey="ID" OtherKey="FK_SiteID" Type="SiteGroupToSite" />
+      <Association Name="Site_SiteUser" Member="SiteUser" ThisKey="ID" OtherKey="FK_SiteID" Type="SiteUser" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SiteGroup" Member="SiteGroup">
+    <Type Name="SiteGroup">
+      <Column Name="ID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupName" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="FK_SiteGroupID" Type="System.String" DbType="NChar(38)" CanBeNull="true" />
+      <Association Name="SiteGroup_SiteGroup" Member="SiteGroup1" ThisKey="ID" OtherKey="FK_SiteGroupID" Type="SiteGroup" />
+      <Association Name="SiteGroup_SiteGroupToMessage" Member="SiteGroupToMessage" ThisKey="ID" OtherKey="FK_SiteGroupID" Type="SiteGroupToMessage" />
+      <Association Name="SiteGroup_SiteGroupToSite" Member="SiteGroupToSite" ThisKey="ID" OtherKey="FK_SiteGroupID" Type="SiteGroupToSite" />
+      <Association Name="SiteGroup_SiteGroup" Member="SiteGroup" ThisKey="FK_SiteGroupID" OtherKey="ID" Type="SiteGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SiteGroupToMessage" Member="SiteGroupToMessage">
+    <Type Name="SiteGroupToMessage">
+      <Column Name="FK_SiteGroupID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_MessageID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReadWriteMode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Message_SiteGroupToMessage" Member="Message" ThisKey="FK_MessageID" OtherKey="ID" Type="Message" IsForeignKey="true" />
+      <Association Name="SiteGroup_SiteGroupToMessage" Member="SiteGroup" ThisKey="FK_SiteGroupID" OtherKey="ID" Type="SiteGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SiteGroupToSite" Member="SiteGroupToSite">
+    <Type Name="SiteGroupToSite">
+      <Column Name="FK_SiteGroupID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_SiteID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Site_SiteGroupToSite" Member="Site" ThisKey="FK_SiteID" OtherKey="ID" Type="Site" IsForeignKey="true" />
+      <Association Name="SiteGroup_SiteGroupToSite" Member="SiteGroup" ThisKey="FK_SiteGroupID" OtherKey="ID" Type="SiteGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SiteUser" Member="SiteUser">
+    <Type Name="SiteUser">
+      <Column Name="FK_SiteID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserPKeyKind" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserPKey" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="DefaultUseServerIP" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Association Name="Site_SiteUser" Member="Site" ThisKey="FK_SiteID" OtherKey="ID" Type="Site" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RemoteServer" Member="RemoteServer">
+    <Type Name="RemoteServer">
+      <Column Name="CPUNumber" Type="System.String" DbType="NChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RegisterClassName" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Port" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RemoteProtocol" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IP" Type="System.String" DbType="NChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Mode" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="LastRegisteredTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastUnRegisteredTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WindowLoginName" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MessageToSiteUsers" Member="MessageToSiteUsers">
+    <Type Name="MessageToSiteUsers">
+      <Column Name="SendMessageBatchNumber" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_MessageID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_ToSiteID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_ToSiteUsersID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FromClientIP" Type="System.String" DbType="NChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SendTime" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FromWindowLoginName" Type="System.String" DbType="NChar(13)" CanBeNull="true" />
+      <Column Name="IsReceived" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ReceiveTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsHaveFinalRecieveTime" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FinalRecieveTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsHaveNotSendReplye" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NotSendReplyTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsSenderReceiveNotSendReplye" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SenderReceivedNotSendReplyTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MsgText" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddMsgContent" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ToSendEmailAddress" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="SystemFirstReceiveTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SystemLastReceiveTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="WaitReceived2CheckIP" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

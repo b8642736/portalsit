@@ -1,0 +1,17 @@
+日曆 System.Globalization.GregorianCalendar 不支援以字串表示的 DateTime。 
+描述: 在執行目前 Web 要求的過程中發生未處理的例外情形。請檢閱堆疊追蹤以取得錯誤的詳細資訊，以及在程式碼中產生的位置。 
+
+例外詳細資訊: System.FormatException: 日曆 System.Globalization.GregorianCalendar 不支援以字串表示的 DateTime。
+
+原始程式錯誤: 
+
+
+行 747:                    End If
+行 748:                    WorkEndTime = WorkEndTime.AddDays(IIf(EndtHour < StartHour, 1, 0))    '如果終止時間小於起始時間則終止日加一天
+行 749:                    WorkStartTime = DateTime.Parse(WorkStartTime.ToString("yyyy/MM/dd " & StartHour))
+行 750:                    WorkEndTime = DateTime.Parse(WorkEndTime.ToString("yyyy/MM/dd " & EndtHour))
+行 751:                    If ClassKind.Substring(0, 1) = "E" And ClassType <> "PB" Then   'ClassType=PB時當輪班處理
+ 
+
+原始程式檔: D:\wwwroot\EForms\HROvertime\App_Code\AS400_Module.vb    行: 749 
+

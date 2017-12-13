@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetServerTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetServerTimeResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AS400SelectQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSourceQueryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AcceptCodeReplay" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AS400SelectQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AS400SelectQueryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AS400ExecuteNonQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSourceQueryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AcceptCodeReplay" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AS400ExecuteNonQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AS400ExecuteNonQueryResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SQLServerSelectQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSourceQueryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SetSQLServerIPOrName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SetConnectDBName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AcceptCodeReplay" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SQLServerSelectQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQLServerSelectQueryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SQLServerExecuteNonQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetSourceQueryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SetSQLServerIPOrName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SetConnectDBName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AcceptCodeReplay" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SQLServerExecuteNonQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SQLServerExecuteNonQueryResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServerTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerTime" />
+  </wsdl:message>
+  <wsdl:message name="GetServerTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AS400SelectQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:AS400SelectQuery" />
+  </wsdl:message>
+  <wsdl:message name="AS400SelectQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:AS400SelectQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AS400ExecuteNonQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:AS400ExecuteNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="AS400ExecuteNonQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:AS400ExecuteNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SQLServerSelectQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:SQLServerSelectQuery" />
+  </wsdl:message>
+  <wsdl:message name="SQLServerSelectQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:SQLServerSelectQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SQLServerExecuteNonQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:SQLServerExecuteNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="SQLServerExecuteNonQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:SQLServerExecuteNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSDBSQLQuerySoap">
+    <wsdl:operation name="GetServerTime">
+      <wsdl:input message="tns:GetServerTimeSoapIn" />
+      <wsdl:output message="tns:GetServerTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AS400SelectQuery">
+      <wsdl:input message="tns:AS400SelectQuerySoapIn" />
+      <wsdl:output message="tns:AS400SelectQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AS400ExecuteNonQuery">
+      <wsdl:input message="tns:AS400ExecuteNonQuerySoapIn" />
+      <wsdl:output message="tns:AS400ExecuteNonQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SQLServerSelectQuery">
+      <wsdl:input message="tns:SQLServerSelectQuerySoapIn" />
+      <wsdl:output message="tns:SQLServerSelectQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SQLServerExecuteNonQuery">
+      <wsdl:input message="tns:SQLServerExecuteNonQuerySoapIn" />
+      <wsdl:output message="tns:SQLServerExecuteNonQuerySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSDBSQLQuerySoap" type="tns:WSDBSQLQuerySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerTime">
+      <soap:operation soapAction="http://tempuri.org/GetServerTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS400SelectQuery">
+      <soap:operation soapAction="http://tempuri.org/AS400SelectQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS400ExecuteNonQuery">
+      <soap:operation soapAction="http://tempuri.org/AS400ExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SQLServerSelectQuery">
+      <soap:operation soapAction="http://tempuri.org/SQLServerSelectQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SQLServerExecuteNonQuery">
+      <soap:operation soapAction="http://tempuri.org/SQLServerExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSDBSQLQuerySoap12" type="tns:WSDBSQLQuerySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerTime">
+      <soap12:operation soapAction="http://tempuri.org/GetServerTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS400SelectQuery">
+      <soap12:operation soapAction="http://tempuri.org/AS400SelectQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS400ExecuteNonQuery">
+      <soap12:operation soapAction="http://tempuri.org/AS400ExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SQLServerSelectQuery">
+      <soap12:operation soapAction="http://tempuri.org/SQLServerSelectQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SQLServerExecuteNonQuery">
+      <soap12:operation soapAction="http://tempuri.org/SQLServerExecuteNonQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSDBSQLQuery">
+    <wsdl:port name="WSDBSQLQuerySoap" binding="tns:WSDBSQLQuerySoap">
+      <soap:address location="http://10.1.4.12/CompanyWebService/wsdbsqlquery.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSDBSQLQuerySoap12" binding="tns:WSDBSQLQuerySoap12">
+      <soap12:address location="http://10.1.4.12/CompanyWebService/wsdbsqlquery.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

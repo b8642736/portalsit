@@ -1,0 +1,16 @@
+﻿body {
+}
+.TitleText
+{
+	font-family: 標楷體;
+	font-size: large;
+	color: #0000FF;
+	filter:glow(color="#606060") 
+}
+.Button1
+{
+	width:100%;
+	cursor:Hand;
+	height:32px;
+}
+

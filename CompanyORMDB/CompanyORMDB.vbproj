@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC01C38E-B385-4AF8-B595-10E78CE211AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CompanyORMDB</RootNamespace>
+    <AssemblyName>CompanyORMDB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CompanyORMDB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CompanyORMDB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CompanyORMDB.ORMBaseClass" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Management" />
+    <Import Include="System.Net" />
+    <Import Include="System.Reflection" />
+    <Import Include="System.Runtime.Remoting" />
+    <Import Include="System.Runtime.Remoting.Channels" />
+    <Import Include="System.Runtime.Remoting.Channels.Tcp" />
+    <Import Include="System.Runtime.Serialization" />
+    <Import Include="System.Threading" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AS400DB\ACAA\ACJ050PF.vb" />
+    <Compile Include="AS400DB\ACLIB\ACA010PF.vb" />
+    <Compile Include="AS400DB\ACLIB\ACA020PF.vb" />
+    <Compile Include="AS400DB\ACLIB\ACD010PF.vb" />
+    <Compile Include="AS400DB\ACLIB\ACJ050PF.vb" />
+    <Compile Include="AS400DB\ACS300LB\ACSSKBPF.vb" />
+    <Compile Include="AS400DB\AS400DateConverter.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\AS400SQLQueryAdapter.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\AS400StringConverter.vb" />
+    <Compile Include="AS400DB\AST500LB\AST106PF.vb" />
+    <Compile Include="AS400DB\AST500LB\AST107PF.vb" />
+    <Compile Include="AS400DB\AST500LB\AST201PF.vb" />
+    <Compile Include="AS400DB\AST500LB\AST401PF.vb" />
+    <Compile Include="AS400DB\AST500LB\AST402PF.vb" />
+    <Compile Include="AS400DB\AST500LB\AST501PF.vb" />
+    <Compile Include="AS400DB\AST500LB\AST001PF.vb" />
+    <Compile Include="AS400DB\AST500LB\ASTB05PF.vb" />
+    <Compile Include="AS400DB\AST500LB\AST003PF.vb" />
+    <Compile Include="AS400DB\AST500LB\AST101PF.vb" />
+    <Compile Include="AS400DB\AST500LB\AST103PF.vb" />
+    <Compile Include="AS400DB\AST500LB\ASTB03PF.vb" />
+    <Compile Include="AS400DB\AST500LB\未使用\ASTREFPF.vb" />
+    <Compile Include="AS400DB\AST501LB\AST001PF.vb" />
+    <Compile Include="AS400DB\AST501LB\AST001PFEx.vb" />
+    <Compile Include="AS400DB\AST501LB\AST003PF.vb" />
+    <Compile Include="AS400DB\AST501LB\AST106PF.vb" />
+    <Compile Include="AS400DB\AST501LB\ASTEXTPF.vb" />
+    <Compile Include="AS400DB\Cash\CASH00PF.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\Cash\CASH01PF.vb" />
+    <Compile Include="AS400DB\Cash\CASH05PF.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\Cash\CashA1PF.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\ClassDBAS400.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\COME\KIND01PF.vb" />
+    <Compile Include="AS400DB\COME\KIND02PF.vb" />
+    <Compile Include="AS400DB\COME\未使用\COME00PF.vb" />
+    <Compile Include="AS400DB\COME\COME01PF.vb" />
+    <Compile Include="AS400DB\DEBYSYSLB\DEBKCRPF.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\DEBY\DEBKCRPF.vb" />
+    <Compile Include="AS400DB\DEBY\DEBY03PF.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\DEBY\DEBY07PF.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\DEBY\LCUSPF.vb" />
+    <Compile Include="AS400DB\FOD100LB\FODM01PF.vb" />
+    <Compile Include="AS400DB\FOD100LB\FODM02PF.vb" />
+    <Compile Include="AS400DB\FOD100LB\FODM03PF.vb" />
+    <Compile Include="AS400DB\FOD100LB\FODM04PF.vb" />
+    <Compile Include="AS400DB\FOD100LB\FODPLCPF.vb" />
+    <Compile Include="AS400DB\GPL2\DEPCODPF.vb" />
+    <Compile Include="AS400DB\IAS400QueryAdapter.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\MTS100LB\WARB02PF.vb" />
+    <Compile Include="AS400DB\MTS100LB\WARB03PF.vb" />
+    <Compile Include="AS400DB\MTS600LB\MTSBC1PF.vb" />
+    <Compile Include="AS400DB\MTS600LB\MTSV01PF.vb" />
+    <Compile Include="AS400DB\PLT000LB\PQDDPDPF.vb" />
+    <Compile Include="AS400DB\PLT000LB\PQDDPTPF.vb" />
+    <Compile Include="AS400DB\PLT000LB\PQDM01PF.vb" />
+    <Compile Include="AS400DB\PLT000LB\PQDS02PF.vb" />
+    <Compile Include="AS400DB\PLT000LB\未使用\PQDM03PF.vb" />
+    <Compile Include="AS400DB\PLT500LB\PTM010PF.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\PPS100LB\PPDQDSL3.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSBLALE.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSBLAPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSBLFPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSBLGPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSBPHPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSBWAPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSBWDPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSCI7PF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSCIALJ.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSCIAPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSCICPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSCIJPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSDEFPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSPU0PF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSQCAPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSQCDPY.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSQCGPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSQCIPF2.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSQCPPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSQDEPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSQDSPF.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSSHALC.vb" />
+    <Compile Include="AS400DB\PPS100LB\PPSSHAPF.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\SGAU10PF\SGAU10PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\INVOICEA.vb" />
+    <Compile Include="AS400DB\SLS300LB\INVOICEE.vb" />
+    <Compile Include="AS400DB\SLS300LB\MAIL03PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2BOLPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2CH1PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2CH2PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2CH7PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2CH8PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2CICPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2CIDPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2CIFPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2CINPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2CIWPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2CUAPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2EXPPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2EXRPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2PR0PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2PR1PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2PR2PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2QTAPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2QTNPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2RCVPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2UFIPF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL2Z01PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL3X04PF.vb" />
+    <Compile Include="AS400DB\SLS300LB\SL3X11PF.vb" />
+    <Compile Include="AS400DB\SMS100LB\SMSC11PF.vb" />
+    <Compile Include="AS400DB\SMS100LB\SMSC1PF.vb" />
+    <Compile Include="AS400DB\SMS100LB\SMSC21PF.vb" />
+    <Compile Include="AS400DB\SMS100LB\SMSC22PF.vb" />
+    <Compile Include="AS400DB\SMS100LB\SMSC2PF.vb" />
+    <Compile Include="AS400DB\SMS100LB\SMSREGPF.vb" />
+    <Compile Include="AS400DB\SMS100LB\SMSSGAPF.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AS400DB\SMS100LB\SMSSGEPF.vb" />
+    <Compile Include="AS400DB\SMS100LB\SMSC23PF.vb" />
+    <Compile Include="AS400DB\TABLE\TABLE7PF.vb" />
+    <Compile Include="AS400DB\TESTKUKU\AST103PF.vb" />
+    <Compile Include="AS400DB\TESTKUKU\CASH05PF.vb" />
+    <Compile Include="AS400DB\TESTKUKU\PPSBLAPF.vb" />
+    <Compile Include="ClassDB.vb" />
+    <Compile Include="DeviceInformation.vb" />
+    <Compile Include="IClassDBInherited.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SQLServer\ClassDBSQLServer.vb" />
+    <Compile Include="SQLServer\IM\L2RealTimeServerStatus.vb" />
+    <Compile Include="SQLServer\IM\Message.vb" />
+    <Compile Include="SQLServer\IM\MessageToFiles.vb" />
+    <Compile Include="SQLServer\IM\MessageToSiteUsers.vb" />
+    <Compile Include="SQLServer\IM\RemottingClass\RemoteCoilScannerNotice.vb" />
+    <Compile Include="SQLServer\IM\RemottingClass\RemottingClassRefObjectBase.vb" />
+    <Compile Include="SQLServer\IM\RemottingClass\SMPMessageNotice.vb">
+    </Compile>
+    <Compile Include="SQLServer\IM\Site.vb" />
+    <Compile Include="SQLServer\IM\SiteGroup.vb" />
+    <Compile Include="SQLServer\IM\SiteGroupToMessage.vb" />
+    <Compile Include="SQLServer\IM\SiteGroupToSite.vb" />
+    <Compile Include="SQLServer\IM\SiteUser.vb" />
+    <Compile Include="SQLServer\IM\RemoteServer.vb" />
+    <Compile Include="SQLServer\MIS\CCmail_Department.vb" />
+    <Compile Include="SQLServer\MIS\CCmail_Department_Log.vb" />
+    <Compile Include="SQLServer\MIS\CCmail_Excute_Log.vb" />
+    <Compile Include="SQLServer\MIS\CCMail_PWD_Log.vb" />
+    <Compile Include="SQLServer\MIS\CCmail_Users.vb" />
+    <Compile Include="SQLServer\MIS\CCmail_Users_Log.vb" />
+    <Compile Include="SQLServer\MIS\RepairRecord.vb" />
+    <Compile Include="SQLServer\OtherOperator\PortalsitLoopRunRec.vb" />
+    <Compile Include="SQLServer\OtherOperator\WebMenu.vb" />
+    <Compile Include="SQLServer\OtherOperator\WebMenuDisplayForAuthority.vb" />
+    <Compile Include="SQLServer\PPS100LB\CoilMoveState.vb" />
+    <Compile Include="SQLServer\PPS100LB\InOutOperationLineName.vb" />
+    <Compile Include="SQLServer\PPS100LB\IPPSSHAPF.vb" />
+    <Compile Include="SQLServer\PPS100LB\L2APLInOutStoveRecord.vb" />
+    <Compile Include="SQLServer\IM\L2RealTimeTagDisplay.vb" />
+    <Compile Include="SQLServer\PPS100LB\L2RecordDefine.vb" />
+    <Compile Include="SQLServer\PPS100LB\L2TagRecord.vb" />
+    <Compile Include="SQLServer\PPS100LB\OperationPCRunningState.vb" />
+    <Compile Include="SQLServer\PPS100LB\OperationPCRunningStateDetail.vb" />
+    <Compile Include="SQLServer\PPS100LB\PackingMaterialControlCode.vb" />
+    <Compile Include="SQLServer\PPS100LB\PDI.vb" />
+    <Compile Include="SQLServer\PPS100LB\PhysicalTest.vb" />
+    <Compile Include="SQLServer\PPS100LB\PlanProductionDisplay.vb" />
+    <Compile Include="SQLServer\PPS100LB\PPSSHAPF.vb" />
+    <Compile Include="SQLServer\PPS100LB\PPSSHAPFFlowAdapter.vb" />
+    <Compile Include="SQLServer\PPS100LB\PPSSUCPF.vb" />
+    <Compile Include="SQLServer\PPS100LB\ProcessSchedual.vb" />
+    <Compile Include="SQLServer\PPS100LB\ProcessSchedualFilter.vb" />
+    <Compile Include="SQLServer\PPS100LB\ProcessToInOutOperationLineName.vb" />
+    <Compile Include="SQLServer\PPS100LB\ProcessToWebClientPCAccount.vb" />
+    <Compile Include="SQLServer\PPS100LB\QABUG.vb" />
+    <Compile Include="SQLServer\PPS100LB\QABugRecord.vb" />
+    <Compile Include="SQLServer\PPS100LB\QABugRecordTitle.vb" />
+    <Compile Include="SQLServer\PPS100LB\QABugSysLoginUser.vb" />
+    <Compile Include="SQLServer\PPS100LB\QAQuickInputGroup.vb" />
+    <Compile Include="SQLServer\PPS100LB\QAThickness.vb" />
+    <Compile Include="SQLServer\PPS100LB\RemoteCoilScannerState.vb" />
+    <Compile Include="SQLServer\PPS100LB\RGSGrindRecord.vb" />
+    <Compile Include="SQLServer\PPS100LB\RunProcessData.vb" />
+    <Compile Include="SQLServer\PPS100LB\RunProcessPackMaterial.vb" />
+    <Compile Include="SQLServer\PPS100LB\RunProcessQCDetail.vb" />
+    <Compile Include="SQLServer\PPS100LB\RunProcessQCTitle.vb" />
+    <Compile Include="SQLServer\PPS100LB\Station.vb" />
+    <Compile Include="SQLServer\PPS100LB\StationDataLastChangeTime.vb" />
+    <Compile Include="SQLServer\PPS100LB\StationToWebClientPCAccount.vb" />
+    <Compile Include="SQLServer\PPS100LB\WeighCar.vb" />
+    <Compile Include="SQLServer\PPS100LB\WeighDataR.vb" />
+    <Compile Include="SQLServer\PPS100LB\WeightHouseTemporary.vb" />
+    <Compile Include="SQLServer\PPS100LB\WeightSationData.vb" />
+    <Compile Include="SQLServer\PPS100LB\WeightSationDateRecord.vb" />
+    <Compile Include="SQLServer\PPS100LB\WeightSationTtransportinformation.vb" />
+    <Compile Include="SQLServer\QCDB01\CarbonSulfurData.vb" />
+    <Compile Include="SQLServer\QCDB01\JYData.vb" />
+    <Compile Include="SQLServer\QCDB01\LaboratoryReportRecord.vb" />
+    <Compile Include="SQLServer\QCDB01\LabRecordA1_D.vb" />
+    <Compile Include="SQLServer\QCDB01\LabRecordA1_M.vb" />
+    <Compile Include="SQLServer\QCDB01\LabRecordA2_Assay_DAT.vb" />
+    <Compile Include="SQLServer\QCDB01\LabRecordA2_Assay_RES.vb" />
+    <Compile Include="SQLServer\QCDB01\LabRecordA2_D.vb" />
+    <Compile Include="SQLServer\QCDB01\LabRecordA2_M.vb" />
+    <Compile Include="SQLServer\QCDB01\LabRecordA2_Remark_DAT.vb" />
+    <Compile Include="SQLServer\QCDB01\LabRecordA2_Remark_RES.vb" />
+    <Compile Include="SQLServer\QCDB01\LabRecordA2_Remark_RESAssay.vb" />
+    <Compile Include="SQLServer\QCDB01\LabRecordA2_Report.vb" />
+    <Compile Include="SQLServer\QCDB01\OXYGENData.vb" />
+    <Compile Include="SQLServer\QCDB01\PickGoodDetailQryLog.vb" />
+    <Compile Include="SQLServer\QCDB01\ProcessSchedule.vb" />
+    <Compile Include="SQLServer\QCDB01\SystemNote.vb" />
+    <Compile Include="SQLServer\QCDB01\SystemSetting.vb" />
+    <Compile Include="SQLServer\QCDB01\WebClientPCAccount.vb" />
+    <Compile Include="SQLServer\QCDB01\WebLoginAccount.vb" />
+    <Compile Include="SQLServer\QCDB01\WebLoginAccountToPickGoodDetail.vb" />
+    <Compile Include="SQLServer\QCDB01\WebSystem.vb" />
+    <Compile Include="SQLServer\QCDB01\WebSystemFunction.vb" />
+    <Compile Include="SQLServer\QCDB01\ZML更換紀錄表.vb" />
+    <Compile Include="SQLServer\QCDB01\分析資料.vb" />
+    <Compile Include="SPMSQLServer\SPM\TEAccDepSelect.vb" />
+    <Compile Include="SQLServer\QCDB01\分析資料_外購.vb" />
+    <Compile Include="SQLServer\QCDB01\成品判定.vb" />
+    <Compile Include="SQLServer\QCDB01\成品判定_公式.vb" />
+    <Compile Include="SQLServer\QCDB01\標準樣本接收資料.vb" />
+    <Compile Include="SQLServer\QCDB01\標準樣本接收資料CS_儀器匯入.vb" />
+    <Compile Include="SQLServer\QCDB01\標準樣本接收資料OX.vb" />
+    <Compile Include="SQLServer\QCDB01\標準樣本接收資料標準差管制.vb" />
+    <Compile Include="SQLServer\SQLServerSQLQueryAdapter.vb" />
+    <Compile Include="SQLServer\SQLVsAS400DataTransfer\SQLVsAS400DBTransferPlan.vb" />
+    <Compile Include="SQLServer\SQLVsAS400DataTransfer\SQLVsAS400DBTransferPlanLog.vb" />
+    <Compile Include="SQLServer\WELFARE\傳票.vb" />
+    <Compile Include="SQLServer\WELFARE\傳票明細.vb" />
+    <Compile Include="Web References\Portalsit2\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Server04m\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Server0bm\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebServiceAdapter\IWSDBSQLQuery.vb" />
+    <Compile Include="WebServiceAdapter\WSDBSQLQuery.vb" />
+    <Compile Include="WebServiceAdapter\WSDBSQLQueryAdapter.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\Portalsit2\wsdbsqlquery.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.1.4.12/CompanyWebService/wsdbsqlquery.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Server0bm\</RelPath>
+      <UpdateFromURL>http://10.1.4.12/CompanyWebService/wsdbsqlquery.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CompanyORMDB_Server0bm_WSDBSQLQuery</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.1.4.31/CompanyWebService/wsdbsqlquery.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Portalsit2\</RelPath>
+      <UpdateFromURL>http://10.1.4.31/CompanyWebService/wsdbsqlquery.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CompanyORMDB_Portalsit2_WSDBSQLQuery</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.1.4.6/CompanyWebService/wsdbsqlquery.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Server04m\</RelPath>
+      <UpdateFromURL>http://10.1.4.6/CompanyWebService/wsdbsqlquery.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CompanyORMDB_Server04m_WSDBSQLQuery</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Web References\Portalsit2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\Portalsit2\wsdbsqlquery.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Server04m\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\Server04m\wsdbsqlquery.disco" />
+    <None Include="Web References\Server04m\wsdbsqlquery.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Server0bm\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\Server0bm\wsdbsqlquery.disco" />
+    <None Include="Web References\Server0bm\wsdbsqlquery.wsdl" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

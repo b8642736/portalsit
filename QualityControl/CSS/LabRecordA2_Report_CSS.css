@@ -1,0 +1,66 @@
+﻿body {
+}
+
+/*.myTab2 {
+}
+.myTab1 {
+    width: 50%;
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+}
+
+    .myTab1 td {
+        height: 30px;
+        padding: 2px;
+        border-collapse: collapse;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #cccccc;
+    }*/
+
+
+.GridView1_CSS {
+    width: 100%;
+}
+
+    .GridView1_CSS td {
+        padding: 7px;
+    }
+
+    .GridView1_CSS th {
+        padding: 2px;
+    }
+
+.GridView1_CSS_HeaderStyle {
+    background-color: Tan;
+    font-weight: bold;
+    height: 40px;
+}
+
+.GridView1_CSS_PagerStyle {
+    background-color: Tan;
+    color: DarkSlateBlue;
+    padding: 1px;
+    height: 5px;
+    text-align: left;
+}
+
+
+
+.ListView1CSS_Input {
+    width: 95%;
+    font-size: medium;
+
+    background-color:#ffffff;
+    color :#000000;
+}
+
+.ListView1CSS_Lock {
+    width: 95%;
+    font-size: medium ;
+    
+    background-color:#CCCCCC;
+    color :#000000;
+}

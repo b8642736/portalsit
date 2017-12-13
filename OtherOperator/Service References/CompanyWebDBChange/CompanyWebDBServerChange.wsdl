@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SetDBConnect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetServer" type="tns:DBServerNameEnum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="DBServerNameEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="MainDBServer" />
+          <s:enumeration value="BackupDBServer1" />
+          <s:enumeration value="BackupDBServer2" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SetDBConnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetDBConnectResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SetDBConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:SetDBConnect" />
+  </wsdl:message>
+  <wsdl:message name="SetDBConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:SetDBConnectResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DBServerChangeSoap">
+    <wsdl:operation name="SetDBConnect">
+      <wsdl:input message="tns:SetDBConnectSoapIn" />
+      <wsdl:output message="tns:SetDBConnectSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DBServerChangeSoap" type="tns:DBServerChangeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetDBConnect">
+      <soap:operation soapAction="http://tempuri.org/SetDBConnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DBServerChangeSoap12" type="tns:DBServerChangeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SetDBConnect">
+      <soap12:operation soapAction="http://tempuri.org/SetDBConnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DBServerChange">
+    <wsdl:port name="DBServerChangeSoap" binding="tns:DBServerChangeSoap">
+      <soap:address location="http://localhost/CompanyWebService/CompanyWebDBServerChange.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DBServerChangeSoap12" binding="tns:DBServerChangeSoap12">
+      <soap12:address location="http://localhost/CompanyWebService/CompanyWebDBServerChange.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

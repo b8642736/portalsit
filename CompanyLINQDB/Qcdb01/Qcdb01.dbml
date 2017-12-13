@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QCdb01" Class="Qcdb01DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SERVER04M;Initial Catalog=QCdb01;Persist Security Info=True;User ID=test01" SettingsObjectName="CompanyLINQDB.My.MySettings" SettingsPropertyName="QCdb01ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MailMsgEdit" Member="MailMsgEdit">
+    <Type Name="MailMsgEdit">
+      <Column Name="ID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MailType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReceivePersonName" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="MailAddress" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

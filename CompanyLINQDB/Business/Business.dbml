@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Business" Class="BusinessDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=server04m;Initial Catalog=Business;Integrated Security=True" SettingsObjectName="CompanyLINQDB.My.MySettings" SettingsPropertyName="BusinessConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.GuestSues" Member="GuestSues">
+    <Type Name="GuestSues">
+      <Column Name="ID" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SubRecordNumber" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="ContectHuman" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="Undertaker" Type="System.String" DbType="NChar(5)" CanBeNull="true" />
+      <Column Name="RecordTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Describe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProcessState" Type="System.Decimal" DbType="Decimal(2,0)" CanBeNull="true" />
+      <Column Name="WindowLoginName" Type="System.String" DbType="NChar(13)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GuestSuesWatchRecord" Member="GuestSuesWatchRecord">
+    <Type Name="GuestSuesWatchRecord">
+      <Column Name="WatchTime" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_GuestSuesID" Type="System.Decimal" DbType="Decimal(9,0) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WindowLoginName" Type="System.String" DbType="NChar(13) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

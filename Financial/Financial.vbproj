@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{412EB462-7E85-4231-9A7B-36B6DC393069}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Financial</RootNamespace>
+    <AssemblyName>Financial</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Financial.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Financial.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20229.20821, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CompanyORMDB" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="PublicClassLibrary" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChangeSearchForm.aspx" />
+    <Content Include="Control\ChangeSearch.ascx" />
+    <Content Include="Control\DebtLetterofCreditSearch.ascx" />
+    <Content Include="Control\InvoiceDayMoneySumSearch.ascx" />
+    <Content Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Edit.ascx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Main.ascx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Print.ascx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Search.ascx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Control\PayMoneySearch.ascx" />
+    <Content Include="Control\PendingPayment.ascx" />
+    <Content Include="CSS\Default.css" />
+    <Content Include="CSS\MainMaster.css" />
+    <Content Include="CSS\TabContainer.css" />
+    <Content Include="DebtLetterofCreditSearchForm.aspx" />
+    <Content Include="FinancialSystemNoteForm.aspx" />
+    <Content Include="InvoiceDayMoneySumSearchForm.aspx" />
+    <Content Include="InvoiceOfReceivablesForm.aspx" />
+    <Content Include="PendingPaymentSearchForm.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Borrow.aspx.designer.vb">
+      <DependentUpon>Borrow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Borrow.aspx.vb">
+      <DependentUpon>Borrow.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BorrowContract.aspx.designer.vb">
+      <DependentUpon>BorrowContract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowContract.aspx.vb">
+      <DependentUpon>BorrowContract.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BorrowContractRate.aspx.designer.vb">
+      <DependentUpon>BorrowContractRate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowContractRate.aspx.vb">
+      <DependentUpon>BorrowContractRate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BorrowLCBill.aspx.designer.vb">
+      <DependentUpon>BorrowLCBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowLCBill.aspx.vb">
+      <DependentUpon>BorrowLCBill.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BorrowLCBillPayMoney.aspx.designer.vb">
+      <DependentUpon>BorrowLCBillPayMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowLCBillPayMoney.aspx.vb">
+      <DependentUpon>BorrowLCBillPayMoney.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BorrowPayMoney.aspx.designer.vb">
+      <DependentUpon>BorrowPayMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowPayMoney.aspx.vb">
+      <DependentUpon>BorrowPayMoney.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CasherInForm.aspx.designer.vb">
+      <DependentUpon>CasherInForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CasherInForm.aspx.vb">
+      <DependentUpon>CasherInForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CashierOutForm.aspx.designer.vb">
+      <DependentUpon>CashierOutForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CashierOutForm.aspx.vb">
+      <DependentUpon>CashierOutForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ChangeSearchForm.aspx.designer.vb">
+      <DependentUpon>ChangeSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeSearchForm.aspx.vb">
+      <DependentUpon>ChangeSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Control\BorrowContractRateEdit.ascx.designer.vb">
+      <DependentUpon>BorrowContractRateEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\BorrowContractRateEdit.ascx.vb">
+      <DependentUpon>BorrowContractRateEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\BorrowEdit.ascx.designer.vb">
+      <DependentUpon>BorrowEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\BorrowEdit.ascx.vb">
+      <DependentUpon>BorrowEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\BorrowLCBillEdit.ascx.designer.vb">
+      <DependentUpon>BorrowLCBillEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\BorrowLCBillEdit.ascx.vb">
+      <DependentUpon>BorrowLCBillEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\BorrowLCBillPayMoneyEdit.ascx.designer.vb">
+      <DependentUpon>BorrowLCBillPayMoneyEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\BorrowLCBillPayMoneyEdit.ascx.vb">
+      <DependentUpon>BorrowLCBillPayMoneyEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\BorrowPayMoneyEdit.ascx.designer.vb">
+      <DependentUpon>BorrowPayMoneyEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\BorrowPayMoneyEdit.ascx.vb">
+      <DependentUpon>BorrowPayMoneyEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\Cashier\CasherIn.ascx.designer.vb">
+      <DependentUpon>CasherIn.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Cashier\CasherIn.ascx.vb">
+      <DependentUpon>CasherIn.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\Cashier\CashierDataSet.Designer.vb">
+      <DependentUpon>CashierDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Control\Cashier\CashierOut.ascx.designer.vb">
+      <DependentUpon>CashierOut.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Cashier\CashierOut.ascx.vb">
+      <DependentUpon>CashierOut.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\ChangeSearch.ascx.designer.vb">
+      <DependentUpon>ChangeSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ChangeSearch.ascx.vb">
+      <DependentUpon>ChangeSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\DebtLetterofCreditSearch.ascx.designer.vb">
+      <DependentUpon>DebtLetterofCreditSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\DebtLetterofCreditSearch.ascx.vb">
+      <DependentUpon>DebtLetterofCreditSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\FinancialDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinancialDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Control\InvoiceDayMoneySumSearch.ascx.designer.vb">
+      <DependentUpon>InvoiceDayMoneySumSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\InvoiceDayMoneySumSearch.ascx.vb">
+      <DependentUpon>InvoiceDayMoneySumSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Edit.ascx.designer.vb">
+      <DependentUpon>InvoiceOfReceivables_Edit.ascx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Edit.ascx.vb">
+      <DependentUpon>InvoiceOfReceivables_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Main.ascx.designer.vb">
+      <DependentUpon>InvoiceOfReceivables_Main.ascx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Main.ascx.vb">
+      <DependentUpon>InvoiceOfReceivables_Main.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Model.vb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Print.ascx.designer.vb">
+      <DependentUpon>InvoiceOfReceivables_Print.ascx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Print.ascx.vb">
+      <DependentUpon>InvoiceOfReceivables_Print.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Search.ascx.designer.vb">
+      <DependentUpon>InvoiceOfReceivables_Search.ascx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Search.ascx.vb">
+      <DependentUpon>InvoiceOfReceivables_Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Control\InvoiceXMLDownload.ascx.designer.vb">
+      <DependentUpon>InvoiceXMLDownload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\InvoiceXMLDownload.ascx.vb">
+      <DependentUpon>InvoiceXMLDownload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\LCDebitEdit.ascx.designer.vb">
+      <DependentUpon>LCDebitEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\LCDebitEdit.ascx.vb">
+      <DependentUpon>LCDebitEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\PayMoneySearch.ascx.designer.vb">
+      <DependentUpon>PayMoneySearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PayMoneySearch.ascx.vb">
+      <DependentUpon>PayMoneySearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\PayMoneySearchDisplayItem.vb" />
+    <Compile Include="Control\BorrowContractEdit.ascx.designer.vb">
+      <DependentUpon>BorrowContractEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\BorrowContractEdit.ascx.vb">
+      <DependentUpon>BorrowContractEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\PendingPayment.ascx.designer.vb">
+      <DependentUpon>PendingPayment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PendingPayment.ascx.vb">
+      <DependentUpon>PendingPayment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DebtLetterofCreditSearchForm.aspx.designer.vb">
+      <DependentUpon>DebtLetterofCreditSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DebtLetterofCreditSearchForm.aspx.vb">
+      <DependentUpon>DebtLetterofCreditSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FinancialSystemNoteForm.aspx.designer.vb">
+      <DependentUpon>FinancialSystemNoteForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinancialSystemNoteForm.aspx.vb">
+      <DependentUpon>FinancialSystemNoteForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InvoiceDayMoneySumSearchForm.aspx.designer.vb">
+      <DependentUpon>InvoiceDayMoneySumSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceDayMoneySumSearchForm.aspx.vb">
+      <DependentUpon>InvoiceDayMoneySumSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InvoiceOfReceivablesForm.aspx.designer.vb">
+      <DependentUpon>InvoiceOfReceivablesForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceOfReceivablesForm.aspx.vb">
+      <DependentUpon>InvoiceOfReceivablesForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InvoiceXMLDownloadForm.aspx.designer.vb">
+      <DependentUpon>InvoiceXMLDownloadForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceXMLDownloadForm.aspx.vb">
+      <DependentUpon>InvoiceXMLDownloadForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LCDebitEditForm.aspx.designer.vb">
+      <DependentUpon>LCDebitEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LCDebitEditForm.aspx.vb">
+      <DependentUpon>LCDebitEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LongBorrowDetailForm.aspx.designer.vb">
+      <DependentUpon>LongBorrowDetailForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LongBorrowDetailForm.aspx.vb">
+      <DependentUpon>LongBorrowDetailForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster.Master.designer.vb">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster.Master.vb">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PayMoneySearchForm.aspx.designer.vb">
+      <DependentUpon>PayMoneySearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayMoneySearchForm.aspx.vb">
+      <DependentUpon>PayMoneySearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PendingPaymentSearchForm.aspx.designer.vb">
+      <DependentUpon>PendingPaymentSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PendingPaymentSearchForm.aspx.vb">
+      <DependentUpon>PendingPaymentSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReportControl\LongBorrowDetail.ascx.designer.vb">
+      <DependentUpon>LongBorrowDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportControl\LongBorrowDetail.ascx.vb">
+      <DependentUpon>LongBorrowDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Report_v1.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Report_v2.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\InvoiceOfReceivables\InvoiceOfReceivables_Report_v2_Detail.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="ReportControl\LongBorrowDetailReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Borrow.aspx" />
+    <Content Include="BorrowContract.aspx" />
+    <Content Include="BorrowContractRate.aspx" />
+    <Content Include="BorrowLCBill.aspx" />
+    <Content Include="BorrowLCBillPayMoney.aspx" />
+    <Content Include="BorrowPayMoney.aspx" />
+    <Content Include="CasherInForm.aspx" />
+    <Content Include="CashierOutForm.aspx" />
+    <Content Include="Control\BorrowContractRateEdit.ascx" />
+    <Content Include="Control\BorrowEdit.ascx" />
+    <Content Include="Control\BorrowContractEdit.ascx" />
+    <Content Include="Control\BorrowLCBillEdit.ascx" />
+    <Content Include="Control\BorrowLCBillPayMoneyEdit.ascx" />
+    <Content Include="Control\BorrowPayMoneyEdit.ascx" />
+    <Content Include="Control\Cashier\CasherIn.ascx" />
+    <Content Include="Control\Cashier\CashierOut.ascx" />
+    <Content Include="Control\InvoiceXMLDownload.ascx" />
+    <Content Include="Control\LCDebitEdit.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Icons\16-arrow-right.png" />
+    <Content Include="Icons\16-circle-blue.png" />
+    <Content Include="Icons\collapse.jpg" />
+    <Content Include="Icons\expand.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="InvoiceXMLDownloadForm.aspx" />
+    <Content Include="LCDebitEditForm.aspx" />
+    <Content Include="LongBorrowDetailForm.aspx" />
+    <Content Include="MainMaster.Master" />
+    <Content Include="PayMoneySearchForm.aspx" />
+    <Content Include="ReportControl\LongBorrowDetail.ascx" />
+    <None Include="Control\Cashier\CashierDataSet.xsc">
+      <DependentUpon>CashierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Control\Cashier\CashierDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CashierDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Control\Cashier\CashierDataSet.xss">
+      <DependentUpon>CashierDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Control\FinancialDataSet.xsc">
+      <DependentUpon>FinancialDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Control\FinancialDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinancialDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Control\FinancialDataSet.xss">
+      <DependentUpon>FinancialDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\設定檔1.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyLINQDB\CompanyLINQDB.vbproj">
+      <Project>{F24E97F1-D320-4779-8C6C-8C7CC65E170D}</Project>
+      <Name>CompanyLINQDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CompanyORMDB\CompanyORMDB.vbproj">
+      <Project>{AC01C38E-B385-4AF8-B595-10E78CE211AD}</Project>
+      <Name>CompanyORMDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicClassLibrary\PublicClassLibrary.vbproj">
+      <Project>{C30FB035-8308-4AAA-A9DC-3453A08F5411}</Project>
+      <Name>PublicClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UCAjaxServerControl1\UCAjaxServerControl1.vbproj">
+      <Project>{2790148A-6BBF-49CF-B2F3-E3966798BCED}</Project>
+      <Name>UCAjaxServerControl1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebAppAuthority\WebAppAuthority.vbproj">
+      <Project>{A2648750-FB34-452A-B768-FE800FF6622A}</Project>
+      <Name>WebAppAuthority</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1225</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Financial</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

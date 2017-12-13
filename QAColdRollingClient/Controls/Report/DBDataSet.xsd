@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DBDataSet" targetNamespace="http://tempuri.org/DBDataSet.xsd" xmlns:mstns="http://tempuri.org/DBDataSet.xsd" xmlns="http://tempuri.org/DBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DBDataSet" msprop:Generator_UserDSName="DBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Thicks" msprop:Generator_TableClassName="ThicksDataTable" msprop:Generator_TableVarName="tableThicks" msprop:Generator_RowChangedName="ThicksRowChanged" msprop:Generator_TablePropName="Thicks" msprop:Generator_RowDeletingName="ThicksRowDeleting" msprop:Generator_RowChangingName="ThicksRowChanging" msprop:Generator_RowEvHandlerName="ThicksRowChangeEventHandler" msprop:Generator_RowDeletedName="ThicksRowDeleted" msprop:Generator_RowClassName="ThicksRow" msprop:Generator_UserTableName="Thicks" msprop:Generator_RowEvArgName="ThicksRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ThickText" msprop:Generator_ColumnVarNameInTable="columnThickText" msprop:Generator_ColumnPropNameInRow="ThickText" msprop:Generator_ColumnPropNameInTable="ThickTextColumn" msprop:Generator_UserColumnName="ThickText" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Bugs" msprop:Generator_TableClassName="BugsDataTable" msprop:Generator_TableVarName="tableBugs" msprop:Generator_RowChangedName="BugsRowChanged" msprop:Generator_TablePropName="Bugs" msprop:Generator_RowDeletingName="BugsRowDeleting" msprop:Generator_RowChangingName="BugsRowChanging" msprop:Generator_RowEvHandlerName="BugsRowChangeEventHandler" msprop:Generator_RowDeletedName="BugsRowDeleted" msprop:Generator_RowClassName="BugsRow" msprop:Generator_UserTableName="Bugs" msprop:Generator_RowEvArgName="BugsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="QABug_Number" msprop:Generator_ColumnVarNameInTable="columnQABug_Number" msprop:Generator_ColumnPropNameInRow="QABug_Number" msprop:Generator_ColumnPropNameInTable="QABug_NumberColumn" msprop:Generator_UserColumnName="QABug_Number" type="xs:string" minOccurs="0" />
+              <xs:element name="Degree" msprop:Generator_ColumnVarNameInTable="columnDegree" msprop:Generator_ColumnPropNameInRow="Degree" msprop:Generator_ColumnPropNameInTable="DegreeColumn" msprop:Generator_UserColumnName="Degree" type="xs:string" minOccurs="0" />
+              <xs:element name="Length" msprop:Generator_ColumnVarNameInTable="columnLength" msprop:Generator_ColumnPropNameInRow="Length" msprop:Generator_ColumnPropNameInTable="LengthColumn" msprop:Generator_UserColumnName="Length" type="xs:string" minOccurs="0" />
+              <xs:element name="DPosition" msprop:Generator_ColumnVarNameInTable="columnDPosition" msprop:Generator_ColumnPropNameInRow="DPosition" msprop:Generator_ColumnPropNameInTable="DPositionColumn" msprop:Generator_UserColumnName="DPosition" type="xs:string" minOccurs="0" />
+              <xs:element name="PosOrNeg" msprop:Generator_ColumnVarNameInTable="columnPosOrNeg" msprop:Generator_ColumnPropNameInRow="PosOrNeg" msprop:Generator_ColumnPropNameInTable="PosOrNegColumn" msprop:Generator_UserColumnName="PosOrNeg" type="xs:string" minOccurs="0" />
+              <xs:element name="Density" msprop:Generator_ColumnVarNameInTable="columnDensity" msprop:Generator_ColumnPropNameInRow="Density" msprop:Generator_ColumnPropNameInTable="DensityColumn" msprop:Generator_UserColumnName="Density" type="xs:string" minOccurs="0" />
+              <xs:element name="Cycle" msprop:Generator_ColumnVarNameInTable="columnCycle" msprop:Generator_ColumnPropNameInRow="Cycle" msprop:Generator_ColumnPropNameInTable="CycleColumn" msprop:Generator_UserColumnName="Cycle" type="xs:string" minOccurs="0" />
+              <xs:element name="C2QABug_Number" msprop:Generator_ColumnVarNameInTable="columnC2QABug_Number" msprop:Generator_ColumnPropNameInRow="C2QABug_Number" msprop:Generator_ColumnPropNameInTable="C2QABug_NumberColumn" msprop:Generator_UserColumnName="C2QABug_Number" type="xs:string" minOccurs="0" />
+              <xs:element name="C2Degree" msprop:Generator_ColumnVarNameInTable="columnC2Degree" msprop:Generator_ColumnPropNameInRow="C2Degree" msprop:Generator_ColumnPropNameInTable="C2DegreeColumn" msprop:Generator_UserColumnName="C2Degree" type="xs:string" minOccurs="0" />
+              <xs:element name="C2Length" msprop:Generator_ColumnVarNameInTable="columnC2Length" msprop:Generator_ColumnPropNameInRow="C2Length" msprop:Generator_ColumnPropNameInTable="C2LengthColumn" msprop:Generator_UserColumnName="C2Length" type="xs:string" minOccurs="0" />
+              <xs:element name="C2DPosition" msprop:Generator_ColumnVarNameInTable="columnC2DPosition" msprop:Generator_ColumnPropNameInRow="C2DPosition" msprop:Generator_ColumnPropNameInTable="C2DPositionColumn" msprop:Generator_UserColumnName="C2DPosition" type="xs:string" minOccurs="0" />
+              <xs:element name="C2PosOrNeg" msprop:Generator_ColumnVarNameInTable="columnC2PosOrNeg" msprop:Generator_ColumnPropNameInRow="C2PosOrNeg" msprop:Generator_ColumnPropNameInTable="C2PosOrNegColumn" msprop:Generator_UserColumnName="C2PosOrNeg" type="xs:string" minOccurs="0" />
+              <xs:element name="C2Density" msprop:Generator_ColumnVarNameInTable="columnC2Density" msprop:Generator_ColumnPropNameInRow="C2Density" msprop:Generator_ColumnPropNameInTable="C2DensityColumn" msprop:Generator_UserColumnName="C2Density" type="xs:string" minOccurs="0" />
+              <xs:element name="C2Cycle" msprop:Generator_ColumnVarNameInTable="columnC2Cycle" msprop:Generator_ColumnPropNameInRow="C2Cycle" msprop:Generator_ColumnPropNameInTable="C2CycleColumn" msprop:Generator_UserColumnName="C2Cycle" type="xs:string" minOccurs="0" />
+              <xs:element name="IsAttentation" msprop:Generator_ColumnVarNameInTable="columnIsAttentation" msprop:Generator_ColumnPropNameInRow="IsAttentation" msprop:Generator_ColumnPropNameInTable="IsAttentationColumn" msprop:Generator_UserColumnName="IsAttentation" type="xs:string" minOccurs="0" />
+              <xs:element name="C2IsAttentation" msprop:Generator_ColumnVarNameInTable="columnC2IsAttentation" msprop:Generator_ColumnPropNameInRow="C2IsAttentation" msprop:Generator_ColumnPropNameInTable="C2IsAttentationColumn" msprop:Generator_UserColumnName="C2IsAttentation" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

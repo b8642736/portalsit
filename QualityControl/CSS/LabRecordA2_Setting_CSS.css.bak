@@ -1,0 +1,22 @@
+﻿body {
+}
+
+.ListView1CSS {
+    /*width: 80%;*/
+    width: 90%;
+}
+
+    .ListView1CSS tr {
+        height: 30px;
+        padding: 5px;
+    }
+
+    .ListView1CSS td {
+        height: 30px;
+        padding: 5px;
+    }
+
+.ListView1CSS_Input {
+    width: 95%;
+    font-size: large;
+}

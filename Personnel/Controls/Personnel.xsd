@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Personnel" targetNamespace="http://tempuri.org/Personnel.xsd" xmlns:mstns="http://tempuri.org/Personnel.xsd" xmlns="http://tempuri.org/Personnel.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Personnel" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Personnel" msprop:Generator_UserDSName="Personnel">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="WorkOrResetDetailSearch" msprop:Generator_TableClassName="WorkOrResetDetailSearchDataTable" msprop:Generator_TableVarName="tableWorkOrResetDetailSearch" msprop:Generator_RowChangedName="WorkOrResetDetailSearchRowChanged" msprop:Generator_TablePropName="WorkOrResetDetailSearch" msprop:Generator_RowDeletingName="WorkOrResetDetailSearchRowDeleting" msprop:Generator_RowChangingName="WorkOrResetDetailSearchRowChanging" msprop:Generator_RowEvHandlerName="WorkOrResetDetailSearchRowChangeEventHandler" msprop:Generator_RowDeletedName="WorkOrResetDetailSearchRowDeleted" msprop:Generator_RowClassName="WorkOrResetDetailSearchRow" msprop:Generator_UserTableName="WorkOrResetDetailSearch" msprop:Generator_RowEvArgName="WorkOrResetDetailSearchRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="單位" msprop:Generator_ColumnVarNameInTable="column單位" msprop:Generator_ColumnPropNameInRow="單位" msprop:Generator_ColumnPropNameInTable="單位Column" msprop:Generator_UserColumnName="單位" type="xs:string" minOccurs="0" />
+              <xs:element name="姓名" msprop:Generator_ColumnVarNameInTable="column姓名" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" msprop:Generator_UserColumnName="姓名" type="xs:string" minOccurs="0" />
+              <xs:element name="工號" msprop:Generator_ColumnVarNameInTable="column工號" msprop:Generator_ColumnPropNameInRow="工號" msprop:Generator_ColumnPropNameInTable="工號Column" msprop:Generator_UserColumnName="工號" type="xs:string" minOccurs="0" />
+              <xs:element name="日期" msprop:Generator_ColumnVarNameInTable="column日期" msprop:Generator_ColumnPropNameInRow="日期" msprop:Generator_ColumnPropNameInTable="日期Column" msprop:Generator_UserColumnName="日期" type="xs:string" minOccurs="0" />
+              <xs:element name="值勤" msprop:Generator_ColumnVarNameInTable="column值勤" msprop:Generator_ColumnPropNameInRow="值勤" msprop:Generator_ColumnPropNameInTable="值勤Column" msprop:Generator_UserColumnName="值勤" type="xs:string" minOccurs="0" />
+              <xs:element name="應出勤時間" msprop:Generator_ColumnVarNameInTable="column應出勤時間" msprop:Generator_ColumnPropNameInRow="應出勤時間" msprop:Generator_ColumnPropNameInTable="應出勤時間Column" msprop:Generator_UserColumnName="應出勤時間" type="xs:string" minOccurs="0" />
+              <xs:element name="刷卡時時間" msprop:Generator_ColumnVarNameInTable="column刷卡時時間" msprop:Generator_ColumnPropNameInRow="刷卡時時間" msprop:Generator_ColumnPropNameInTable="刷卡時時間Column" msprop:Generator_UserColumnName="刷卡時時間" type="xs:string" minOccurs="0" />
+              <xs:element name="請假時數" msprop:Generator_ColumnVarNameInTable="column請假時數" msprop:Generator_ColumnPropNameInRow="請假時數" msprop:Generator_ColumnPropNameInTable="請假時數Column" msprop:Generator_UserColumnName="請假時數" type="xs:string" minOccurs="0" />
+              <xs:element name="加班" msprop:Generator_ColumnVarNameInTable="column加班" msprop:Generator_ColumnPropNameInRow="加班" msprop:Generator_ColumnPropNameInTable="加班Column" msprop:Generator_UserColumnName="加班" type="xs:string" minOccurs="0" />
+              <xs:element name="說明" msprop:Generator_ColumnVarNameInTable="column說明" msprop:Generator_ColumnPropNameInRow="說明" msprop:Generator_ColumnPropNameInTable="說明Column" msprop:Generator_UserColumnName="說明" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HRLeaveDetail" msprop:Generator_TableClassName="HRLeaveDetailDataTable" msprop:Generator_TableVarName="tableHRLeaveDetail" msprop:Generator_TablePropName="HRLeaveDetail" msprop:Generator_RowDeletingName="HRLeaveDetailRowDeleting" msprop:Generator_RowChangingName="HRLeaveDetailRowChanging" msprop:Generator_RowEvHandlerName="HRLeaveDetailRowChangeEventHandler" msprop:Generator_RowDeletedName="HRLeaveDetailRowDeleted" msprop:Generator_UserTableName="HRLeaveDetail" msprop:Generator_RowChangedName="HRLeaveDetailRowChanged" msprop:Generator_RowEvArgName="HRLeaveDetailRowChangeEvent" msprop:Generator_RowClassName="HRLeaveDetailRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="單位代號" msprop:Generator_ColumnVarNameInTable="column單位代號" msprop:Generator_ColumnPropNameInRow="單位代號" msprop:Generator_ColumnPropNameInTable="單位代號Column" msprop:Generator_UserColumnName="單位代號" type="xs:string" minOccurs="0" />
+              <xs:element name="工號" msprop:Generator_ColumnVarNameInTable="column工號" msprop:Generator_ColumnPropNameInRow="工號" msprop:Generator_ColumnPropNameInTable="工號Column" msprop:Generator_UserColumnName="工號" type="xs:string" minOccurs="0" />
+              <xs:element name="姓名" msprop:Generator_ColumnVarNameInTable="column姓名" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" msprop:Generator_UserColumnName="姓名" type="xs:string" minOccurs="0" />
+              <xs:element name="假別" msprop:Generator_ColumnVarNameInTable="column假別" msprop:Generator_ColumnPropNameInRow="假別" msprop:Generator_ColumnPropNameInTable="假別Column" msprop:Generator_UserColumnName="假別" type="xs:string" minOccurs="0" />
+              <xs:element name="起始時間" msprop:Generator_ColumnVarNameInTable="column起始時間" msprop:Generator_ColumnPropNameInRow="起始時間" msprop:Generator_ColumnPropNameInTable="起始時間Column" msprop:Generator_UserColumnName="起始時間" type="xs:string" minOccurs="0" />
+              <xs:element name="終訖時間" msprop:Generator_ColumnVarNameInTable="column終訖時間" msprop:Generator_ColumnPropNameInRow="終訖時間" msprop:Generator_ColumnPropNameInTable="終訖時間Column" msprop:Generator_UserColumnName="終訖時間" type="xs:string" minOccurs="0" />
+              <xs:element name="合計日時" msprop:Generator_ColumnVarNameInTable="column合計日時" msprop:Generator_ColumnPropNameInRow="合計日時" msprop:Generator_ColumnPropNameInTable="合計日時Column" msprop:Generator_UserColumnName="合計日時" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Report_伙食小計表" msprop:Generator_TableClassName="Report_伙食小計表DataTable" msprop:Generator_TableVarName="tableReport_伙食小計表" msprop:Generator_RowChangedName="Report_伙食小計表RowChanged" msprop:Generator_TablePropName="Report_伙食小計表" msprop:Generator_RowDeletingName="Report_伙食小計表RowDeleting" msprop:Generator_RowChangingName="Report_伙食小計表RowChanging" msprop:Generator_RowEvHandlerName="Report_伙食小計表RowChangeEventHandler" msprop:Generator_RowDeletedName="Report_伙食小計表RowDeleted" msprop:Generator_RowClassName="Report_伙食小計表Row" msprop:Generator_UserTableName="Report_伙食小計表" msprop:Generator_RowEvArgName="Report_伙食小計表RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="序號" msprop:Generator_ColumnVarNameInTable="column序號" msprop:Generator_ColumnPropNameInRow="序號" msprop:Generator_ColumnPropNameInTable="序號Column" msprop:Generator_UserColumnName="序號" type="xs:string" minOccurs="0" />
+              <xs:element name="置放位子中文" msdata:Caption="置放位子" msprop:Generator_ColumnVarNameInTable="column置放位子中文" msprop:Generator_ColumnPropNameInRow="置放位子中文" msprop:Generator_ColumnPropNameInTable="置放位子中文Column" msprop:Generator_UserColumnName="置放位子中文" type="xs:string" minOccurs="0" />
+              <xs:element name="置放位子代號" msprop:Generator_ColumnVarNameInTable="column置放位子代號" msprop:Generator_ColumnPropNameInRow="置放位子代號" msprop:Generator_ColumnPropNameInTable="置放位子代號Column" msprop:Generator_UserColumnName="置放位子代號" type="xs:string" minOccurs="0" />
+              <xs:element name="時段" msprop:Generator_ColumnVarNameInTable="column時段" msprop:Generator_ColumnPropNameInRow="時段" msprop:Generator_ColumnPropNameInTable="時段Column" msprop:Generator_UserColumnName="時段" type="xs:string" minOccurs="0" />
+              <xs:element name="餐別A" msprop:Generator_ColumnVarNameInTable="column餐別A" msprop:Generator_ColumnPropNameInRow="餐別A" msprop:Generator_ColumnPropNameInTable="餐別AColumn" msprop:Generator_UserColumnName="餐別A" type="xs:int" minOccurs="0" />
+              <xs:element name="餐別B" msdata:Caption="餐別A" msprop:Generator_ColumnVarNameInTable="column餐別B" msprop:Generator_ColumnPropNameInRow="餐別B" msprop:Generator_ColumnPropNameInTable="餐別BColumn" msprop:Generator_UserColumnName="餐別B" type="xs:int" minOccurs="0" />
+              <xs:element name="餐別C" msdata:Caption="餐別A" msprop:Generator_ColumnVarNameInTable="column餐別C" msprop:Generator_ColumnPropNameInRow="餐別C" msprop:Generator_ColumnPropNameInTable="餐別CColumn" msprop:Generator_UserColumnName="餐別C" type="xs:int" minOccurs="0" />
+              <xs:element name="餐別D" msdata:Caption="餐別A" msprop:Generator_ColumnVarNameInTable="column餐別D" msprop:Generator_ColumnPropNameInRow="餐別D" msprop:Generator_ColumnPropNameInTable="餐別DColumn" msprop:Generator_UserColumnName="餐別D" type="xs:int" minOccurs="0" />
+              <xs:element name="餐別E" msdata:Caption="餐別A" msprop:Generator_ColumnVarNameInTable="column餐別E" msprop:Generator_ColumnPropNameInRow="餐別E" msprop:Generator_ColumnPropNameInTable="餐別EColumn" msprop:Generator_UserColumnName="餐別E" type="xs:int" minOccurs="0" />
+              <xs:element name="餐別F" msprop:Generator_ColumnVarNameInTable="column餐別F" msprop:Generator_ColumnPropNameInRow="餐別F" msprop:Generator_ColumnPropNameInTable="餐別FColumn" msprop:Generator_UserColumnName="餐別F" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Report_伙食明細表" msprop:Generator_TableClassName="Report_伙食明細表DataTable" msprop:Generator_TableVarName="tableReport_伙食明細表" msprop:Generator_RowChangedName="Report_伙食明細表RowChanged" msprop:Generator_TablePropName="Report_伙食明細表" msprop:Generator_RowDeletingName="Report_伙食明細表RowDeleting" msprop:Generator_RowChangingName="Report_伙食明細表RowChanging" msprop:Generator_RowEvHandlerName="Report_伙食明細表RowChangeEventHandler" msprop:Generator_RowDeletedName="Report_伙食明細表RowDeleted" msprop:Generator_RowClassName="Report_伙食明細表Row" msprop:Generator_UserTableName="Report_伙食明細表" msprop:Generator_RowEvArgName="Report_伙食明細表RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="處置" msprop:Generator_ColumnVarNameInTable="column處置" msprop:Generator_ColumnPropNameInRow="處置" msprop:Generator_ColumnPropNameInTable="處置Column" msprop:Generator_UserColumnName="處置" type="xs:string" minOccurs="0" />
+              <xs:element name="序號" msprop:Generator_ColumnVarNameInTable="column序號" msprop:Generator_ColumnPropNameInRow="序號" msprop:Generator_ColumnPropNameInTable="序號Column" msprop:Generator_UserColumnName="序號" type="xs:string" minOccurs="0" />
+              <xs:element name="編號" msprop:Generator_ColumnVarNameInTable="column編號" msprop:Generator_ColumnPropNameInRow="編號" msprop:Generator_ColumnPropNameInTable="編號Column" msprop:Generator_UserColumnName="編號" type="xs:string" minOccurs="0" />
+              <xs:element name="姓名" msprop:Generator_ColumnVarNameInTable="column姓名" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" msprop:Generator_UserColumnName="姓名" type="xs:string" minOccurs="0" />
+              <xs:element name="部門0" msprop:Generator_ColumnVarNameInTable="column部門0" msprop:Generator_ColumnPropNameInRow="部門0" msprop:Generator_ColumnPropNameInTable="部門0Column" msprop:Generator_UserColumnName="部門0" type="xs:string" minOccurs="0" />
+              <xs:element name="部門1" msprop:Generator_ColumnVarNameInTable="column部門1" msprop:Generator_ColumnPropNameInRow="部門1" msprop:Generator_ColumnPropNameInTable="部門1Column" msprop:Generator_UserColumnName="部門1" type="xs:string" minOccurs="0" />
+              <xs:element name="部門2" msprop:Generator_ColumnVarNameInTable="column部門2" msprop:Generator_ColumnPropNameInRow="部門2" msprop:Generator_ColumnPropNameInTable="部門2Column" msprop:Generator_UserColumnName="部門2" type="xs:string" minOccurs="0" />
+              <xs:element name="葷食" msprop:Generator_ColumnVarNameInTable="column葷食" msprop:Generator_ColumnPropNameInRow="葷食" msprop:Generator_ColumnPropNameInTable="葷食Column" msprop:Generator_UserColumnName="葷食" type="xs:string" minOccurs="0" />
+              <xs:element name="素食" msprop:Generator_ColumnVarNameInTable="column素食" msprop:Generator_ColumnPropNameInRow="素食" msprop:Generator_ColumnPropNameInTable="素食Column" msprop:Generator_UserColumnName="素食" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Report_伙食報支總表" msprop:Generator_TableClassName="Report_伙食報支總表DataTable" msprop:Generator_TableVarName="tableReport_伙食報支總表" msprop:Generator_RowChangedName="Report_伙食報支總表RowChanged" msprop:Generator_TablePropName="Report_伙食報支總表" msprop:Generator_RowDeletingName="Report_伙食報支總表RowDeleting" msprop:Generator_RowChangingName="Report_伙食報支總表RowChanging" msprop:Generator_RowEvHandlerName="Report_伙食報支總表RowChangeEventHandler" msprop:Generator_RowDeletedName="Report_伙食報支總表RowDeleted" msprop:Generator_RowClassName="Report_伙食報支總表Row" msprop:Generator_UserTableName="Report_伙食報支總表" msprop:Generator_RowEvArgName="Report_伙食報支總表RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="序號" msprop:Generator_ColumnVarNameInTable="column序號" msprop:Generator_ColumnPropNameInRow="序號" msprop:Generator_ColumnPropNameInTable="序號Column" msprop:Generator_UserColumnName="序號" type="xs:string" minOccurs="0" />
+              <xs:element name="編號" msprop:Generator_ColumnVarNameInTable="column編號" msprop:Generator_ColumnPropNameInRow="編號" msprop:Generator_ColumnPropNameInTable="編號Column" msprop:Generator_UserColumnName="編號" type="xs:string" minOccurs="0" />
+              <xs:element name="姓名" msprop:Generator_ColumnVarNameInTable="column姓名" msprop:Generator_ColumnPropNameInRow="姓名" msprop:Generator_ColumnPropNameInTable="姓名Column" msprop:Generator_UserColumnName="姓名" type="xs:string" minOccurs="0" />
+              <xs:element name="置便當" msprop:Generator_ColumnVarNameInTable="column置便當" msprop:Generator_ColumnPropNameInRow="置便當" msprop:Generator_ColumnPropNameInTable="置便當Column" msprop:Generator_UserColumnName="置便當" type="xs:string" minOccurs="0" />
+              <xs:element name="部門" msprop:Generator_ColumnVarNameInTable="column部門" msprop:Generator_ColumnPropNameInRow="部門" msprop:Generator_ColumnPropNameInTable="部門Column" msprop:Generator_UserColumnName="部門" type="xs:string" minOccurs="0" />
+              <xs:element name="午葷" msprop:Generator_ColumnVarNameInTable="column午葷" msprop:Generator_ColumnPropNameInRow="午葷" msprop:Generator_ColumnPropNameInTable="午葷Column" msprop:Generator_UserColumnName="午葷" type="xs:string" minOccurs="0" />
+              <xs:element name="午素" msprop:Generator_ColumnVarNameInTable="column午素" msprop:Generator_ColumnPropNameInRow="午素" msprop:Generator_ColumnPropNameInTable="午素Column" msprop:Generator_UserColumnName="午素" type="xs:string" minOccurs="0" />
+              <xs:element name="晚葷" msprop:Generator_ColumnVarNameInTable="column晚葷" msprop:Generator_ColumnPropNameInRow="晚葷" msprop:Generator_ColumnPropNameInTable="晚葷Column" msprop:Generator_UserColumnName="晚葷" type="xs:string" minOccurs="0" />
+              <xs:element name="晚素" msprop:Generator_ColumnVarNameInTable="column晚素" msprop:Generator_ColumnPropNameInRow="晚素" msprop:Generator_ColumnPropNameInTable="晚素Column" msprop:Generator_UserColumnName="晚素" type="xs:string" minOccurs="0" />
+              <xs:element name="應付" msprop:Generator_ColumnVarNameInTable="column應付" msprop:Generator_ColumnPropNameInRow="應付" msprop:Generator_ColumnPropNameInTable="應付Column" msprop:Generator_UserColumnName="應付" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Report_伙食每日每餐總表" msprop:Generator_TableClassName="Report_伙食每日每餐總表DataTable" msprop:Generator_TableVarName="tableReport_伙食每日每餐總表" msprop:Generator_TablePropName="Report_伙食每日每餐總表" msprop:Generator_RowDeletingName="Report_伙食每日每餐總表RowDeleting" msprop:Generator_RowChangingName="Report_伙食每日每餐總表RowChanging" msprop:Generator_RowEvHandlerName="Report_伙食每日每餐總表RowChangeEventHandler" msprop:Generator_RowDeletedName="Report_伙食每日每餐總表RowDeleted" msprop:Generator_UserTableName="Report_伙食每日每餐總表" msprop:Generator_RowChangedName="Report_伙食每日每餐總表RowChanged" msprop:Generator_RowEvArgName="Report_伙食每日每餐總表RowChangeEvent" msprop:Generator_RowClassName="Report_伙食每日每餐總表Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="標題" msprop:Generator_ColumnVarNameInTable="column標題" msprop:Generator_ColumnPropNameInRow="標題" msprop:Generator_ColumnPropNameInTable="標題Column" msprop:Generator_UserColumnName="標題" type="xs:string" minOccurs="0" />
+              <xs:element name="資料1" msprop:Generator_ColumnVarNameInTable="column資料1" msprop:Generator_ColumnPropNameInRow="資料1" msprop:Generator_ColumnPropNameInTable="資料1Column" msprop:Generator_UserColumnName="資料1" type="xs:string" minOccurs="0" />
+              <xs:element name="資料2" msprop:Generator_ColumnVarNameInTable="column資料2" msprop:Generator_ColumnPropNameInRow="資料2" msprop:Generator_ColumnPropNameInTable="資料2Column" msprop:Generator_UserColumnName="資料2" type="xs:string" minOccurs="0" />
+              <xs:element name="資料3" msprop:Generator_ColumnVarNameInTable="column資料3" msprop:Generator_ColumnPropNameInRow="資料3" msprop:Generator_ColumnPropNameInTable="資料3Column" msprop:Generator_UserColumnName="資料3" type="xs:string" minOccurs="0" />
+              <xs:element name="資料4" msprop:Generator_ColumnVarNameInTable="column資料4" msprop:Generator_ColumnPropNameInRow="資料4" msprop:Generator_ColumnPropNameInTable="資料4Column" msprop:Generator_UserColumnName="資料4" type="xs:string" minOccurs="0" />
+              <xs:element name="資料5" msprop:Generator_ColumnVarNameInTable="column資料5" msprop:Generator_ColumnPropNameInRow="資料5" msprop:Generator_ColumnPropNameInTable="資料5Column" msprop:Generator_UserColumnName="資料5" type="xs:string" minOccurs="0" />
+              <xs:element name="資料6" msprop:Generator_ColumnVarNameInTable="column資料6" msprop:Generator_ColumnPropNameInRow="資料6" msprop:Generator_ColumnPropNameInTable="資料6Column" msprop:Generator_UserColumnName="資料6" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

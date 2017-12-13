@@ -1,0 +1,1055 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E7B8E89-2CE0-4995-B536-1D38F44DC2C7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>QualityControl</RootNamespace>
+    <AssemblyName>QualityControl</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>QualityControl.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>QualityControl.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 12.0\ReportViewer\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CompanyORMDB" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="PublicClassLibrary" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BlackCoilOEMSearchForm.aspx" />
+    <Content Include="BlackCoilSearchForm.aspx" />
+    <Content Include="CoilDefectExtendSearchForm.aspx" />
+    <Content Include="CoilDefectSearchForm.aspx" />
+    <Content Include="CoilExamineRecForm.aspx" />
+    <Content Include="CoilLevelWeightSearchForm.aspx" />
+    <Content Include="CoilNumberInfosForm.aspx" />
+    <Content Include="CoilProgressSearchForm.aspx" />
+    <Content Include="Controls\BlackCoilOEMSearch.ascx" />
+    <Content Include="Controls\BlackCoilSearch.ascx" />
+    <Content Include="Controls\CoilDefectSearch.ascx" />
+    <Content Include="Controls\CoilExamineRec.ascx" />
+    <Content Include="Controls\CoilLevelWeightSearch.ascx" />
+    <Content Include="Controls\CoilNumberInfos.ascx" />
+    <Content Include="Controls\CoilProgressSearch.ascx" />
+    <Content Include="Controls\CSSearch.ascx" />
+    <Content Include="Controls\HomeSellReview\HomeSellReview.ascx" />
+    <Content Include="Controls\HotRollingSearch.ascx" />
+    <Content Include="Controls\InspectionSearch.ascx" />
+    <Content Include="Controls\LabRecordA2_Edit\img\TE.png" />
+    <Content Include="Controls\LabRecordA2_Edit\LabRecordA2_Edit.ascx" />
+    <Content Include="Controls\LabRecordA2_Edit\LabRecordA2_Main.ascx" />
+    <Content Include="Controls\LabRecordA2_Edit\LabRecordA2_Print.ascx" />
+    <Content Include="Controls\LabRecordA2_Edit\LabRecordA2_Search.ascx" />
+    <Content Include="Controls\LabRecordA2_Edit\WebService_autocomplete.asmx" />
+    <Content Include="Controls\LabRecordA2_Report\LabRecordA2_Report.ascx" />
+    <Content Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Assay_DAT.ascx" />
+    <Content Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Assay_RES_V1.ascx" />
+    <Content Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Assay_RES_V2.ascx" />
+    <Content Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Main.ascx" />
+    <Content Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Preview.ascx" />
+    <Content Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_DAT.ascx" />
+    <Content Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_RES_ASSAY.ascx" />
+    <Content Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_RES_V1.ascx" />
+    <Content Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_RES_V2.ascx" />
+    <Content Include="Controls\NatureAttributeSearch.ascx" />
+    <Content Include="Controls\NonRadioactiveReport\NonRadioactive_Edit.ascx" />
+    <Content Include="Controls\NonRadioactiveReport\NonRadioactive_Main.ascx" />
+    <Content Include="Controls\NonRadioactiveReport\NonRadioactive_Print.ascx" />
+    <Content Include="Controls\NonRadioactiveReport\NonRadioactive_Search.ascx" />
+    <Content Include="Controls\NonRadioactiveReport\TE.png" />
+    <Content Include="Controls\ProductBugSearch\ProductBugSearch.ascx" />
+    <Content Include="Controls\ProductBugStatistics.ascx" />
+    <Content Include="Controls\ProductBugWeightSearch.ascx" />
+    <Content Include="Controls\ProductLoseStatistics.ascx" />
+    <Content Include="Controls\QABugEdit.ascx" />
+    <Content Include="Controls\QABugRecordEdit.ascx" />
+    <Content Include="Controls\QAPDI.ascx" />
+    <Content Include="Controls\SQLServerElementControlSearch.ascx" />
+    <Content Include="Controls\SQLServerStoveElementSearch.ascx" />
+    <Content Include="Controls\SteelKindFaceOutRateAnalysis\SteelKindFaceOutRateAnalysis.ascx" />
+    <Content Include="Controls\StoveElementOutBuySearch.ascx" />
+    <Content Include="Controls\StoveElementSearchOther.ascx" />
+    <Content Include="Controls\YieldRateSearch.ascx" />
+    <Content Include="Controls\YieldRateSearch2.ascx" />
+    <Content Include="Controls\CoilDefectExtendSearch.ascx" />
+    <Content Include="Controls\CoilNatureAndChemistryAttributeSearch.ascx" />
+    <Content Include="CSSearchForm.aspx" />
+    <Content Include="CSS\Default.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSS\LabRecordA2_Report_CSS.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSS\LabRecordA2_Setting_CSS.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSS\MainMaster.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSS\TabContainer.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HomeSellReviewForm.aspx" />
+    <Content Include="HotRollingSearchForm.aspx" />
+    <Content Include="InspectionSearchForm.aspx" />
+    <Content Include="LabRecordA2EditForm.aspx" />
+    <Content Include="LabRecordA2PreviewForm.aspx" />
+    <Content Include="LabRecordA2ReportForm.aspx" />
+    <Content Include="LabRecordA2SettingForm.aspx" />
+    <Content Include="NatureAttributeSearchForm.aspx" />
+    <Content Include="NonRadioactiveSearchForm.aspx" />
+    <Content Include="ProductBugSearchForm.aspx" />
+    <Content Include="ProductBugStatisticsForm.aspx" />
+    <Content Include="ProductBugWeightSearchForm.aspx" />
+    <Content Include="ProductLoseStatisticsForm.aspx" />
+    <Content Include="QABugEditForm.aspx" />
+    <Content Include="QABugRecordEditForm.aspx" />
+    <Content Include="QAPDIForm.aspx" />
+    <Content Include="SQLServerElementControlSearchForm.aspx" />
+    <Content Include="SQLServerStoveElementSearchForm.aspx" />
+    <Content Include="SteelKindFaceOutRateAnalysisForm.aspx" />
+    <Content Include="StoveElementOutBuySearchForm.aspx" />
+    <Content Include="StoveElementSearchOtherForm.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="YieldRateSearch2Form.aspx" />
+    <Content Include="YieldRateSearchForm.aspx" />
+    <Content Include="CoilNatureAndChemistryAttributeSearchForm.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlackCoilOEMSearchForm.aspx.designer.vb">
+      <DependentUpon>BlackCoilOEMSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlackCoilOEMSearchForm.aspx.vb">
+      <DependentUpon>BlackCoilOEMSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="BlackCoilSearchForm.aspx.designer.vb">
+      <DependentUpon>BlackCoilSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlackCoilSearchForm.aspx.vb">
+      <DependentUpon>BlackCoilSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilDefectEntrustSearchForm.aspx.designer.vb">
+      <DependentUpon>CoilDefectEntrustSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilDefectEntrustSearchForm.aspx.vb">
+      <DependentUpon>CoilDefectEntrustSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilDefectExtendSearchForm.aspx.designer.vb">
+      <DependentUpon>CoilDefectExtendSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilDefectExtendSearchForm.aspx.vb">
+      <DependentUpon>CoilDefectExtendSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilDefectPurchaseSearchForm.aspx.designer.vb">
+      <DependentUpon>CoilDefectPurchaseSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilDefectPurchaseSearchForm.aspx.vb">
+      <DependentUpon>CoilDefectPurchaseSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilDefectSearchForm.aspx.designer.vb">
+      <DependentUpon>CoilDefectSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilDefectSearchForm.aspx.vb">
+      <DependentUpon>CoilDefectSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CoilExamineRecForm.aspx.designer.vb">
+      <DependentUpon>CoilExamineRecForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilExamineRecForm.aspx.vb">
+      <DependentUpon>CoilExamineRecForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilLevelWeightSearchForm.aspx.designer.vb">
+      <DependentUpon>CoilLevelWeightSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilLevelWeightSearchForm.aspx.vb">
+      <DependentUpon>CoilLevelWeightSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilLineWidthHeightSearchForm.aspx.designer.vb">
+      <DependentUpon>CoilLineWidthHeightSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilLineWidthHeightSearchForm.aspx.vb">
+      <DependentUpon>CoilLineWidthHeightSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilNumberInfosForm.aspx.designer.vb">
+      <DependentUpon>CoilNumberInfosForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilNumberInfosForm.aspx.vb">
+      <DependentUpon>CoilNumberInfosForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilProgressSearchForm.aspx.designer.vb">
+      <DependentUpon>CoilProgressSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilProgressSearchForm.aspx.vb">
+      <DependentUpon>CoilProgressSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilRealWidthSearchForm.aspx.designer.vb">
+      <DependentUpon>CoilRealWidthSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilRealWidthSearchForm.aspx.vb">
+      <DependentUpon>CoilRealWidthSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackCoilOEMSearch.ascx.designer.vb">
+      <DependentUpon>BlackCoilOEMSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BlackCoilOEMSearch.ascx.vb">
+      <DependentUpon>BlackCoilOEMSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BlackCoilSearch.ascx.designer.vb">
+      <DependentUpon>BlackCoilSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BlackCoilSearch.ascx.vb">
+      <DependentUpon>BlackCoilSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilDefectEntrustSearch.ascx.designer.vb">
+      <DependentUpon>CoilDefectEntrustSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilDefectEntrustSearch.ascx.vb">
+      <DependentUpon>CoilDefectEntrustSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilDefectPurchaseSearch.ascx.designer.vb">
+      <DependentUpon>CoilDefectPurchaseSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilDefectPurchaseSearch.ascx.vb">
+      <DependentUpon>CoilDefectPurchaseSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilDefectSearch.ascx.designer.vb">
+      <DependentUpon>CoilDefectSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilDefectSearch.ascx.vb">
+      <DependentUpon>CoilDefectSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilExamineRec.ascx.designer.vb">
+      <DependentUpon>CoilExamineRec.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilExamineRec.ascx.vb">
+      <DependentUpon>CoilExamineRec.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilLevelWeightSearch.ascx.designer.vb">
+      <DependentUpon>CoilLevelWeightSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilLevelWeightSearch.ascx.vb">
+      <DependentUpon>CoilLevelWeightSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilLineWidthHeightSearch.ascx.designer.vb">
+      <DependentUpon>CoilLineWidthHeightSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilLineWidthHeightSearch.ascx.vb">
+      <DependentUpon>CoilLineWidthHeightSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilNumberInfos.ascx.designer.vb">
+      <DependentUpon>CoilNumberInfos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilNumberInfos.ascx.vb">
+      <DependentUpon>CoilNumberInfos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilProgressSearch.ascx.designer.vb">
+      <DependentUpon>CoilProgressSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilProgressSearch.ascx.vb">
+      <DependentUpon>CoilProgressSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilRealWidthSearch.ascx.designer.vb">
+      <DependentUpon>CoilRealWidthSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilRealWidthSearch.ascx.vb">
+      <DependentUpon>CoilRealWidthSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CSSearch.ascx.designer.vb">
+      <DependentUpon>CSSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CSSearch.ascx.vb">
+      <DependentUpon>CSSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\HomeSellReview\HomeSellReview.ascx.designer.vb">
+      <DependentUpon>HomeSellReview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HomeSellReview\HomeSellReview.ascx.vb">
+      <DependentUpon>HomeSellReview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\HotRollingSearch.ascx.designer.vb">
+      <DependentUpon>HotRollingSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HotRollingSearch.ascx.vb">
+      <DependentUpon>HotRollingSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InspectionSearch.ascx.designer.vb">
+      <DependentUpon>InspectionSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InspectionSearch.ascx.vb">
+      <DependentUpon>InspectionSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Edit\LabRecordA2_Edit.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Edit\LabRecordA2_Edit.ascx.vb">
+      <DependentUpon>LabRecordA2_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Edit\LabRecordA2_Edit_Module.vb" />
+    <Compile Include="Controls\LabRecordA2_Edit\LabRecordA2_Main.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Main.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Edit\LabRecordA2_Main.ascx.vb">
+      <DependentUpon>LabRecordA2_Main.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Edit\LabRecordA2_Print.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Print.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Edit\LabRecordA2_Print.ascx.vb">
+      <DependentUpon>LabRecordA2_Print.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Edit\LabRecordA2_Search.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Search.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Edit\LabRecordA2_Search.ascx.vb">
+      <DependentUpon>LabRecordA2_Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Edit\WebService_autocomplete.asmx.vb">
+      <DependentUpon>WebService_autocomplete.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Report\LabRecordA2_Report.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Report.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Report\LabRecordA2_Report.ascx.vb">
+      <DependentUpon>LabRecordA2_Report.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Assay_DAT.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Setting_Assay_DAT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Assay_DAT.ascx.vb">
+      <DependentUpon>LabRecordA2_Setting_Assay_DAT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Assay_RES_V1.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Setting_Assay_RES_V1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Assay_RES_V1.ascx.vb">
+      <DependentUpon>LabRecordA2_Setting_Assay_RES_V1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Assay_RES_V2.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Setting_Assay_RES_V2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Assay_RES_V2.ascx.vb">
+      <DependentUpon>LabRecordA2_Setting_Assay_RES_V2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Main.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Setting_Main.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Main.ascx.vb">
+      <DependentUpon>LabRecordA2_Setting_Main.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Module.vb" />
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Preview.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Setting_Preview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Preview.ascx.vb">
+      <DependentUpon>LabRecordA2_Setting_Preview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_DAT.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Setting_Remark_DAT.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_DAT.ascx.vb">
+      <DependentUpon>LabRecordA2_Setting_Remark_DAT.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_RES_ASSAY.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Setting_Remark_RES_ASSAY.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_RES_ASSAY.ascx.vb">
+      <DependentUpon>LabRecordA2_Setting_Remark_RES_ASSAY.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_RES_V1.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Setting_Remark_RES_V1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_RES_V1.ascx.vb">
+      <DependentUpon>LabRecordA2_Setting_Remark_RES_V1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_RES_V2.ascx.designer.vb">
+      <DependentUpon>LabRecordA2_Setting_Remark_RES_V2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabRecordA2_Setting\LabRecordA2_Setting_Remark_RES_V2.ascx.vb">
+      <DependentUpon>LabRecordA2_Setting_Remark_RES_V2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MainDefectSearch.ascx.designer.vb">
+      <DependentUpon>MainDefectSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MainDefectSearch.ascx.vb">
+      <DependentUpon>MainDefectSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NatureAttributeSearch.ascx.designer.vb">
+      <DependentUpon>NatureAttributeSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NatureAttributeSearch.ascx.vb">
+      <DependentUpon>NatureAttributeSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NonRadioactiveReport\NonRadioactive_Edit.ascx.designer.vb">
+      <DependentUpon>NonRadioactive_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NonRadioactiveReport\NonRadioactive_Edit.ascx.vb">
+      <DependentUpon>NonRadioactive_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NonRadioactiveReport\NonRadioactive_Main.ascx.designer.vb">
+      <DependentUpon>NonRadioactive_Main.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NonRadioactiveReport\NonRadioactive_Main.ascx.vb">
+      <DependentUpon>NonRadioactive_Main.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NonRadioactiveReport\NonRadioactive_Print.ascx.designer.vb">
+      <DependentUpon>NonRadioactive_Print.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NonRadioactiveReport\NonRadioactive_Print.ascx.vb">
+      <DependentUpon>NonRadioactive_Print.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NonRadioactiveReport\NonRadioactive_Search.ascx.designer.vb">
+      <DependentUpon>NonRadioactive_Search.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NonRadioactiveReport\NonRadioactive_Search.ascx.vb">
+      <DependentUpon>NonRadioactive_Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductBugSearch\ProductBugSearch.ascx.designer.vb">
+      <DependentUpon>ProductBugSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductBugSearch\ProductBugSearch.ascx.vb">
+      <DependentUpon>ProductBugSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductBugStatistics.ascx.designer.vb">
+      <DependentUpon>ProductBugStatistics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductBugStatistics.ascx.vb">
+      <DependentUpon>ProductBugStatistics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductBugWeightSearch.ascx.designer.vb">
+      <DependentUpon>ProductBugWeightSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductBugWeightSearch.ascx.vb">
+      <DependentUpon>ProductBugWeightSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductLoseStatistics.ascx.designer.vb">
+      <DependentUpon>ProductLoseStatistics.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductLoseStatistics.ascx.vb">
+      <DependentUpon>ProductLoseStatistics.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\QABugEdit.ascx.designer.vb">
+      <DependentUpon>QABugEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QABugEdit.ascx.vb">
+      <DependentUpon>QABugEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\QABugRecordEdit.ascx.designer.vb">
+      <DependentUpon>QABugRecordEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QABugRecordEdit.ascx.vb">
+      <DependentUpon>QABugRecordEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\QAPDI.ascx.designer.vb">
+      <DependentUpon>QAPDI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QAPDI.ascx.vb">
+      <DependentUpon>QAPDI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\QualityControlDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QualityControlDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QualityControlDataSet.vb">
+      <DependentUpon>QualityControlDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SLABBeforeOutElementSearch.ascx.designer.vb">
+      <DependentUpon>SLABBeforeOutElementSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SLABBeforeOutElementSearch.ascx.vb">
+      <DependentUpon>SLABBeforeOutElementSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SQLServerElementControlSearch.ascx.designer.vb">
+      <DependentUpon>SQLServerElementControlSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SQLServerElementControlSearch.ascx.vb">
+      <DependentUpon>SQLServerElementControlSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SQLServerStoveElementSearch.ascx.designer.vb">
+      <DependentUpon>SQLServerStoveElementSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SQLServerStoveElementSearch.ascx.vb">
+      <DependentUpon>SQLServerStoveElementSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SteelKindFaceOutRateAnalysis\SteelKindFaceOutRateAnalysis.ascx.designer.vb">
+      <DependentUpon>SteelKindFaceOutRateAnalysis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SteelKindFaceOutRateAnalysis\SteelKindFaceOutRateAnalysis.ascx.vb">
+      <DependentUpon>SteelKindFaceOutRateAnalysis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StoveElementOutBuySearch.ascx.designer.vb">
+      <DependentUpon>StoveElementOutBuySearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StoveElementOutBuySearch.ascx.vb">
+      <DependentUpon>StoveElementOutBuySearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StoveElementSearchOther.ascx.designer.vb">
+      <DependentUpon>StoveElementSearchOther.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StoveElementSearchOther.ascx.vb">
+      <DependentUpon>StoveElementSearchOther.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StoveElementSearch.ascx.designer.vb">
+      <DependentUpon>StoveElementSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StoveElementSearch.ascx.vb">
+      <DependentUpon>StoveElementSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilYieldRateCompute.vb" />
+    <Compile Include="Controls\YieldRateSearch.ascx.designer.vb">
+      <DependentUpon>YieldRateSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\YieldRateSearch.ascx.vb">
+      <DependentUpon>YieldRateSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\YieldRateSearch2.ascx.designer.vb">
+      <DependentUpon>YieldRateSearch2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\YieldRateSearch2.ascx.vb">
+      <DependentUpon>YieldRateSearch2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilDefectExtendSearch.ascx.designer.vb">
+      <DependentUpon>CoilDefectExtendSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilDefectExtendSearch.ascx.vb">
+      <DependentUpon>CoilDefectExtendSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CoilNatureAndChemistryAttributeSearch.ascx.designer.vb">
+      <DependentUpon>CoilNatureAndChemistryAttributeSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CoilNatureAndChemistryAttributeSearch.ascx.vb">
+      <DependentUpon>CoilNatureAndChemistryAttributeSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSSearchForm.aspx.designer.vb">
+      <DependentUpon>CSSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSSearchForm.aspx.vb">
+      <DependentUpon>CSSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HomeSellReviewForm.aspx.designer.vb">
+      <DependentUpon>HomeSellReviewForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeSellReviewForm.aspx.vb">
+      <DependentUpon>HomeSellReviewForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HotRollingSearchForm.aspx.designer.vb">
+      <DependentUpon>HotRollingSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HotRollingSearchForm.aspx.vb">
+      <DependentUpon>HotRollingSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="InspectionSearchForm.aspx.designer.vb">
+      <DependentUpon>InspectionSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InspectionSearchForm.aspx.vb">
+      <DependentUpon>InspectionSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LabRecordA2EditForm.aspx.designer.vb">
+      <DependentUpon>LabRecordA2EditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LabRecordA2EditForm.aspx.vb">
+      <DependentUpon>LabRecordA2EditForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabRecordA2PreviewForm.aspx.designer.vb">
+      <DependentUpon>LabRecordA2PreviewForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LabRecordA2PreviewForm.aspx.vb">
+      <DependentUpon>LabRecordA2PreviewForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabRecordA2ReportForm.aspx.designer.vb">
+      <DependentUpon>LabRecordA2ReportForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LabRecordA2ReportForm.aspx.vb">
+      <DependentUpon>LabRecordA2ReportForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LabRecordA2SettingForm.aspx.designer.vb">
+      <DependentUpon>LabRecordA2SettingForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LabRecordA2SettingForm.aspx.vb">
+      <DependentUpon>LabRecordA2SettingForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainDefectSearchForm.aspx.designer.vb">
+      <DependentUpon>MainDefectSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainDefectSearchForm.aspx.vb">
+      <DependentUpon>MainDefectSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster.Master.designer.vb">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster.Master.vb">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NatureAttributeSearchForm.aspx.designer.vb">
+      <DependentUpon>NatureAttributeSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NatureAttributeSearchForm.aspx.vb">
+      <DependentUpon>NatureAttributeSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="NonRadioactiveSearchForm.aspx.designer.vb">
+      <DependentUpon>NonRadioactiveSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NonRadioactiveSearchForm.aspx.vb">
+      <DependentUpon>NonRadioactiveSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductBugSearchForm.aspx.designer.vb">
+      <DependentUpon>ProductBugSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBugSearchForm.aspx.vb">
+      <DependentUpon>ProductBugSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProductBugStatisticsForm.aspx.designer.vb">
+      <DependentUpon>ProductBugStatisticsForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBugStatisticsForm.aspx.vb">
+      <DependentUpon>ProductBugStatisticsForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProductBugWeightSearchForm.aspx.designer.vb">
+      <DependentUpon>ProductBugWeightSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBugWeightSearchForm.aspx.vb">
+      <DependentUpon>ProductBugWeightSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProductLoseStatisticsForm.aspx.designer.vb">
+      <DependentUpon>ProductLoseStatisticsForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductLoseStatisticsForm.aspx.vb">
+      <DependentUpon>ProductLoseStatisticsForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="QABugEditForm.aspx.designer.vb">
+      <DependentUpon>QABugEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QABugEditForm.aspx.vb">
+      <DependentUpon>QABugEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="QABugRecordEditForm.aspx.designer.vb">
+      <DependentUpon>QABugRecordEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QABugRecordEditForm.aspx.vb">
+      <DependentUpon>QABugRecordEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="QAPDIForm.aspx.designer.vb">
+      <DependentUpon>QAPDIForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QAPDIForm.aspx.vb">
+      <DependentUpon>QAPDIForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SLABBeforeOutElementSearchForm.aspx.designer.vb">
+      <DependentUpon>SLABBeforeOutElementSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SLABBeforeOutElementSearchForm.aspx.vb">
+      <DependentUpon>SLABBeforeOutElementSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SQLServerElementControlSearchForm.aspx.designer.vb">
+      <DependentUpon>SQLServerElementControlSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SQLServerElementControlSearchForm.aspx.vb">
+      <DependentUpon>SQLServerElementControlSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SQLServerStoveElementSearchForm.aspx.designer.vb">
+      <DependentUpon>SQLServerStoveElementSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SQLServerStoveElementSearchForm.aspx.vb">
+      <DependentUpon>SQLServerStoveElementSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SteelKindFaceOutRateAnalysisForm.aspx.designer.vb">
+      <DependentUpon>SteelKindFaceOutRateAnalysisForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SteelKindFaceOutRateAnalysisForm.aspx.vb">
+      <DependentUpon>SteelKindFaceOutRateAnalysisForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="StoveElementOutBuySearchForm.aspx.designer.vb">
+      <DependentUpon>StoveElementOutBuySearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoveElementOutBuySearchForm.aspx.vb">
+      <DependentUpon>StoveElementOutBuySearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="StoveElementSearchForm.aspx.designer.vb">
+      <DependentUpon>StoveElementSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoveElementSearchForm.aspx.vb">
+      <DependentUpon>StoveElementSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="StoveElementSearchOtherForm.aspx.designer.vb">
+      <DependentUpon>StoveElementSearchOtherForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoveElementSearchOtherForm.aspx.vb">
+      <DependentUpon>StoveElementSearchOtherForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="YieldRateSearch2Form.aspx.designer.vb">
+      <DependentUpon>YieldRateSearch2Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YieldRateSearch2Form.aspx.vb">
+      <DependentUpon>YieldRateSearch2Form.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="YieldRateSearchForm.aspx.designer.vb">
+      <DependentUpon>YieldRateSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YieldRateSearchForm.aspx.vb">
+      <DependentUpon>YieldRateSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CoilNatureAndChemistryAttributeSearchForm.aspx.designer.vb">
+      <DependentUpon>CoilNatureAndChemistryAttributeSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoilNatureAndChemistryAttributeSearchForm.aspx.vb">
+      <DependentUpon>CoilNatureAndChemistryAttributeSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\SteelKindFaceOutRateAnalysis\SteelKindFaceOutRateAnalysisReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controls\HomeSellReview\HomeSellReviewReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Controls\LabRecordA2_Edit\report\Main.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LabRecordA2_Edit\report\Report-Details.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LabRecordA2_Edit\report\Report-Main.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LabRecordA2_Edit\report\Report-Sub1.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LabRecordA2_Edit\report\Report-Sub2.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LabRecordA2_Edit\report\Report-Sub3.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LabRecordA2_Edit\report\Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NonRadioactiveReport\NonRadioactive_Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CoilDefectEntrustSearchForm.aspx" />
+    <Content Include="CoilDefectPurchaseSearchForm.aspx" />
+    <Content Include="CoilLineWidthHeightSearchForm.aspx" />
+    <Content Include="CoilRealWidthSearchForm.aspx" />
+    <Content Include="Controls\CoilDefectEntrustSearch.ascx" />
+    <Content Include="Controls\CoilDefectPurchaseSearch.ascx" />
+    <Content Include="Controls\CoilLineWidthHeightSearch.ascx" />
+    <Content Include="Controls\CoilRealWidthSearch.ascx" />
+    <Content Include="Controls\MainDefectSearch.ascx" />
+    <Content Include="Controls\SLABBeforeOutElementSearch.ascx" />
+    <Content Include="Controls\StoveElementSearch.ascx" />
+    <Content Include="Controls\輸入資料範本.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="Icons\16-arrow-right.png" />
+    <Content Include="Icons\16-circle-blue.png" />
+    <Content Include="Icons\collapse.jpg" />
+    <Content Include="Icons\expand.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MainDefectSearchForm.aspx" />
+    <Content Include="MainMaster.Master" />
+    <Content Include="SLABBeforeOutElementSearchForm.aspx" />
+    <Content Include="StoveElementSearchForm.aspx" />
+    <None Include="Controls\QualityControlDataSet.xsc">
+      <DependentUpon>QualityControlDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Controls\QualityControlDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QualityControlDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Controls\QualityControlDataSet.xss">
+      <DependentUpon>QualityControlDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\設定檔1.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyLINQDB\CompanyLINQDB.vbproj">
+      <Project>{F24E97F1-D320-4779-8C6C-8C7CC65E170D}</Project>
+      <Name>CompanyLINQDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CompanyORMDB\CompanyORMDB.vbproj">
+      <Project>{AC01C38E-B385-4AF8-B595-10E78CE211AD}</Project>
+      <Name>CompanyORMDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicClassLibrary\PublicClassLibrary.vbproj">
+      <Project>{C30FB035-8308-4AAA-A9DC-3453A08F5411}</Project>
+      <Name>PublicClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UCAjaxServerControl1\UCAjaxServerControl1.vbproj">
+      <Project>{2790148A-6BBF-49CF-B2F3-E3966798BCED}</Project>
+      <Name>UCAjaxServerControl1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebAppAuthority\WebAppAuthority.vbproj">
+      <Project>{A2648750-FB34-452A-B768-FE800FF6622A}</Project>
+      <Name>WebAppAuthority</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61508</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/QualityControl</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

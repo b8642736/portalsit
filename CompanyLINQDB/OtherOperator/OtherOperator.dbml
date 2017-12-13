@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="OtherOperator" Class="OtherOperatorDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=server04m;Initial Catalog=OtherOperator;Persist Security Info=True;User ID=WebLoginUser" SettingsObjectName="CompanyLINQDB.My.MySettings" SettingsPropertyName="Server1_OtherOperator" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AS400QueryRecord" Member="AS400QueryRecord">
+    <Type Name="AS400QueryRecord">
+      <Column Name="ID" Type="System.String" DbType="Char(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QueryString" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="QueryType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifyRecordCount" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="RunPCIP" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="RunUser" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="RunTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsRunSuccess" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MessageBoard" Member="MessageBoard">
+    <Type Name="MessageBoard">
+      <Column Name="ID" Type="System.String" DbType="Char(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MessageContent" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DataSaveDateTeime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DataSaveUser" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FileSharedRecord" Member="FileSharedRecord">
+    <Type Name="FileSharedRecord">
+      <Column Name="ID" Type="System.String" DbType="Char(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SaveFileFullPath" Type="System.String" DbType="Char(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Descript" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="UploadTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UploadUser" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="UploadPCIP" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebMenuDisplayForAuthority" Member="WebMenuDisplayForAuthority">
+    <Type Name="WebMenuDisplayForAuthority">
+      <Column Name="ID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FK_WebMenuID" Type="System.String" DbType="NChar(38) NOT NULL" CanBeNull="false" />
+      <Column Name="FK_SystemCode" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FK_FunctionCode" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="WebMenu_WebMenuDisplayForAuthority" Member="WebMenu" ThisKey="FK_WebMenuID" OtherKey="ID" Type="WebMenu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WebMenu" Member="WebMenu">
+    <Type Name="WebMenu">
+      <Column Name="ID" Type="System.String" DbType="NChar(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MenuName" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="NodeType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NodeText" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="GoWebSitName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="GoWebSitFileName" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="ToolTip" Type="System.String" DbType="NChar(200)" CanBeNull="true" />
+      <Column Name="IsEnable" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FK_UpWebMenuID" Type="System.String" DbType="NChar(38)" CanBeNull="true" />
+      <Association Name="WebMenu_WebMenuDisplayForAuthority" Member="WebMenuDisplayForAuthority" ThisKey="ID" OtherKey="FK_WebMenuID" Type="WebMenuDisplayForAuthority" />
+      <Association Name="WebMenu_WebMenu" Member="WebMenu1" ThisKey="ID" OtherKey="FK_UpWebMenuID" Type="WebMenu" />
+      <Association Name="WebMenu_WebMenu" Member="WebMenu" ThisKey="FK_UpWebMenuID" OtherKey="ID" Type="WebMenu" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

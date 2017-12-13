@@ -1,0 +1,64 @@
+﻿body {
+}
+
+.ListView1CSS {
+    /*width: 80%;*/
+    width: 90%;
+}
+
+    .ListView1CSS tr {
+        height: 30px;
+        padding: 5px;
+    }
+
+    .ListView1CSS td {
+        height: 30px;
+        padding: 5px;
+    }
+
+.ListView1CSS_Input {
+    width: 95%;
+    font-size: medium;
+
+    background-color:#ffffff;
+    color :#000000;
+}
+
+.ListView1CSS_Lock {
+    width: 95%;
+    font-size: medium ;
+    
+    background-color:#CCCCCC;
+    color :#000000;
+}
+
+
+
+.myTab1 {
+    width: 90%;
+    border-collapse: collapse;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+}
+
+    .myTab1 td {
+        height: 30px;
+        padding: 2px;
+        border-collapse: collapse;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #cccccc;
+    }
+
+
+.td_key {
+    background: #28c82f;
+    border-color: #000000;
+    color: #000000;
+}
+
+
+.myTab2 {
+    width: 100%;
+}

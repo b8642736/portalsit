@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QCdb01" Class="SMPDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=Server04m;Initial Catalog=QCdb01;Persist Security Info=True;User ID=test01" SettingsObjectName="CompanyLINQDB.My.MySettings" SettingsPropertyName="Server1_QCdb01" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.分光儀紀錄" Member="分光儀紀錄">
+    <Type Name="分光儀紀錄">
+      <Column Name="爐號" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="鋼種" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="材質" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="站別" Type="System.String" DbType="NVarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="序號" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="判定" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="日期" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="時間" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="操作員" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DF" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MD30" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ti" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Nb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="W" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="H2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="B" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ca" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sample" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Task" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Method" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Melt" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Furnace" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="分光儀編號" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.成品判定" Member="成品判定">
+    <Type Name="成品判定">
+      <Column Name="鋼種" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="材質" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="管制種類" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="DF" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MD30" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ti" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Nb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="W" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="H2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="B" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ca" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BI" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ZN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ZR" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GP" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAndN" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.接收資料JY4" Member="接收資料JY4">
+    <Type Name="接收資料JY4">
+      <Column Name="爐號" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="站別" Type="System.String" DbType="NVarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="序號" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="日期" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="時間" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="點序" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ti" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Nb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="W" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="H2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="B" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ca" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="取樣註記" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.氮氧紀錄" Member="氮氧紀錄">
+    <Type Name="氮氧紀錄">
+      <Column Name="爐號" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="站別" Type="System.String" DbType="NVarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="序號" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="日期" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="時間" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="N1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O1" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.登錄密碼" Member="登錄密碼">
+    <Type Name="登錄密碼">
+      <Column Name="pid" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="pwd" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="date1" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="date2" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="phone" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="e_mail" Type="System.String" DbType="Char(30) NOT NULL" CanBeNull="false" />
+      <Column Name="auth" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.碳硫紀錄" Member="碳硫紀錄">
+    <Type Name="碳硫紀錄">
+      <Column Name="爐號" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="站別" Type="System.String" DbType="NVarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="序號" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="日期" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="時間" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="C2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S2" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.製程判定" Member="製程判定">
+    <Type Name="製程判定">
+      <Column Name="鋼種" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="材質" Type="System.String" DbType="NVarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="站別" Type="System.String" DbType="NVarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="序號" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="上下限" Type="System.Char" DbType="NVarChar(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DF" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MD30" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ti" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Nb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="W" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="H2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="B" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ca" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="C2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="最後更新時間" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="更新來源IP" Type="System.String" DbType="Char(15)" CanBeNull="true" />
+      <Column Name="更新者" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="As" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Bi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Zn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Zr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GP" Storage="_G_p" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ta" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CAndN" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NbAndTa" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SMPMethod" Member="SMPMethod">
+    <Type Name="SMPMethod">
+      <Column Name="MethodNumber" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Memo1" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsNOUse" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="SMPMethod_SMPMethodToSMPStandardSample" Member="SMPMethodToSMPStandardSample" ThisKey="MethodNumber" OtherKey="SMPMethodNumber" Type="SMPMethodToSMPStandardSample" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SMPStandardSample" Member="SMPStandardSample">
+    <Type Name="SMPStandardSample">
+      <Column Name="SampleNumber" Type="System.String" DbType="Char(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ti" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Nb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="W" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="B" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ca" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[As]" Member="As" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Bi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Zn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Zr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ModifyUser" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="ModifyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsNOUse" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Ta" Type="System.Double" CanBeNull="false" />
+      <Association Name="SMPStandardSample_SMPMethodToSMPStandardSample" Member="SMPMethodToSMPStandardSample" ThisKey="SampleNumber" OtherKey="SMPSampleNumber" Type="SMPMethodToSMPStandardSample" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SMPMethodToSMPStandardSample" Member="SMPMethodToSMPStandardSample">
+    <Type Name="SMPMethodToSMPStandardSample">
+      <Column Name="SMPMethodNumber" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SMPSampleNumber" Type="System.String" DbType="Char(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="SMPMethod_SMPMethodToSMPStandardSample" Member="SMPMethod" ThisKey="SMPMethodNumber" OtherKey="MethodNumber" Type="SMPMethod" IsForeignKey="true" />
+      <Association Name="SMPStandardSample_SMPMethodToSMPStandardSample" Member="SMPStandardSample" ThisKey="SMPSampleNumber" OtherKey="SampleNumber" Type="SMPStandardSample" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.取樣品質" Member="取樣品質">
+    <Type Name="取樣品質">
+      <Column Name="SaveTime" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="爐號" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="站別" Type="System.String" DbType="NVarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="序號" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="日期" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="時間" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="取樣品質代碼" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="取樣品質說明" Type="System.String" DbType="Char(40)" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.分析資料" Member="分析資料">
+    <Type Name="分析資料">
+      <Column Name="爐號" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="鋼種" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="材質" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="站別" Type="System.String" DbType="NVarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="序號" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="判定" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="日期" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="時間" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="操作員" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DF" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MD30" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ti" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Nb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="W" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="H2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="B" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ca" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="C2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="分光儀編號" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="輻射" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="連鑄爐次" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="最後爐" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="驗收料" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="備註1" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="資料異動者" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="資料異動日期" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProcessSchedule" Member="ProcessSchedule">
+    <Type Name="ProcessSchedule">
+      <Column Name="ID" Type="System.String" DbType="Char(38) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SortNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StoveNumber" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SteelKind" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentState" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StartStateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndStateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.標準樣本接收資料CS" Member="標準樣本接收資料CS">
+    <Type Name="標準樣本接收資料CS">
+      <Column Name="SampleID" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="日期時間" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="C1" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="S1" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MachineID" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ShowSampleID" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.標準樣本接收資料OX" Member="標準樣本接收資料OX">
+    <Type Name="標準樣本接收資料OX">
+      <Column Name="SampleID" Type="System.String" DbType="Char(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="日期時間" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="N1" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="O1" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="MachineID" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ShowSampleID" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.標準樣本接收資料" Member="標準樣本接收資料">
+    <Type Name="標準樣本接收資料">
+      <Column Name="爐號" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="站別" Type="System.String" DbType="NVarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="序號" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="日期時間" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="點序" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ti" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Nb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="W" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="B" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ca" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[As]" Member="As" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Bi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Zn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Zr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SampleMark" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Sample" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Comments" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Task" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Method" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Shift" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Furance" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Melt" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="鋼種" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="DeviceName" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="FK_SampleNumber" Type="System.String" DbType="Char(12)" CanBeNull="true" />
+      <Column Name="Ta" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.標準樣本接收資料上下限" Member="標準樣本接收資料上下限">
+    <Type Name="標準樣本接收資料上下限">
+      <Column Name="SampleNumber" Type="System.String" DbType="Char(12) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UP_C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Co" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_AL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Sn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Pb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Ti" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Nb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_W" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_N2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_O2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_B" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Ca" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Mg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_As" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Bi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Sb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Zn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Zr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Fe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Co" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_AL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Sn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Pb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Ti" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Nb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_W" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_N2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_O2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_B" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Ca" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Mg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_As" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Bi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Sb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Zn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Zr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Fe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UP_Ta" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Down_Ta" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.溫濕度記錄" Member="溫濕度記錄">
+    <Type Name="溫濕度記錄">
+      <Column Name="SaveDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Temperture" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Humidity" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DataDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.分析資料變更記錄" Member="分析資料變更記錄">
+    <Type Name="分析資料變更記錄">
+      <Column Name="RecChangeTime" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PreChange爐號" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PreChange站別" Type="System.String" DbType="NChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PreChange序號" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PreChange日期" Type="System.Double" DbType="Float NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RecChangeReason" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RecChangeReasonText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="爐號" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="鋼種" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="材質" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="站別" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+      <Column Name="序號" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="判定" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="日期" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="時間" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="操作員" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DF" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MD30" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="C" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Si" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ni" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Cu" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Co" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AL" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Pb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ti" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Nb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="V" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="W" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="H2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="B" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ca" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Mg" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Fe" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="N1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="O1" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="C2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="S2" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="分光儀編號" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="輻射" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="連鑄爐次" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="最後爐" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="驗收料" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="備註1" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="資料異動者" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="資料異動日期" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="As" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Bi" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Sb" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Zn" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Zr" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GP" Storage="_G_p" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Ta" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

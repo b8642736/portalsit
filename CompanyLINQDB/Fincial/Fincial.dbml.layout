@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 11.375" name="Fincial">
+  <DataContextMoniker Name="/FincialDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8a0c9ecb-95b4-4da8-9b7b-3d3934f003a5" absoluteBounds="3.5, 5.25, 2, 4.6554182942708335">
+      <DataClassMoniker Name="/FincialDataContext/Borrow" />
+      <nestedChildShapes>
+        <elementListCompartment Id="623a9058-cf2e-47e5-8f52-656b4d1b8bea" absoluteBounds="3.515, 5.71, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f8ba784-0b37-40fd-aa54-57ad4f9f3897" absoluteBounds="6.25, 7.875, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/FincialDataContext/BorrowPayMoney" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e4159ee-52f9-4bdf-ae59-fddfe435bbc9" absoluteBounds="6.265, 8.335, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="194099d2-5232-4109-a20c-007f171c2a2f" absoluteBounds="0.75, 4.125, 2, 4.2708154296874987">
+      <DataClassMoniker Name="/FincialDataContext/BorrowContract" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c587277-dcae-48f6-bb20-a9099f519cac" absoluteBounds="0.765, 4.585, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca6bacb0-e035-4f55-acda-c67e51ec3d93" absoluteBounds="3.5, 1.375, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/FincialDataContext/BorrowContractRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c81413d2-8a33-4e9b-9f53-8d0a8d7ca3aa" absoluteBounds="3.515, 1.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a1ef42e8-89ab-4f3f-8394-c064298f310c" absoluteBounds="6.25, 4, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/FincialDataContext/BorrowLCBill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="78e1842a-ecdd-41e2-a896-2bb60426c23e" absoluteBounds="6.265, 4.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a1baa55d-3452-4fce-bbf1-6b04c3f198e9" absoluteBounds="9, 4, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/FincialDataContext/BorrowLCBillPayMoney" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1208a662-c012-4a99-b861-0be99e8f38e4" absoluteBounds="9.015, 4.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 8.89020914713542); (6.25 : 8.89020914713542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FincialDataContext/Borrow/Borrow_BorrowPayMoney" />
+      <nodes>
+        <classShapeMoniker Id="8a0c9ecb-95b4-4da8-9b7b-3d3934f003a5" />
+        <classShapeMoniker Id="8f8ba784-0b37-40fd-aa54-57ad4f9f3897" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.82290771484375); (3.5 : 6.82290771484375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FincialDataContext/BorrowContract/BorrowContract_Borrow" />
+      <nodes>
+        <classShapeMoniker Id="194099d2-5232-4109-a20c-007f171c2a2f" />
+        <classShapeMoniker Id="8a0c9ecb-95b4-4da8-9b7b-3d3934f003a5" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.45923076923077 : 8.3958154296875); (1.45923076923077 : 8.6458154296875); (2.05461538461538 : 8.6458154296875); (2.05461538461538 : 8.3958154296875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FincialDataContext/BorrowContract/BorrowContract_BorrowContract" />
+      <nodes>
+        <classShapeMoniker Id="194099d2-5232-4109-a20c-007f171c2a2f" />
+        <classShapeMoniker Id="194099d2-5232-4109-a20c-007f171c2a2f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4.125); (1.75 : 2.35659912109375); (3.5 : 2.35659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FincialDataContext/BorrowContract/BorrowContract_BorrowContractRate" />
+      <nodes>
+        <classShapeMoniker Id="194099d2-5232-4109-a20c-007f171c2a2f" />
+        <classShapeMoniker Id="ca6bacb0-e035-4f55-acda-c67e51ec3d93" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 6.18350341796875); (6.25 : 6.18350341796875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FincialDataContext/Borrow/Borrow_BorrowLCBill" />
+      <nodes>
+        <classShapeMoniker Id="8a0c9ecb-95b4-4da8-9b7b-3d3934f003a5" />
+        <classShapeMoniker Id="a1ef42e8-89ab-4f3f-8394-c064298f310c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 5.55850341796875); (9 : 5.55850341796875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/FincialDataContext/BorrowLCBill/BorrowLCBill_BorrowLCBillPayMoney" />
+      <nodes>
+        <classShapeMoniker Id="a1ef42e8-89ab-4f3f-8394-c064298f310c" />
+        <classShapeMoniker Id="a1baa55d-3452-4fce-bbf1-6b04c3f198e9" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

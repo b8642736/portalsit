@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WELFARE" targetNamespace="http://tempuri.org/WELFARE.xsd" xmlns:mstns="http://tempuri.org/WELFARE.xsd" xmlns="http://tempuri.org/WELFARE.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WELFARE" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="WELFARE" msprop:Generator_UserDSName="WELFARE">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VoucherSearch" msprop:Generator_TableClassName="VoucherSearchDataTable" msprop:Generator_TableVarName="tableVoucherSearch" msprop:Generator_TablePropName="VoucherSearch" msprop:Generator_RowDeletingName="VoucherSearchRowDeleting" msprop:Generator_RowChangingName="VoucherSearchRowChanging" msprop:Generator_RowEvHandlerName="VoucherSearchRowChangeEventHandler" msprop:Generator_RowDeletedName="VoucherSearchRowDeleted" msprop:Generator_UserTableName="VoucherSearch" msprop:Generator_RowChangedName="VoucherSearchRowChanged" msprop:Generator_RowEvArgName="VoucherSearchRowChangeEvent" msprop:Generator_RowClassName="VoucherSearchRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="傳票編號" msprop:Generator_ColumnVarNameInTable="column傳票編號" msprop:Generator_ColumnPropNameInRow="傳票編號" msprop:Generator_ColumnPropNameInTable="傳票編號Column" msprop:Generator_UserColumnName="傳票編號" type="xs:string" minOccurs="0" />
+              <xs:element name="傳票日期" msprop:Generator_ColumnVarNameInTable="column傳票日期" msprop:Generator_ColumnPropNameInRow="傳票日期" msprop:Generator_ColumnPropNameInTable="傳票日期Column" msprop:Generator_UserColumnName="傳票日期" type="xs:string" minOccurs="0" />
+              <xs:element name="入帳日期" msprop:Generator_ColumnVarNameInTable="column入帳日期" msprop:Generator_ColumnPropNameInRow="入帳日期" msprop:Generator_ColumnPropNameInTable="入帳日期Column" msprop:Generator_UserColumnName="入帳日期" type="xs:string" minOccurs="0" />
+              <xs:element name="會計科目" msprop:Generator_ColumnVarNameInTable="column會計科目" msprop:Generator_ColumnPropNameInRow="會計科目" msprop:Generator_ColumnPropNameInTable="會計科目Column" msprop:Generator_UserColumnName="會計科目" type="xs:string" minOccurs="0" />
+              <xs:element name="款項目" msprop:Generator_ColumnVarNameInTable="column款項目" msprop:Generator_ColumnPropNameInRow="款項目" msprop:Generator_ColumnPropNameInTable="款項目Column" msprop:Generator_UserColumnName="款項目" type="xs:string" minOccurs="0" />
+              <xs:element name="明細項" msprop:Generator_ColumnVarNameInTable="column明細項" msprop:Generator_ColumnPropNameInRow="明細項" msprop:Generator_ColumnPropNameInTable="明細項Column" msprop:Generator_UserColumnName="明細項" type="xs:string" minOccurs="0" />
+              <xs:element name="借貸別" msprop:Generator_ColumnVarNameInTable="column借貸別" msprop:Generator_ColumnPropNameInRow="借貸別" msprop:Generator_ColumnPropNameInTable="借貸別Column" msprop:Generator_UserColumnName="借貸別" type="xs:string" minOccurs="0" />
+              <xs:element name="金額" msprop:Generator_ColumnVarNameInTable="column金額" msprop:Generator_ColumnPropNameInRow="金額" msprop:Generator_ColumnPropNameInTable="金額Column" msprop:Generator_UserColumnName="金額" type="xs:string" minOccurs="0" />
+              <xs:element name="科目別" msprop:Generator_ColumnVarNameInTable="column科目別" msprop:Generator_ColumnPropNameInRow="科目別" msprop:Generator_ColumnPropNameInTable="科目別Column" msprop:Generator_UserColumnName="科目別" type="xs:string" minOccurs="0" />
+              <xs:element name="摘要" msprop:Generator_ColumnVarNameInTable="column摘要" msprop:Generator_ColumnPropNameInRow="摘要" msprop:Generator_ColumnPropNameInTable="摘要Column" msprop:Generator_UserColumnName="摘要" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

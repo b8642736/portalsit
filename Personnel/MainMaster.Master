@@ -1,0 +1,31 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainMaster.master.vb" Inherits="Personnel.MainMaster" %>
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true" 
+EnableScriptLocalization="true"/>
+        <cc1:ucauthorizebutton ID="UcAuthorizeButton1" runat="server" 
+                OpenControlPath="Portalsit@StartContent.aspx" Text="返回主選單" 
+                CssClass="Button1" />
+        <cc1:ucauthorizebutton ID="UcAuthorizeButton2" runat="server" 
+                OpenControlPath="Personnel@Default.aspx" Text="返回系統選單" 
+            CssClass="Button1" />
+        <br /><br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

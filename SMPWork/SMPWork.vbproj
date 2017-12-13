@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{109FFBEF-B386-48FF-9BE8-46E258845632}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SMPWork</RootNamespace>
+    <AssemblyName>SMPWork</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SMPWork.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>SMPWork.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20229.20821, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CompanyLINQDB" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AS400StoveElementEditForm.aspx.designer.vb">
+      <DependentUpon>AS400StoveElementEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AS400StoveElementEditForm.aspx.vb">
+      <DependentUpon>AS400StoveElementEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AS400StoveElementEdit\AS400StoveElementEdit.ascx.designer.vb">
+      <DependentUpon>AS400StoveElementEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AS400StoveElementEdit\AS400StoveElementEdit.ascx.vb">
+      <DependentUpon>AS400StoveElementEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CertificateCheckToXML\CertificateCheckToXML.ascx.designer.vb">
+      <DependentUpon>CertificateCheckToXML.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CertificateCheckToXML\CertificateCheckToXML.ascx.vb">
+      <DependentUpon>CertificateCheckToXML.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ElementChangeSearch\ElementChangeSearch.ascx.designer.vb">
+      <DependentUpon>ElementChangeSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ElementChangeSearch\ElementChangeSearch.ascx.vb">
+      <DependentUpon>ElementChangeSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\HumitureEdit\HumitureEdit.ascx.designer.vb">
+      <DependentUpon>HumitureEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HumitureEdit\HumitureEdit.ascx.vb">
+      <DependentUpon>HumitureEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\JudgeEdit\JudgeEdit.ascx.designer.vb">
+      <DependentUpon>JudgeEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\JudgeEdit\JudgeEdit.ascx.vb">
+      <DependentUpon>JudgeEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LaboratoryReport\LaboratoryReportMaker.ascx.designer.vb">
+      <DependentUpon>LaboratoryReportMaker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LaboratoryReport\LaboratoryReportMaker.ascx.vb">
+      <DependentUpon>LaboratoryReportMaker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MailMsgEdit\MailMsgEdit.ascx.designer.vb">
+      <DependentUpon>MailMsgEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MailMsgEdit\MailMsgEdit.ascx.vb">
+      <DependentUpon>MailMsgEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StandSampleRangeEdit\StandSampleRangeEdit.ascx.designer.vb">
+      <DependentUpon>StandSampleRangeEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StandSampleRangeEdit\StandSampleRangeEdit.ascx.vb">
+      <DependentUpon>StandSampleRangeEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StandSampleStdDevEdit\StandSampleStdDevEdit.ascx.designer.vb">
+      <DependentUpon>StandSampleStdDevEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StandSampleStdDevEdit\StandSampleStdDevEdit.ascx.vb">
+      <DependentUpon>StandSampleStdDevEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StoveElementEdit\StoveElementEdit.ascx.designer.vb">
+      <DependentUpon>StoveElementEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StoveElementEdit\StoveElementEdit.ascx.vb">
+      <DependentUpon>StoveElementEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\儀器檢測查詢編修\CheckSampleEdit.ascx.designer.vb">
+      <DependentUpon>CheckSampleEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\儀器檢測查詢編修\CheckSampleEdit.ascx.vb">
+      <DependentUpon>CheckSampleEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\儀器檢測查詢編修\CSEquipmentCheckSearch.ascx.designer.vb">
+      <DependentUpon>CSEquipmentCheckSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\儀器檢測查詢編修\CSEquipmentCheckSearch.ascx.vb">
+      <DependentUpon>CSEquipmentCheckSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\儀器檢測查詢編修\EquipmentCheckPrint.ascx.designer.vb">
+      <DependentUpon>EquipmentCheckPrint.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\儀器檢測查詢編修\EquipmentCheckPrint.ascx.vb">
+      <DependentUpon>EquipmentCheckPrint.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\儀器檢測查詢編修\EquipmentCheckSearch.ascx.designer.vb">
+      <DependentUpon>EquipmentCheckSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\儀器檢測查詢編修\EquipmentCheckSearch.ascx.vb">
+      <DependentUpon>EquipmentCheckSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RadiationReport\RadiationReportMaker.ascx.designer.vb">
+      <DependentUpon>RadiationReportMaker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RadiationReport\RadiationReportMaker.ascx.vb">
+      <DependentUpon>RadiationReportMaker.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ReportUseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportUseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SampleStatusReport\SampleStatusDetailSearch.ascx.designer.vb">
+      <DependentUpon>SampleStatusDetailSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SampleStatusReport\SampleStatusDetailSearch.ascx.vb">
+      <DependentUpon>SampleStatusDetailSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SampleStatusReport\SampleStatusReport.ascx.designer.vb">
+      <DependentUpon>SampleStatusReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SampleStatusReport\SampleStatusReport.ascx.vb">
+      <DependentUpon>SampleStatusReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\儀器檢測查詢編修\OXEquipmentCheckSearch.ascx.designer.vb">
+      <DependentUpon>OXEquipmentCheckSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\儀器檢測查詢編修\OXEquipmentCheckSearch.ascx.vb">
+      <DependentUpon>OXEquipmentCheckSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSEquipmentCheckSearchForm.aspx.designer.vb">
+      <DependentUpon>CSEquipmentCheckSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSEquipmentCheckSearchForm.aspx.vb">
+      <DependentUpon>CSEquipmentCheckSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ElementChangeSearchForm.aspx.designer.vb">
+      <DependentUpon>ElementChangeSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ElementChangeSearchForm.aspx.vb">
+      <DependentUpon>ElementChangeSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EquipmentCheckPrintForm.aspx.designer.vb">
+      <DependentUpon>EquipmentCheckPrintForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentCheckPrintForm.aspx.vb">
+      <DependentUpon>EquipmentCheckPrintForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EquipmentCheckSearchForm.aspx.designer.vb">
+      <DependentUpon>EquipmentCheckSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EquipmentCheckSearchForm.aspx.vb">
+      <DependentUpon>EquipmentCheckSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HumitureEditForm.aspx.designer.vb">
+      <DependentUpon>HumitureEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HumitureEditForm.aspx.vb">
+      <DependentUpon>HumitureEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="JudgeEditForm.aspx.designer.vb">
+      <DependentUpon>JudgeEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JudgeEditForm.aspx.vb">
+      <DependentUpon>JudgeEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LaboratoryReportMakerForm.aspx.designer.vb">
+      <DependentUpon>LaboratoryReportMakerForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LaboratoryReportMakerForm.aspx.vb">
+      <DependentUpon>LaboratoryReportMakerForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MailMsgEditForm.aspx.designer.vb">
+      <DependentUpon>MailMsgEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailMsgEditForm.aspx.vb">
+      <DependentUpon>MailMsgEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster.Master.designer.vb">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster.Master.vb">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OXEquipmentCheckSearchForm.aspx.designer.vb">
+      <DependentUpon>OXEquipmentCheckSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OXEquipmentCheckSearchForm.aspx.vb">
+      <DependentUpon>OXEquipmentCheckSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="QCdb01DataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QCdb01DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RadiationReportMakerForm.aspx.designer.vb">
+      <DependentUpon>RadiationReportMakerForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RadiationReportMakerForm.aspx.vb">
+      <DependentUpon>RadiationReportMakerForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SampleStatusDetailSearchForm.aspx.designer.vb">
+      <DependentUpon>SampleStatusDetailSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleStatusDetailSearchForm.aspx.vb">
+      <DependentUpon>SampleStatusDetailSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SampleStatusReportForm.aspx.designer.vb">
+      <DependentUpon>SampleStatusReportForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleStatusReportForm.aspx.vb">
+      <DependentUpon>SampleStatusReportForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="StandSampleRangeEditForm.aspx.designer.vb">
+      <DependentUpon>StandSampleRangeEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandSampleRangeEditForm.aspx.vb">
+      <DependentUpon>StandSampleRangeEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="StandSampleStdDevEditForm.aspx.designer.vb">
+      <DependentUpon>StandSampleStdDevEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandSampleStdDevEditForm.aspx.vb">
+      <DependentUpon>StandSampleStdDevEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="StoveElementEditForm.aspx.designer.vb">
+      <DependentUpon>StoveElementEditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoveElementEditForm.aspx.vb">
+      <DependentUpon>StoveElementEditForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\EquipmentCheckPrintSetTextFile_OLD.txt" />
+    <Content Include="AS400StoveElementEditForm.aspx" />
+    <Content Include="Controls\AS400StoveElementEdit\AS400StoveElementEdit.ascx" />
+    <Content Include="Controls\ElementChangeSearch\ElementChangeSearch.ascx" />
+    <Content Include="Controls\HumitureEdit\HumitureEdit.ascx" />
+    <Content Include="Controls\JudgeEdit\JudgeEdit.ascx" />
+    <Content Include="Controls\LaboratoryReport\LaboratoryReportMaker.ascx" />
+    <Content Include="Controls\MailMsgEdit\MailMsgEdit.ascx" />
+    <Content Include="Controls\SampleStatusReport\SampleStatusReportDoc.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controls\StandSampleRangeEdit\StandSampleRangeEdit.ascx" />
+    <Content Include="Controls\StandSampleStdDevEdit\StandSampleStdDevEdit.ascx" />
+    <Content Include="Controls\StoveElementEdit\StoveElementEdit.ascx" />
+    <Content Include="Controls\儀器檢測查詢編修\CheckSampleEdit.ascx" />
+    <Content Include="Controls\LaboratoryReport\LaboratoryReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controls\RadiationReport\RadiationReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controls\儀器檢測查詢編修\EquipmentCheckReport.rdlc" />
+    <Content Include="Controls\儀器檢測查詢編修\第一版EquipmentCheckReport.rdlc" />
+    <Content Include="Controls\儀器檢測查詢編修\第二版EquipmentCheckReport.rdlc" />
+    <Content Include="Controls\RadiationReport\複製 - RadiationReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\CertificateCheckToXML\CertificateCheckToXML.ascx" />
+    <Content Include="Controls\儀器檢測查詢編修\CSEquipmentCheckSearch.ascx" />
+    <Content Include="Controls\儀器檢測查詢編修\EquipmentCheckPrint.ascx" />
+    <Content Include="App_Data\EquipmentCheckPrintSetTextFile.txt" />
+    <Content Include="Controls\儀器檢測查詢編修\EquipmentCheckSearch.ascx" />
+    <Content Include="Controls\RadiationReport\RadiationReportMaker.ascx" />
+    <Content Include="Controls\SampleStatusReport\SampleStatusDetailSearch.ascx" />
+    <Content Include="Controls\SampleStatusReport\SampleStatusReport.ascx" />
+    <Content Include="Controls\儀器檢測查詢編修\OXEquipmentCheckSearch.ascx" />
+    <Content Include="CSEquipmentCheckSearchForm.aspx" />
+    <Content Include="CSS\Default.css" />
+    <Content Include="CSS\MainMaster.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="ElementChangeSearchForm.aspx" />
+    <Content Include="EquipmentCheckPrintForm.aspx" />
+    <Content Include="EquipmentCheckSearchForm.aspx" />
+    <Content Include="HumitureEditForm.aspx" />
+    <Content Include="Icons\16-arrow-right.png" />
+    <Content Include="Icons\16-circle-blue.png" />
+    <Content Include="Icons\collapse.jpg" />
+    <Content Include="Icons\expand.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="JudgeEditForm.aspx" />
+    <Content Include="LaboratoryReportMakerForm.aspx" />
+    <Content Include="MailMsgEditForm.aspx" />
+    <Content Include="MainMaster.Master" />
+    <None Include="Controls\ReportUseDataSet.xsc">
+      <DependentUpon>ReportUseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Controls\ReportUseDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportUseDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Controls\ReportUseDataSet.xss">
+      <DependentUpon>ReportUseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\設定檔1.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="OXEquipmentCheckSearchForm.aspx" />
+    <Content Include="RadiationReportMakerForm.aspx" />
+    <Content Include="SampleStatusDetailSearchForm.aspx" />
+    <Content Include="SampleStatusReportForm.aspx" />
+    <Content Include="StandSampleRangeEditForm.aspx" />
+    <Content Include="StandSampleStdDevEditForm.aspx" />
+    <Content Include="StoveElementEditForm.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="QCdb01DataSet.xsc">
+      <DependentUpon>QCdb01DataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="QCdb01DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QCdb01DataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="QCdb01DataSet.xss">
+      <DependentUpon>QCdb01DataSet.xsd</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyLINQDB\CompanyLINQDB.vbproj">
+      <Project>{F24E97F1-D320-4779-8C6C-8C7CC65E170D}</Project>
+      <Name>CompanyLINQDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CompanyORMDB\CompanyORMDB.vbproj">
+      <Project>{AC01C38E-B385-4AF8-B595-10E78CE211AD}</Project>
+      <Name>CompanyORMDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicClassLibrary\PublicClassLibrary.vbproj">
+      <Project>{C30FB035-8308-4AAA-A9DC-3453A08F5411}</Project>
+      <Name>PublicClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UCAjaxServerControl1\UCAjaxServerControl1.vbproj">
+      <Project>{2790148A-6BBF-49CF-B2F3-E3966798BCED}</Project>
+      <Name>UCAjaxServerControl1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebAppAuthority\WebAppAuthority.vbproj">
+      <Project>{A2648750-FB34-452A-B768-FE800FF6622A}</Project>
+      <Name>WebAppAuthority</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7081</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/SMPWork</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

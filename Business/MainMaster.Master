@@ -1,0 +1,83 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainMaster.master.vb" Inherits="Business.MainMaster" %>
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+            <cc1:ucauthorizebutton ID="UcAuthorizeButton1" runat="server" 
+                    OpenControlPath="Portalsit@StartContent.aspx" Text="返回主選單" 
+                    CssClass="Button1" />
+            <cc1:ucauthorizebutton ID="UcAuthorizeButton2" runat="server" 
+                    OpenControlPath="Business@Default.aspx" Text="返回系統選單" 
+                CssClass="Button1" />
+<%--        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="553px">
+            <Items>
+                <asp:MenuItem Text="查詢編修作業" 
+                    Value="查詢編修作業" ImageUrl="~/Icons/16-circle-blue.png" 
+                    PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="訂單提貨查詢" 
+                        Value="1,BUS01@BUS0101"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="客戶基本資料查詢" 
+                        Value="1,BUS01@BUS0102"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="客戶出貨噸數金額統計表" 
+                        Value="1,BUS01@BUS0108"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="客戶訂單平均厚度統計表" 
+                        Value="1,BUS01@BUS0114"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="客戶毛利分析" 
+                        Value="1,BUS01@BUS0115"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="客訴查詢編修" 
+                        Value="1,BUS01@BUS0116"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="成品庫作業" 
+                    Value="成品庫作業" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="產品出貨車輛登入" 
+                        Value="BUS01@BUS0105"></asp:MenuItem>
+                    <asp:MenuItem Text="鋼捲過磅作業" Value="BUS01@BUS0106" 
+                        ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="報表" 
+                    Value="報表" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="訂單彙整列印" 
+                        Value="2,BUS01@BUS0101"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="訂單承訂未交列印" 
+                        Value="2,BUS01@BUS0103"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="成品無主庫存印列" 
+                        Value="2,BUS01@BUS0104"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="成品有主庫存印列" 
+                        Value="2,BUS01@BUS0117"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="成品繳庫單抄本印列" 
+                        Value="2,BUS01@BUS0107"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="訂單發貨量統計表" 
+                        Value="2,BUS01@BUS0109"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="外銷出貨各月訂單統計表" 
+                        Value="2,BUS01@BUS0110"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="提貨單發貨量統計表" 
+                        Value="2,BUS01@BUS0111"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="客戶外銷訂單發貨量統計表" 
+                        Value="2,BUS01@BUS0112"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="客戶外銷訂單每月發貨量統計表" 
+                        Value="2,BUS01@BUS0113"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="返回首頁" 
+                    
+                    Value="99,BUS01">
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

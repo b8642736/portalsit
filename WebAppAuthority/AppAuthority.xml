@@ -1,0 +1,41 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AppAuthority
+</name>
+</assembly>
+<members>
+<member name="M:AppAuthority.ValidAuthorityModule.IsCanValidAuthoritySystem(System.String,System.String,System.String)">
+	<summary>
+ 驗證是否可通過授權系統
+ </summary>
+	<param name="WebSystemCode"></param>
+	<param name="WebSystemFunctionCode"></param>
+	<param name="ValidClientPCIP">增加使用者IP授權</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:AppAuthority.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AppAuthority.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:AppAuthority.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:AppAuthority.FilterMenuForAuthority.IsPathAuthority(System.Web.UI.Page,System.String)">
+	<summary>
+ 驗證授權路徑
+ </summary>
+	<param name="SourceWebPage"></param>
+	<param name="AuthorizePath"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="VB" CodeBehind="EAFCompanyService.asmx.vb" Class="CompanyWebService.Service1" %>

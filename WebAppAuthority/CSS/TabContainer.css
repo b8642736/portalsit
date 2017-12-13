@@ -1,0 +1,65 @@
+﻿.ajax__myTab .ajax__tab_header
+{
+    font-size: 18px;
+    border-bottom: solid 1px #999999;
+}
+
+.ajax__myTab .ajax__tab_outer
+{
+    padding-right: 4px;
+    height: 30px;
+    background-color: #C0C0C0;
+    margin-right: 2px;
+    border-right: solid 1px #666666;
+    border-top: solid 1px #aaaaaa;
+}
+
+.ajax__myTab .ajax__tab_inner
+{
+    padding-left: 3px;
+    background-color: #C0C0C0;
+}
+
+.ajax__myTab .ajax__tab_tab
+{
+    height: 20px;
+    padding: 4px;
+    margin: 0;
+}
+
+.ajax__myTab .ajax__tab_hover .ajax__tab_outer
+{
+    background-color: #cccccc;
+}
+
+.ajax__myTab .ajax__tab_hover .ajax__tab_inner
+{
+    background-color: #cccccc;
+}
+
+.ajax__myTab .ajax__tab_hover .ajax__tab_tab
+{
+}
+
+.ajax__myTab .ajax__tab_active .ajax__tab_outer
+{
+    background-color: #fff;
+    border-left: solid 1px #999999;
+}
+
+.ajax__myTab .ajax__tab_active .ajax__tab_inner
+{
+    background-color: #fff;
+}
+
+.ajax__myTab .ajax__tab_active .ajax__tab_tab
+{
+}
+
+.ajax__myTab .ajax__tab_body
+{
+    border: 1px solid #999999;
+    border-top: 0;
+    padding: 8px;
+    background-color: #ffffff;
+}

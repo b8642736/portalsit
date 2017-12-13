@@ -1,0 +1,974 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>92496aba-c6dc-4d75-8457-9c25f7698ce2</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>21cm</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>29.7cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.1cm</RightMargin>
+  <LeftMargin>0.1cm</LeftMargin>
+  <BottomMargin>0.6cm</BottomMargin>
+  <rd:ReportID>2cf25e96-67a7-41b1-a62b-34459bb81b10</rd:ReportID>
+  <PageWidth>29.7cm</PageWidth>
+  <DataSets>
+    <DataSet Name="Borrow">
+      <Fields>
+        <Field Name="BankName">
+          <DataField>BankName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IBorrowMoney">
+          <DataField>IBorrowMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="IPayRateKind">
+          <DataField>IPayRateKind</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IBorrowRate">
+          <DataField>IBorrowRate</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="IBorrowStartDate">
+          <DataField>IBorrowStartDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="IBorrowEndDate">
+          <DataField>IBorrowEndDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ContractKindName">
+          <DataField>ContractKindName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AlreadyUseLCBorrowMoney">
+          <DataField>AlreadyUseLCBorrowMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="CanUseLCMoney">
+          <DataField>CanUseLCMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="DebtUseMoney">
+          <DataField>DebtUseMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="DebtRateMoney">
+          <DataField>DebtRateMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="DebtMoney">
+          <DataField>DebtMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="HypothesisDebtRateMoneyDay">
+          <DataField>HypothesisDebtRateMoneyDay</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PayRateKindName">
+          <DataField>PayRateKindName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IsForeignMoneyKind">
+          <DataField>IsForeignMoneyKind</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="LastPayUseMoneyDate">
+          <DataField>LastPayUseMoneyDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="AllCanUseContractKindCodes">
+          <DataField>AllCanUseContractKindCodes</DataField>
+          <rd:TypeName>System.Collections.Generic.List`1[System.String]</rd:TypeName>
+        </Field>
+        <Field Name="PlanPayRateMoneyInformations">
+          <DataField>PlanPayRateMoneyInformations</DataField>
+          <rd:TypeName>System.Collections.Generic.List`1[CompanyLINQDB.PayRateMoneyDaySessionClass]</rd:TypeName>
+        </Field>
+        <Field Name="NextTimePlanPayRateMoneyInformations">
+          <DataField>NextTimePlanPayRateMoneyInformations</DataField>
+          <rd:TypeName>System.Collections.Generic.List`1[CompanyLINQDB.PayRateMoneyDaySessionClass]</rd:TypeName>
+        </Field>
+        <Field Name="NextTimePlanPayRateMoney">
+          <DataField>NextTimePlanPayRateMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="NextTimePlanPayRateMoneyDate">
+          <DataField>NextTimePlanPayRateMoneyDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PlanPayUseMoneyInformations">
+          <DataField>PlanPayUseMoneyInformations</DataField>
+          <rd:TypeName>System.Collections.Generic.List`1[CompanyLINQDB.PayUseMoneyDaySessionClass]</rd:TypeName>
+        </Field>
+        <Field Name="NextTimePlanPayUseMoneyInformations">
+          <DataField>NextTimePlanPayUseMoneyInformations</DataField>
+          <rd:TypeName>System.Collections.Generic.List`1[CompanyLINQDB.PayUseMoneyDaySessionClass]</rd:TypeName>
+        </Field>
+        <Field Name="NextTimePlanPayUseMoney">
+          <DataField>NextTimePlanPayUseMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="NextTimePlanPayUseMoneyDate">
+          <DataField>NextTimePlanPayUseMoneyDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="AlreadyPayUseMoney">
+          <DataField>AlreadyPayUseMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="WaitPayUseMoney">
+          <DataField>WaitPayUseMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="CreditMoneyName">
+          <DataField>CreditMoneyName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BorrowNTMoney">
+          <DataField>BorrowNTMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="BorrowContract_CanUseMoney">
+          <DataField>BorrowContract_CanUseMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="SessionDateSurplusBorrowMoneys">
+          <DataField>SessionDateSurplusBorrowMoneys</DataField>
+          <rd:TypeName>System.Collections.Generic.List`1[CompanyLINQDB.SessionDateSurplusBorrowMoneyClass]</rd:TypeName>
+        </Field>
+        <Field Name="About_BorrowContract">
+          <DataField>About_BorrowContract</DataField>
+          <rd:TypeName>CompanyLINQDB.BorrowContract</rd:TypeName>
+        </Field>
+        <Field Name="About_BorrowLCBill">
+          <DataField>About_BorrowLCBill</DataField>
+          <rd:TypeName>System.Collections.Generic.List`1[CompanyLINQDB.BorrowLCBill]</rd:TypeName>
+        </Field>
+        <Field Name="About_BorrowLCBillPayMoney">
+          <DataField>About_BorrowLCBillPayMoney</DataField>
+          <rd:TypeName>System.Collections.Generic.List`1[CompanyLINQDB.BorrowLCBillPayMoney]</rd:TypeName>
+        </Field>
+        <Field Name="About_BorrowPayMoney">
+          <DataField>About_BorrowPayMoney</DataField>
+          <rd:TypeName>System.Collections.Generic.List`1[CompanyLINQDB.BorrowPayMoney]</rd:TypeName>
+        </Field>
+        <Field Name="IAbout_BorrowPayMoney">
+          <DataField>IAbout_BorrowPayMoney</DataField>
+          <rd:TypeName>System.Collections.Generic.List`1[CompanyLINQDB.IBorrowPayMoneyDBObject]</rd:TypeName>
+        </Field>
+        <Field Name="BorrowContractCreditMoneyForNT">
+          <DataField>BorrowContractCreditMoneyForNT</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="NextTimeNTPayUseMoney">
+          <DataField>NextTimeNTPayUseMoney</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="ContractDescription1">
+          <DataField>ContractDescription1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BorrowSessionDate">
+          <DataField>BorrowSessionDate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FK_BankNumber">
+          <DataField>FK_BankNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FK_ContractKind">
+          <DataField>FK_ContractKind</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FK_StartDate">
+          <DataField>FK_StartDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BorrowStartDate">
+          <DataField>BorrowStartDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BorrowEndDate">
+          <DataField>BorrowEndDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BorrowMoney">
+          <DataField>BorrowMoney</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BorrowRate">
+          <DataField>BorrowRate</DataField>
+          <rd:TypeName>System.Nullable`1[System.Double]</rd:TypeName>
+        </Field>
+        <Field Name="ExchangeRate">
+          <DataField>ExchangeRate</DataField>
+          <rd:TypeName>System.Nullable`1[System.Double]</rd:TypeName>
+        </Field>
+        <Field Name="ProcessEmployee">
+          <DataField>ProcessEmployee</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LCNumber">
+          <DataField>LCNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LCCaseNumber">
+          <DataField>LCCaseNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LatePayMonths">
+          <DataField>LatePayMonths</DataField>
+          <rd:TypeName>System.Nullable`1[System.Int32]</rd:TypeName>
+        </Field>
+        <Field Name="RePaymentTimes">
+          <DataField>RePaymentTimes</DataField>
+          <rd:TypeName>System.Nullable`1[System.Int32]</rd:TypeName>
+        </Field>
+        <Field Name="RePaymentBankNumber">
+          <DataField>RePaymentBankNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PayRateKind">
+          <DataField>PayRateKind</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PayRateMoneyDayNumber">
+          <DataField>PayRateMoneyDayNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PayPrincipalMoneyDayNumber">
+          <DataField>PayPrincipalMoneyDayNumber</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Memo1">
+          <DataField>Memo1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PayRateMoney">
+          <DataField>PayRateMoney</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="BorrowPayMoney">
+          <DataField>BorrowPayMoney</DataField>
+          <rd:TypeName>System.Data.Linq.EntitySet`1[CompanyLINQDB.BorrowPayMoney]</rd:TypeName>
+        </Field>
+        <Field Name="BorrowLCBill">
+          <DataField>BorrowLCBill</DataField>
+          <rd:TypeName>System.Data.Linq.EntitySet`1[CompanyLINQDB.BorrowLCBill]</rd:TypeName>
+        </Field>
+        <Field Name="BorrowContract">
+          <DataField>BorrowContract</DataField>
+          <rd:TypeName>CompanyLINQDB.BorrowContract</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:ObjectDataSourceType>CompanyLINQDB.Borrow, CompanyLINQDB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+        <rd:ObjectDataSourceSelectMethod>Getbb</rd:ObjectDataSourceSelectMethod>
+        <rd:ObjectDataSourceSelectMethodSignature>System.Collections.Generic.List`1[CompanyLINQDB.Borrow] Getbb(System.Collections.Generic.List`1[System.String])</rd:ObjectDataSourceSelectMethodSignature>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>29cm</Width>
+  <Body>
+    <ColumnSpacing>0cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox3">
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <Top>0.5cm</Top>
+        <Width>11.9cm</Width>
+        <Style>
+          <FontFamily>標楷體</FontFamily>
+          <FontSize>14pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>9.85cm</Left>
+        <Height>0.75cm</Height>
+        <Value>唐榮鐵工廠股份有限公司　長期借款明細表</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>0.75cm</Top>
+        <Width>5.5cm</Width>
+        <Style>
+          <FontFamily>標楷體</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.85cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>="資料日期:" &amp; format(Now,"yyyy/MM/dd")</Value>
+      </Textbox>
+      <Table Name="table1">
+        <DataSetName>Borrow</DataSetName>
+        <Top>1.5cm</Top>
+        <Width>28cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="BankName">
+                      <rd:DefaultName>BankName</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Left</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!BankName.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="BorrowContractCreditMoneyForNT">
+                      <rd:DefaultName>BorrowContractCreditMoneyForNT</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(Fields!BorrowContractCreditMoneyForNT.Value/1000,"###,###.#")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="BorrowRate">
+                      <rd:DefaultName>BorrowRate</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(Fields!BorrowRate.Value/100, "#.000%")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="BorrowNTMoney">
+                      <rd:DefaultName>BorrowNTMoney</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(Fields!WaitPayUseMoney.Value, "###,###.#")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="NextTimePlanPayUseMoneyDate">
+                      <rd:DefaultName>NextTimePlanPayUseMoneyDate</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(Fields!NextTimePlanPayUseMoneyDate.Value, "yyyy/MM/dd")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="NextTimeNTPayUseMoney">
+                      <rd:DefaultName>NextTimeNTPayUseMoney</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(Fields!NextTimeNTPayUseMoney.Value, "###,###.#")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="ContractDescription1">
+                      <rd:DefaultName>ContractDescription1</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!ContractDescription1.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="BorrowSessionDate">
+                      <rd:DefaultName>BorrowSessionDate</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!BorrowSessionDate.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.02646cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <FontFamily>標楷體</FontFamily>
+          <TextAlign>Center</TextAlign>
+        </Style>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>標楷體</FontFamily>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>代款行庫</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>標楷體</FontFamily>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>額度
+(仟元台幣)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <rd:DefaultName>textbox16</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>標楷體</FontFamily>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>
+利率</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox30">
+                      <rd:DefaultName>textbox30</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>標楷體</FontFamily>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>貨款金額
+(元台幣)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ColSpan>4</ColSpan>
+                  <ReportItems>
+                    <Table Name="table2">
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>標楷體</FontFamily>
+                      </Style>
+                      <Header>
+                        <TableRows>
+                          <TableRow>
+                            <TableCells>
+                              <TableCell>
+                                <ColSpan>4</ColSpan>
+                                <ReportItems>
+                                  <Textbox Name="textbox19">
+                                    <rd:DefaultName>textbox19</rd:DefaultName>
+                                    <Style>
+                                      <BorderStyle>
+                                        <Default>Solid</Default>
+                                      </BorderStyle>
+                                      <FontFamily>標楷體</FontFamily>
+                                      <TextAlign>Center</TextAlign>
+                                      <VerticalAlign>Bottom</VerticalAlign>
+                                      <LineHeight>12pt</LineHeight>
+                                    </Style>
+                                    <Value>備註</Value>
+                                  </Textbox>
+                                </ReportItems>
+                              </TableCell>
+                            </TableCells>
+                            <Height>0.56148cm</Height>
+                          </TableRow>
+                          <TableRow>
+                            <TableCells>
+                              <TableCell>
+                                <ReportItems>
+                                  <Textbox Name="textbox21">
+                                    <rd:DefaultName>textbox21</rd:DefaultName>
+                                    <Style>
+                                      <BorderStyle>
+                                        <Default>Solid</Default>
+                                      </BorderStyle>
+                                      <FontFamily>標楷體</FontFamily>
+                                      <TextAlign>Center</TextAlign>
+                                      <VerticalAlign>Bottom</VerticalAlign>
+                                      <LineHeight>12pt</LineHeight>
+                                    </Style>
+                                    <Value>最近還款日</Value>
+                                  </Textbox>
+                                </ReportItems>
+                              </TableCell>
+                              <TableCell>
+                                <ReportItems>
+                                  <Textbox Name="textbox22">
+                                    <rd:DefaultName>textbox22</rd:DefaultName>
+                                    <Style>
+                                      <BorderStyle>
+                                        <Default>Solid</Default>
+                                      </BorderStyle>
+                                      <FontFamily>標楷體</FontFamily>
+                                      <TextAlign>Center</TextAlign>
+                                      <VerticalAlign>Bottom</VerticalAlign>
+                                      <LineHeight>12pt</LineHeight>
+                                    </Style>
+                                    <Value>金額(元台幣)</Value>
+                                  </Textbox>
+                                </ReportItems>
+                              </TableCell>
+                              <TableCell>
+                                <ReportItems>
+                                  <Textbox Name="textbox23">
+                                    <rd:DefaultName>textbox23</rd:DefaultName>
+                                    <Style>
+                                      <BorderStyle>
+                                        <Default>Solid</Default>
+                                      </BorderStyle>
+                                      <FontFamily>標楷體</FontFamily>
+                                      <TextAlign>Center</TextAlign>
+                                      <VerticalAlign>Bottom</VerticalAlign>
+                                      <LineHeight>12pt</LineHeight>
+                                    </Style>
+                                    <Value>償還辦法</Value>
+                                  </Textbox>
+                                </ReportItems>
+                              </TableCell>
+                              <TableCell>
+                                <ReportItems>
+                                  <Textbox Name="textbox24">
+                                    <rd:DefaultName>textbox24</rd:DefaultName>
+                                    <Style>
+                                      <BorderStyle>
+                                        <Default>Solid</Default>
+                                      </BorderStyle>
+                                      <FontFamily>標楷體</FontFamily>
+                                      <TextAlign>Center</TextAlign>
+                                      <VerticalAlign>Bottom</VerticalAlign>
+                                      <LineHeight>12pt</LineHeight>
+                                    </Style>
+                                    <Value>契約期間</Value>
+                                  </Textbox>
+                                </ReportItems>
+                              </TableCell>
+                            </TableCells>
+                            <Height>0.68852cm</Height>
+                          </TableRow>
+                        </TableRows>
+                      </Header>
+                      <TableColumns>
+                        <TableColumn>
+                          <Width>2.49763cm</Width>
+                        </TableColumn>
+                        <TableColumn>
+                          <Width>3.5223cm</Width>
+                        </TableColumn>
+                        <TableColumn>
+                          <Width>4.49763cm</Width>
+                        </TableColumn>
+                        <TableColumn>
+                          <Width>3.48773cm</Width>
+                        </TableColumn>
+                      </TableColumns>
+                    </Table>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.25cm</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>3.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>4.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>3.5cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>3.02646cm</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>合　　　計</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(sum(Fields!BorrowContractCreditMoneyForNT.Value)/1000,"###,###.#")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox5">
+                      <rd:DefaultName>textbox5</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox32">
+                      <rd:DefaultName>textbox32</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(sum(Fields!WaitPayUseMoney.Value), "###,###.#")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=format(sum(Fields!NextTimeNTPayUseMoney.Value), "###,###.#")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox28">
+                      <rd:DefaultName>textbox28</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <BorderStyle>
+                          <Default>Solid</Default>
+                        </BorderStyle>
+                        <FontFamily>新細明體</FontFamily>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.75cm</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>0.7cm</Left>
+      </Table>
+    </ReportItems>
+    <Height>21cm</Height>
+  </Body>
+  <Language>zh-TW</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox6">
+        <rd:DefaultName>textbox6</rd:DefaultName>
+        <Width>4.5cm</Width>
+        <Style>
+          <FontFamily>新細明體</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>14cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=Globals!PageNumber &amp; "/" &amp; Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>1.13492cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>0.6cm</TopMargin>
+  <PageHeight>21cm</PageHeight>
+</Report>

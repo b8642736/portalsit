@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BuyDataSet" targetNamespace="http://tempuri.org/BuyDataSet.xsd" xmlns:mstns="http://tempuri.org/BuyDataSet.xsd" xmlns="http://tempuri.org/BuyDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BuyDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BuyDataSet" msprop:Generator_UserDSName="BuyDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="InStockCheckSearch" msprop:Generator_TableClassName="InStockCheckSearchDataTable" msprop:Generator_TableVarName="tableInStockCheckSearch" msprop:Generator_TablePropName="InStockCheckSearch" msprop:Generator_RowDeletingName="InStockCheckSearchRowDeleting" msprop:Generator_UserTableName="InStockCheckSearch" msprop:Generator_RowChangingName="InStockCheckSearchRowChanging" msprop:Generator_RowEvHandlerName="InStockCheckSearchRowChangeEventHandler" msprop:Generator_RowDeletedName="InStockCheckSearchRowDeleted" msprop:Generator_RowEvArgName="InStockCheckSearchRowChangeEvent" msprop:Generator_RowChangedName="InStockCheckSearchRowChanged" msprop:Generator_RowClassName="InStockCheckSearchRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="合約案號" msprop:Generator_ColumnVarNameInTable="column合約案號" msprop:Generator_ColumnPropNameInRow="合約案號" msprop:Generator_ColumnPropNameInTable="合約案號Column" msprop:Generator_UserColumnName="合約案號" type="xs:string" minOccurs="0" />
+              <xs:element name="驗收日期" msprop:Generator_ColumnVarNameInTable="column驗收日期" msprop:Generator_ColumnPropNameInRow="驗收日期" msprop:Generator_ColumnPropNameInTable="驗收日期Column" msprop:Generator_UserColumnName="驗收日期" type="xs:string" minOccurs="0" />
+              <xs:element name="入帳日期" msprop:Generator_ColumnVarNameInTable="column入帳日期" msprop:Generator_ColumnPropNameInRow="入帳日期" msprop:Generator_ColumnPropNameInTable="入帳日期Column" msprop:Generator_UserColumnName="入帳日期" type="xs:string" minOccurs="0" />
+              <xs:element name="付款期限" msprop:Generator_ColumnVarNameInTable="column付款期限" msprop:Generator_ColumnPropNameInRow="付款期限" msprop:Generator_ColumnPropNameInTable="付款期限Column" msprop:Generator_UserColumnName="付款期限" type="xs:string" minOccurs="0" />
+              <xs:element name="項次" msprop:Generator_ColumnVarNameInTable="column項次" msprop:Generator_ColumnPropNameInRow="項次" msprop:Generator_ColumnPropNameInTable="項次Column" msprop:Generator_UserColumnName="項次" type="xs:string" minOccurs="0" />
+              <xs:element name="料號" msprop:Generator_ColumnVarNameInTable="column料號" msprop:Generator_ColumnPropNameInRow="料號" msprop:Generator_ColumnPropNameInTable="料號Column" msprop:Generator_UserColumnName="料號" type="xs:string" minOccurs="0" />
+              <xs:element name="品名" msprop:Generator_ColumnVarNameInTable="column品名" msprop:Generator_ColumnPropNameInRow="品名" msprop:Generator_ColumnPropNameInTable="品名Column" msprop:Generator_UserColumnName="品名" type="xs:string" minOccurs="0" />
+              <xs:element name="特性" msprop:Generator_ColumnVarNameInTable="column特性" msprop:Generator_ColumnPropNameInRow="特性" msprop:Generator_ColumnPropNameInTable="特性Column" msprop:Generator_UserColumnName="特性" type="xs:string" minOccurs="0" />
+              <xs:element name="單位" msprop:Generator_ColumnVarNameInTable="column單位" msprop:Generator_ColumnPropNameInRow="單位" msprop:Generator_ColumnPropNameInTable="單位Column" msprop:Generator_UserColumnName="單位" type="xs:string" minOccurs="0" />
+              <xs:element name="數量" msprop:Generator_ColumnVarNameInTable="column數量" msprop:Generator_ColumnPropNameInRow="數量" msprop:Generator_ColumnPropNameInTable="數量Column" msprop:Generator_UserColumnName="數量" type="xs:string" minOccurs="0" />
+              <xs:element name="單價" msprop:Generator_ColumnVarNameInTable="column單價" msprop:Generator_ColumnPropNameInRow="單價" msprop:Generator_ColumnPropNameInTable="單價Column" msprop:Generator_UserColumnName="單價" type="xs:string" minOccurs="0" />
+              <xs:element name="總價" msprop:Generator_ColumnVarNameInTable="column總價" msprop:Generator_ColumnPropNameInRow="總價" msprop:Generator_ColumnPropNameInTable="總價Column" msprop:Generator_UserColumnName="總價" type="xs:string" minOccurs="0" />
+              <xs:element name="罰款或折讓金額" msprop:Generator_ColumnVarNameInTable="column罰款或折讓金額" msprop:Generator_ColumnPropNameInRow="罰款或折讓金額" msprop:Generator_ColumnPropNameInTable="罰款或折讓金額Column" msprop:Generator_UserColumnName="罰款或折讓金額" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MaterialBuyInComeSearch" msprop:Generator_TableClassName="MaterialBuyInComeSearchDataTable" msprop:Generator_TableVarName="tableMaterialBuyInComeSearch" msprop:Generator_TablePropName="MaterialBuyInComeSearch" msprop:Generator_RowDeletingName="MaterialBuyInComeSearchRowDeleting" msprop:Generator_UserTableName="MaterialBuyInComeSearch" msprop:Generator_RowChangingName="MaterialBuyInComeSearchRowChanging" msprop:Generator_RowEvHandlerName="MaterialBuyInComeSearchRowChangeEventHandler" msprop:Generator_RowDeletedName="MaterialBuyInComeSearchRowDeleted" msprop:Generator_RowEvArgName="MaterialBuyInComeSearchRowChangeEvent" msprop:Generator_RowChangedName="MaterialBuyInComeSearchRowChanged" msprop:Generator_RowClassName="MaterialBuyInComeSearchRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="合約案號" msprop:Generator_ColumnVarNameInTable="column合約案號" msprop:Generator_ColumnPropNameInRow="合約案號" msprop:Generator_ColumnPropNameInTable="合約案號Column" msprop:Generator_UserColumnName="合約案號" type="xs:string" minOccurs="0" />
+              <xs:element name="項次" msprop:Generator_ColumnVarNameInTable="column項次" msprop:Generator_ColumnPropNameInRow="項次" msprop:Generator_ColumnPropNameInTable="項次Column" msprop:Generator_UserColumnName="項次" type="xs:string" minOccurs="0" />
+              <xs:element name="物料編號" msprop:Generator_ColumnVarNameInTable="column物料編號" msprop:Generator_ColumnPropNameInRow="物料編號" msprop:Generator_ColumnPropNameInTable="物料編號Column" msprop:Generator_UserColumnName="物料編號" type="xs:string" minOccurs="0" />
+              <xs:element name="品名" msprop:Generator_ColumnVarNameInTable="column品名" msprop:Generator_ColumnPropNameInRow="品名" msprop:Generator_ColumnPropNameInTable="品名Column" msprop:Generator_UserColumnName="品名" type="xs:string" minOccurs="0" />
+              <xs:element name="供應商" msprop:Generator_ColumnVarNameInTable="column供應商" msprop:Generator_ColumnPropNameInRow="供應商" msprop:Generator_ColumnPropNameInTable="供應商Column" msprop:Generator_UserColumnName="供應商" type="xs:string" minOccurs="0" />
+              <xs:element name="合約日期" msprop:Generator_ColumnVarNameInTable="column合約日期" msprop:Generator_ColumnPropNameInRow="合約日期" msprop:Generator_ColumnPropNameInTable="合約日期Column" msprop:Generator_UserColumnName="合約日期" type="xs:string" minOccurs="0" />
+              <xs:element name="履約期限" msprop:Generator_ColumnVarNameInTable="column履約期限" msprop:Generator_ColumnPropNameInRow="履約期限" msprop:Generator_ColumnPropNameInTable="履約期限Column" msprop:Generator_UserColumnName="履約期限" type="xs:string" minOccurs="0" />
+              <xs:element name="單位" msprop:Generator_ColumnVarNameInTable="column單位" msprop:Generator_ColumnPropNameInRow="單位" msprop:Generator_ColumnPropNameInTable="單位Column" msprop:Generator_UserColumnName="單位" type="xs:string" minOccurs="0" />
+              <xs:element name="數量" msprop:Generator_ColumnVarNameInTable="column數量" msprop:Generator_ColumnPropNameInRow="數量" msprop:Generator_ColumnPropNameInTable="數量Column" msprop:Generator_UserColumnName="數量" type="xs:string" minOccurs="0" />
+              <xs:element name="幣別" msprop:Generator_ColumnVarNameInTable="column幣別" msprop:Generator_ColumnPropNameInRow="幣別" msprop:Generator_ColumnPropNameInTable="幣別Column" msprop:Generator_UserColumnName="幣別" type="xs:string" minOccurs="0" />
+              <xs:element name="單價" msprop:Generator_ColumnVarNameInTable="column單價" msprop:Generator_ColumnPropNameInRow="單價" msprop:Generator_ColumnPropNameInTable="單價Column" msprop:Generator_UserColumnName="單價" type="xs:string" minOccurs="0" />
+              <xs:element name="總價" msprop:Generator_ColumnVarNameInTable="column總價" msprop:Generator_ColumnPropNameInRow="總價" msprop:Generator_ColumnPropNameInTable="總價Column" msprop:Generator_UserColumnName="總價" type="xs:string" minOccurs="0" />
+              <xs:element name="已驗收數量" msprop:Generator_ColumnVarNameInTable="column已驗收數量" msprop:Generator_ColumnPropNameInRow="已驗收數量" msprop:Generator_ColumnPropNameInTable="已驗收數量Column" msprop:Generator_UserColumnName="已驗收數量" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

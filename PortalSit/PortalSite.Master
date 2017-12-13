@@ -1,0 +1,51 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="PortalSite.master.vb" Inherits="PortalSit.PortalSite" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+<%@ Register assembly="UCAjaxServerControl1" namespace="UCAjaxServerControl1" tagprefix="cc2" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>未命名頁面</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+     	    vertical-align:top;
+     	     direction:ltr;
+        }
+    .TitleText
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-large;
+	text-align: center;
+	vertical-align: middle;
+	padding-top: 50px;
+	color: #0000FF;
+	font-style: normal;
+}
+    .ButtonStyle
+    {cursor:Hand;
+     width:100%;
+    }
+    .TDStyle
+    {
+     width:16%;
+    }
+    </style>
+    <link href="CSS/StartContent.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server" width="100%">
+        <div style="text-align:center;width:100%">
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Title2.png" />
+        </div>
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

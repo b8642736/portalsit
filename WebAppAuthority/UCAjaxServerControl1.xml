@@ -1,0 +1,68 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+UCAjaxServerControl1
+</name>
+</assembly>
+<members>
+<member name="P:UCAjaxServerControl1.My.Resources.Resources.ResourceManager">
+	<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member><member name="P:UCAjaxServerControl1.My.Resources.Resources.Culture">
+	<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強型別資源類別的資源查閱。
+</summary>
+</member><member name="T:UCAjaxServerControl1.My.Resources.Resources">
+	<summary>
+  用於查詢當地語系化字串等的強型別資源類別
+</summary>
+</member><member name="P:UCAjaxServerControl1.ucAuthorizeButton.AuthorizePath">
+	<summary>
+ 授權路徑
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:UCAjaxServerControl1.ucAuthorizeButton.OpenControlPath">
+	<summary>
+ 開啟控制項路徑
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:UCAjaxServerControl1.ucAuthorizeButton.VaildToEnableOrDisable">
+	<summary>
+ 驗證後啟動或關閉
+ </summary>
+	<remarks></remarks>
+</member><member name="M:UCAjaxServerControl1.ucAuthorizeButton.VaildShowOrRemove">
+	<summary>
+ 驗證後顯示或移除
+ </summary>
+	<remarks></remarks>
+</member><member name="M:UCAjaxServerControl1.ucAuthorizeButton.ValidRedirectSitePage">
+	<summary>
+ 驗證後導向指定網頁
+ </summary>
+	<returns>回傳錯誤訊息</returns>
+	<remarks></remarks>
+</member><member name="M:UCAjaxServerControl1.ucAuthorizeButton.RedirectSitePage(System.String,System.String)">
+	<summary>
+ 重新導向站台及開啟的網頁
+ </summary>
+	<param name="SiteName"></param>
+	<param name="OpenPageFullName"></param>
+	<remarks></remarks>
+</member><member name="P:UCAjaxServerControl1.ucAuthorizeButton.ErrorMessage">
+	<summary>
+ 錯誤訊息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

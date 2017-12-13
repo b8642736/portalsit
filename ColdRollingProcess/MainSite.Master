@@ -1,0 +1,56 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainSite.master.vb" Inherits="ColdRollingProcess.MainSite" %>
+<%@ Register assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI" tagprefix="asp" %>
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+            <cc1:ucauthorizebutton ID="UcAuthorizeButton1" runat="server" 
+                    OpenControlPath="Portalsit@StartContent.aspx" Text="返回主選單" 
+                    CssClass="Button1" />
+            <cc1:ucauthorizebutton ID="UcAuthorizeButton2" runat="server" 
+                    OpenControlPath="ColdRollingProcess@Default.aspx" Text="返回系統選單" 
+                CssClass="Button1" />
+<%--        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="軋鋼現場作業站平台" 
+                    Value="1,COLD01@COLD0103">
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="編修" 
+                    Value="編修" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem Text="生產排程計劃編修" Value="COLD01@COLD0101" 
+                        ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                    <asp:MenuItem Text="製程作業名稱轉換編修" Value="COLD01@COLD0102" 
+                        ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="冷軋站台編修" 
+                        Value="COLD01@COLD0104"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" 
+                    PopOutImageUrl="~/Icons/16-arrow-right.png" Text="查詢" Value="查詢">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="鋼捲產線狀況查詢" 
+                        Value="COLD01@COLD0105"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="返回首頁" 
+                    Value="99,COLD01">
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

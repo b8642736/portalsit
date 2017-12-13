@@ -1,0 +1,15 @@
+﻿body {
+}
+.DefaultGrid
+{
+	border-right: mediumblue solid;
+	border-top: mediumblue solid;
+	border-left: mediumblue solid;
+	border-bottom: mediumblue solid;
+	border-collapse: separate;
+}
+
+.GridLine1
+{
+	height: 40px;
+}

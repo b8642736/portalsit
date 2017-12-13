@@ -1,0 +1,65 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="WebAuthorityMaster.master.vb" Inherits="WebAppAuthority.WebAuthorityMaster" %>
+<%@ Register assembly="WebAppAuthority" namespace="WebAppAuthority" tagprefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>未命名頁面</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <cc1:ucAuthorizeButton ID="UcAuthorizeButton1" runat="server" 
+                OpenControlPath="Portalsit@StartContent.aspx" Text="返回主選單" 
+                CssClass="Button1" />
+        <cc1:ucAuthorizeButton ID="UcAuthorizeButton2" runat="server" 
+                OpenControlPath="WebAppAuthority@Default.aspx" Text="返回系統選單" CssClass="Button1" />
+        <%--<asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" 
+                    PopOutImageUrl="~/Icons/16-arrow-right.png" Text="系統授基權本資料" 
+                    Value="系統授基權本資料">
+                    <asp:MenuItem Text="新增/編修系統" Value="1-1" 
+                        ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                    <asp:MenuItem Text="新增/編修系統功能" Value="1-2" 
+                        ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                    <asp:MenuItem Text="新增/編修使用者" Value="1-3" ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="新增/編修用戶端電腦" 
+                        Value="1-4"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="新增/編修群組" Value="1-5">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="個別方式授權" 
+                    Value="2" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="個人授權" Value="2-1">
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="個人複製授權" Value="2-2">
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="電腦IP授權" Value="2-3">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" 
+                    Text="群組方式授權" Value="群組方式授權" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="群組成員編修" Value="3-1">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="群組授權" Value="3-2" ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="系統使用權限查詢" Value="4">
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="返回首頁" Value="999">
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>--%>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

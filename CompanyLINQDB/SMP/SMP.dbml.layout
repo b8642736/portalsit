@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 19.625, 27.25" name="SMP">
+  <DataContextMoniker Name="/SMPDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b12a7274-5017-4f2e-a8e1-e0cee789107b" absoluteBounds="4.625, 3.75, 2, 8.5594812011718755">
+      <DataClassMoniker Name="/SMPDataContext/分光儀紀錄" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1a3dc095-e897-446b-ae3c-8ef5d5d73108" absoluteBounds="4.6400000000000006, 4.21, 1.9700000000000002, 7.999481201171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a958c4e-5ed3-4e02-8cff-8b909a773f6b" absoluteBounds="6.75, 0.75, 2, 7.63551066080729">
+      <DataClassMoniker Name="/SMPDataContext/成品判定" />
+      <nestedChildShapes>
+        <elementListCompartment Id="49f7ca81-728a-47a4-882d-b5df703dd53f" absoluteBounds="6.7650000000000006, 1.21, 1.9700000000000002, 7.0755106608072911" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="776d72a2-cb4d-4efd-836d-392812656bd9" absoluteBounds="6.75, 8.75, 2, 6.5267460123697916">
+      <DataClassMoniker Name="/SMPDataContext/接收資料JY4" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e1e0e37-6a56-4712-b329-a8ffdffe1b79" absoluteBounds="6.7650000000000006, 9.21, 1.9700000000000002, 5.9667460123697911" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b8f1a7a9-b760-43e0-bb10-ae5166c85d00" absoluteBounds="9.75, 0.75, 2, 2.0916874186197916">
+      <DataClassMoniker Name="/SMPDataContext/氮氧紀錄" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2793883-21d6-4a7f-8b41-446318f39dbb" absoluteBounds="9.765, 1.2100000000000009, 1.9700000000000002, 1.5316874186197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc4b2967-566f-49aa-831b-c2b752b28b5c" absoluteBounds="9.75, 3.75, 2, 2.2764815266927076">
+      <DataClassMoniker Name="/SMPDataContext/登錄密碼" />
+      <nestedChildShapes>
+        <elementListCompartment Id="454e1e74-0849-4cd5-b8a9-e03fa66ac4b3" absoluteBounds="9.765, 4.2100000000000009, 1.9700000000000002, 1.7164815266927083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2400d760-9465-4e8a-a957-af6e7a3e8ff8" absoluteBounds="9.25, 7.625, 2, 2.0916874186197916">
+      <DataClassMoniker Name="/SMPDataContext/碳硫紀錄" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2cb6d416-763e-41ff-a60f-4d15e81635d9" absoluteBounds="9.265, 8.085, 1.9700000000000002, 1.5316874186197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="334aca6a-4a52-4fa9-979e-d5890d554bc1" absoluteBounds="9.75, 10.75, 2, 9.48345174153646">
+      <DataClassMoniker Name="/SMPDataContext/製程判定" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5024324a-cada-4ce6-9c06-37374a8b5a52" absoluteBounds="9.765, 11.21, 1.9700000000000002, 8.9234517415364571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6f18f2b0-1894-49a1-9bfd-d43d181e7995" absoluteBounds="12.375, 11.875, 2, 1.3525109863281255">
+      <DataClassMoniker Name="/SMPDataContext/SMPMethod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5dff793a-7abc-4458-99c6-444791115df3" absoluteBounds="12.39, 12.335, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0adb5a7c-5c2d-4998-8ab9-0f4190638719" absoluteBounds="12.375, 20.25, 2, 6.7115401204427094">
+      <DataClassMoniker Name="/SMPDataContext/SMPStandardSample" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70b46a58-5f82-4fe2-8284-e8dd5e9046f6" absoluteBounds="12.39, 20.71, 1.9700000000000002, 6.151540120442708" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="69fade35-75a2-49c5-827c-a5710e1ab720" absoluteBounds="15.625, 14.25, 2, 1.3525109863281255">
+      <DataClassMoniker Name="/SMPDataContext/SMPMethodToSMPStandardSample" />
+      <nestedChildShapes>
+        <elementListCompartment Id="463ffd96-5ef1-49e5-9807-33a1d69287d3" absoluteBounds="15.64, 14.71, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(13.375 : 13.2612939453125); (13.375 : 14.9431469726562); (13.7916666666667 : 14.9431469726562 : JumpStart); (13.9583333333333 : 14.9431469726562 : JumpEnd); (15.625 : 14.9431469726562)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SMPDataContext/SMPMethod/SMPMethod_SMPMethodToSMPStandardSample" />
+      <nodes>
+        <classShapeMoniker Id="6f18f2b0-1894-49a1-9bfd-d43d181e7995" />
+        <classShapeMoniker Id="69fade35-75a2-49c5-827c-a5710e1ab720" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(13.875 : 20.25); (13.875 : 14.5653209863281); (15.625 : 14.5653209863281)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SMPDataContext/SMPStandardSample/SMPStandardSample_SMPMethodToSMPStandardSample" />
+      <nodes>
+        <classShapeMoniker Id="0adb5a7c-5c2d-4998-8ab9-0f4190638719" />
+        <classShapeMoniker Id="69fade35-75a2-49c5-827c-a5710e1ab720" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5a92a46a-af6b-42df-9df8-ca00813d229a" absoluteBounds="1, 12.375, 2, 2.4612756347656255">
+      <DataClassMoniker Name="/SMPDataContext/取樣品質" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89f6264a-eba3-4907-9254-715a17b86e7d" absoluteBounds="1.0150000000000001, 12.835, 1.9700000000000002, 1.901275634765625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d12ae818-0242-43fb-a8d8-53863033cae2" absoluteBounds="12, 0.75, 2, 9.4834517415364576">
+      <DataClassMoniker Name="/SMPDataContext/分析資料" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b208478-2038-41b7-95f2-36b1bcb1ce01" absoluteBounds="12.015, 1.21, 1.9700000000000002, 8.9234517415364571" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2420f743-7161-4407-b13f-37baf77dfed0" absoluteBounds="2.125, 17.375, 2, 2.0916874186197951">
+      <DataClassMoniker Name="/SMPDataContext/ProcessSchedule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48c83b3b-f857-4455-a19f-f480a2c6cd7f" absoluteBounds="2.14, 17.835, 1.9700000000000002, 1.5316874186197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f69b8a74-4c3e-4af9-876c-f3b01f79be4c" absoluteBounds="14.75, 6.125, 2, 1.9068933105468755">
+      <DataClassMoniker Name="/SMPDataContext/標準樣本接收資料CS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="18d00534-9577-43ce-a14a-f173ed77a2d2" absoluteBounds="14.765, 6.5850000000000009, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7fbf3323-7790-4112-b97a-5c0201ea696c" absoluteBounds="14.75, 3.625, 2, 1.9068933105468746">
+      <DataClassMoniker Name="/SMPDataContext/標準樣本接收資料OX" />
+      <nestedChildShapes>
+        <elementListCompartment Id="08b6f747-839e-4591-8c33-483f681d53a4" absoluteBounds="14.765, 4.085, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f658d019-4eea-4132-954d-ceefb1c982ee" absoluteBounds="0.5, 2.125, 2, 9.29865763346354">
+      <DataClassMoniker Name="/SMPDataContext/標準樣本接收資料" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df481ecc-8008-4fba-8b1b-f9c1c841352e" absoluteBounds="0.515, 2.585, 1.9700000000000002, 8.7386576334635411" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a9723a4-fe20-4de9-823d-fc806842178a" absoluteBounds="2.5, 1.125, 2, 11.700981038411458">
+      <DataClassMoniker Name="/SMPDataContext/標準樣本接收資料上下限" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79a1e8ad-d66a-4d03-95fe-e26ae9037ca2" absoluteBounds="2.515, 1.585, 1.9700000000000002, 11.140981038411457" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6866e3c9-864d-4e45-9bd5-aaaf187faabc" absoluteBounds="4.625, 1.375, 2, 1.537305094401042">
+      <DataClassMoniker Name="/SMPDataContext/溫濕度記錄" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df7951ce-5ede-43b3-a065-153434ce2542" absoluteBounds="4.64, 1.835, 1.9700000000000002, 0.97730509440104163" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9ff54da7-30a9-42ed-9648-bea3cd285b2a" absoluteBounds="17.375, 1.875, 2, 12.07056925455729">
+      <DataClassMoniker Name="/SMPDataContext/分析資料變更記錄" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0411457-70ce-415c-b03c-8d820f6147b3" absoluteBounds="17.39, 2.335, 1.9700000000000002, 11.510569254557291" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

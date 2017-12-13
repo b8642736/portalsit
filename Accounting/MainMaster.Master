@@ -1,0 +1,66 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainMaster.master.vb" Inherits="Accounting.MainMaster" %>
+
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <%--            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>--%>
+            <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true">
+            </asp:ScriptManager>
+            <cc1:ucAuthorizeButton ID="UcAuthorizeButton1" runat="server"
+                OpenControlPath="Portalsit@StartContent.aspx" Text="返回主選單"
+                CssClass="Button1" />
+            <cc1:ucAuthorizeButton ID="UcAuthorizeButton2" runat="server"
+                OpenControlPath="Accounting@Default.aspx" Text="返回系統選單"
+                CssClass="Button1" />
+            <%--<asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+            style="height: 18px">
+            <Items>
+                <asp:MenuItem Text="查詢" 
+                    Value="查詢" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="固定資產折舊查詢" 
+                        Value="ACC01@ACC0101"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="費用科目金額合計查詢" 
+                        Value="ACC01@ACC0104"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="費用科目細目金額查詢" 
+                        Value="ACC01@ACC0105"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="非消耗物品編輯" 
+                    Value="ACC01@ACC0103"></asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="零用金作業" 
+                    Value="零用金作業" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="單位代碼維護成業" 
+                        Value="1,ACC01@ACC0102"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="現金支出作業" 
+                        Value="2,ACC01@ACC0102"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="報銷/年初開立 支票作業" 
+                        Value="3,ACC01@ACC0102"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" 
+                        PopOutImageUrl="~/Icons/16-arrow-right.png" Text="報表列印" Value="報表列印">
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="現金出納備查記錄表" 
+                            Value="4,ACC01@ACC0102"></asp:MenuItem>
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="零用金報銷撥補清單" 
+                            Value="5,ACC01@ACC0102"></asp:MenuItem>
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="返回首頁" 
+                    Value="99,ACC01"></asp:MenuItem>
+            </Items>
+        </asp:Menu>--%>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

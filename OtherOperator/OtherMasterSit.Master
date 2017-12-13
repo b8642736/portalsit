@@ -1,0 +1,54 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="OtherMasterSit.master.vb" Inherits="OtherOperator.OtherMasterSit" %>
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <cc1:ucAuthorizeButton ID="UcAuthorizeButton1" runat="server" 
+                OpenControlPath="Portalsit@StartContent.aspx" Text="返回主選單" 
+                CssClass="Button1" />
+        <cc1:ucAuthorizeButton ID="UcAuthorizeButton2" runat="server" 
+                OpenControlPath="OtherOperator@Default.aspx" Text="返回系統選單" CssClass="Button1" />
+        <%--<asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem Text="公佈欄編修" Value="Other01@Other0101" 
+                    ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                <asp:MenuItem Text="AS400SQL查詢" Value="Other01@Other0102" 
+                    ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="舊單位轉換新單位" 
+                    Value="New,Other01@Other0102"></asp:MenuItem>
+                <asp:MenuItem Text="資料庫定義轉VB類別" Value="資料庫定義轉VB類別" 
+                    ImageUrl="~/Icons/16-circle-blue.png" 
+                    PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="AS400資料庫定義轉VB類別" 
+                        Value="1,Other01@Other0104"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="SQLServer資料庫定義轉VB類別" 
+                        Value="2,Other01@Other0104"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="檔案共享" 
+                    Value="Other01@Other0105,Other01@Other0106"></asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="AS400與SQLServerDB轉檔" 
+                    Value="Other01@Other0107"></asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="回首頁" 
+                    Value="99,Other01">
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>--%>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

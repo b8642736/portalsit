@@ -1,0 +1,47 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainMaster.master.vb" Inherits="StockStatic.MainMaster" %>
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <cc1:ucauthorizebutton ID="UcAuthorizeButton1" runat="server" 
+                OpenControlPath="Portalsit@StartContent.aspx" Text="返回主選單" 
+                CssClass="Button1" />
+        <cc1:ucauthorizebutton ID="UcAuthorizeButton2" runat="server" 
+                OpenControlPath="StockStatic@Default.aspx" Text="返回系統選單" 
+            CssClass="Button1" />
+<%--        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Height="18px">
+            <Items>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="鋼胚查詢" 
+                    Value="鋼胚查詢" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem Text="鋼胚庫存查詢" Value="1,Stock01@Stock0101" 
+                        ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="鋼胚研磨品質不良查詢" 
+                        Value="2,Stock01@Stock0102"></asp:MenuItem>
+                    <asp:MenuItem Text="送外代軋鋼胚統計查詢" Value="1,Stock01@Stock0103" 
+                        ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="鋼胚研磨重量查詢" 
+                        Value="1,Stock01@Stock0104"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="返回首頁" 
+                    Value="99,Stock01"></asp:MenuItem>
+            </Items>
+        </asp:Menu>--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

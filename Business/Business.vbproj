@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE4FF258-46E9-4F34-93B9-BD990EC31F50}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Business</RootNamespace>
+    <AssemblyName>Business</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Business.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Business.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20229.20821, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CompanyORMDB.ORMBaseClass" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClipPaperForm.aspx" />
+    <Content Include="Controls\ClipPaper\ClipPaper.ascx" />
+    <Content Include="Controls\CustomerIncomeAnalysis\CustomerIncomeAnalysis.ascx" />
+    <Content Include="Controls\ElectronicMedia.ascx" />
+    <Content Include="Controls\GuestSues\CustomerSearch.ascx" />
+    <Content Include="Controls\GuestSues\EmployeeSampleSearch.ascx" />
+    <Content Include="Controls\GuestSues\GuestSues.ascx" />
+    <Content Include="Controls\LabelPrint\stamp_30122.jpg" />
+    <Content Include="Controls\LabelPrint\stamp_30155.jpg" />
+    <Content Include="Controls\MasterStock\MasterStock.ascx" />
+    <Content Include="Controls\NoMasterStock\NoMasterStock.ascx" />
+    <Content Include="Controls\OrderAvgThickSearch\OrderAvgThickSearch.ascx" />
+    <Content Include="Controls\OrderMonthBuyAnalysis\OrderMonthBuyAnalysis.ascx" />
+    <Content Include="Controls\OrderRealBuyAnalysis\OrderRealBuyAnalysis.ascx" />
+    <Content Include="Controls\PickGoodDetail\PickGoodDetailSearch.ascx" />
+    <Content Include="Controls\WeightProcess2\WeightProcess2.ascx" />
+    <Content Include="CSS\Default.css" />
+    <Content Include="CSS\MainMaster.css" />
+    <Content Include="CustomerIncomeAnalysisForm.aspx" />
+    <Content Include="ElectronicMediaForm.aspx" />
+    <Content Include="GuestSuesForm.aspx" />
+    <Content Include="MasterStockForm.aspx" />
+    <Content Include="OrderAvgThickSearchForm.aspx" />
+    <Content Include="OrderMonthBuyAnalysisForm.aspx" />
+    <Content Include="OrderRealBuyAnalysisForm.aspx" />
+    <Content Include="PickGoodDetailSearchForm.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BillSendedForm.aspx.designer.vb">
+      <DependentUpon>BillSendedForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BillSendedForm.aspx.vb">
+      <DependentUpon>BillSendedForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ClipPaperForm.aspx.designer.vb">
+      <DependentUpon>ClipPaperForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClipPaperForm.aspx.vb">
+      <DependentUpon>ClipPaperForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BillSended\BillSended.ascx.designer.vb">
+      <DependentUpon>BillSended.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BillSended\BillSended.ascx.vb">
+      <DependentUpon>BillSended.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ClipPaper\ClipPaper.ascx.designer.vb">
+      <DependentUpon>ClipPaper.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClipPaper\ClipPaper.ascx.vb">
+      <DependentUpon>ClipPaper.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomerBasicDataSearch.ascx.designer.vb">
+      <DependentUpon>CustomerBasicDataSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomerBasicDataSearch.ascx.vb">
+      <DependentUpon>CustomerBasicDataSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomerIncomeAnalysis\CustomerIncomeAnalysis.ascx.designer.vb">
+      <DependentUpon>CustomerIncomeAnalysis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomerIncomeAnalysis\CustomerIncomeAnalysis.ascx.vb">
+      <DependentUpon>CustomerIncomeAnalysis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CustumerSellWeightMoneyAmouont\CustumerSellWeightMoneyAmouont.ascx.designer.vb">
+      <DependentUpon>CustumerSellWeightMoneyAmouont.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustumerSellWeightMoneyAmouont\CustumerSellWeightMoneyAmouont.ascx.vb">
+      <DependentUpon>CustumerSellWeightMoneyAmouont.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ElectronicMedia.ascx.designer.vb">
+      <DependentUpon>ElectronicMedia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ElectronicMedia.ascx.vb">
+      <DependentUpon>ElectronicMedia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\GuestSues\CustomerSearch.ascx.designer.vb">
+      <DependentUpon>CustomerSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GuestSues\CustomerSearch.ascx.vb">
+      <DependentUpon>CustomerSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\GuestSues\EmployeeSampleSearch.ascx.designer.vb">
+      <DependentUpon>EmployeeSampleSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GuestSues\EmployeeSampleSearch.ascx.vb">
+      <DependentUpon>EmployeeSampleSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\GuestSues\GuestSues.ascx.designer.vb">
+      <DependentUpon>GuestSues.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GuestSues\GuestSues.ascx.vb">
+      <DependentUpon>GuestSues.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LabelPrint\LabelPrint.ascx.designer.vb">
+      <DependentUpon>LabelPrint.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LabelPrint\LabelPrint.ascx.vb">
+      <DependentUpon>LabelPrint.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MasterStock\MasterStock.ascx.designer.vb">
+      <DependentUpon>MasterStock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MasterStock\MasterStock.ascx.vb">
+      <DependentUpon>MasterStock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NoMasterStock\NoMasterStock.ascx.designer.vb">
+      <DependentUpon>NoMasterStock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NoMasterStock\NoMasterStock.ascx.vb">
+      <DependentUpon>NoMasterStock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderAvgThickSearch\OrderAvgThickSearch.ascx.designer.vb">
+      <DependentUpon>OrderAvgThickSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderAvgThickSearch\OrderAvgThickSearch.ascx.vb">
+      <DependentUpon>OrderAvgThickSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderMonthAnalysis\OrderMonthAnalysisControl.ascx.designer.vb">
+      <DependentUpon>OrderMonthAnalysisControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderMonthAnalysis\OrderMonthAnalysisControl.ascx.vb">
+      <DependentUpon>OrderMonthAnalysisControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderMonthBuyAnalysis\OrderMonthBuyAnalysis.ascx.designer.vb">
+      <DependentUpon>OrderMonthBuyAnalysis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderMonthBuyAnalysis\OrderMonthBuyAnalysis.ascx.vb">
+      <DependentUpon>OrderMonthBuyAnalysis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderNotSend\OrderNotSend.ascx.designer.vb">
+      <DependentUpon>OrderNotSend.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderNotSend\OrderNotSend.ascx.vb">
+      <DependentUpon>OrderNotSend.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderRealBuyAnalysis\OrderRealBuyAnalysis.ascx.designer.vb">
+      <DependentUpon>OrderRealBuyAnalysis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderRealBuyAnalysis\OrderRealBuyAnalysis.ascx.vb">
+      <DependentUpon>OrderRealBuyAnalysis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderSended\OrderSended.ascx.designer.vb">
+      <DependentUpon>OrderSended.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderSended\OrderSended.ascx.vb">
+      <DependentUpon>OrderSended.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderSummaryPrint\OrderSummaryPrint.ascx.designer.vb">
+      <DependentUpon>OrderSummaryPrint.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderSummaryPrint\OrderSummaryPrint.ascx.vb">
+      <DependentUpon>OrderSummaryPrint.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OverPayReport\OverPayReport.ascx.designer.vb">
+      <DependentUpon>OverPayReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OverPayReport\OverPayReport.ascx.vb">
+      <DependentUpon>OverPayReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PickGoodDetail\PickGoodDetailSearch.ascx.designer.vb">
+      <DependentUpon>PickGoodDetailSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PickGoodDetail\PickGoodDetailSearch.ascx.vb">
+      <DependentUpon>PickGoodDetailSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductOutCheck\ProductOutCheck.ascx.designer.vb">
+      <DependentUpon>ProductOutCheck.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductOutCheck\ProductOutCheck.ascx.vb">
+      <DependentUpon>ProductOutCheck.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SLS300LB.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SLS300LB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TakeGoodSearch.ascx.designer.vb">
+      <DependentUpon>TakeGoodSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TakeGoodSearch.ascx.vb">
+      <DependentUpon>TakeGoodSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WeightProcess2\WeightProcess2.ascx.designer.vb">
+      <DependentUpon>WeightProcess2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WeightProcess2\WeightProcess2.ascx.vb">
+      <DependentUpon>WeightProcess2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WeightProcessReport\WeightProcessDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeightProcessDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WeightProcessReport\WeightProcessReport.ascx.designer.vb">
+      <DependentUpon>WeightProcessReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WeightProcessReport\WeightProcessReport.ascx.vb">
+      <DependentUpon>WeightProcessReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\WeightProcess\WeightProcess.ascx.designer.vb">
+      <DependentUpon>WeightProcess.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WeightProcess\WeightProcess.ascx.vb">
+      <DependentUpon>WeightProcess.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerBasicDataSearchForm.aspx.designer.vb">
+      <DependentUpon>CustomerBasicDataSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerBasicDataSearchForm.aspx.vb">
+      <DependentUpon>CustomerBasicDataSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustomerIncomeAnalysisForm.aspx.designer.vb">
+      <DependentUpon>CustomerIncomeAnalysisForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerIncomeAnalysisForm.aspx.vb">
+      <DependentUpon>CustomerIncomeAnalysisForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CustumerSellWeightMoneyAmouontForm.aspx.designer.vb">
+      <DependentUpon>CustumerSellWeightMoneyAmouontForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustumerSellWeightMoneyAmouontForm.aspx.vb">
+      <DependentUpon>CustumerSellWeightMoneyAmouontForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ElectronicMediaForm.aspx.designer.vb">
+      <DependentUpon>ElectronicMediaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ElectronicMediaForm.aspx.vb">
+      <DependentUpon>ElectronicMediaForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GuestSuesForm.aspx.designer.vb">
+      <DependentUpon>GuestSuesForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GuestSuesForm.aspx.vb">
+      <DependentUpon>GuestSuesForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LabelPrintForm.aspx.designer.vb">
+      <DependentUpon>LabelPrintForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LabelPrintForm.aspx.vb">
+      <DependentUpon>LabelPrintForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster.Master.designer.vb">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster.Master.vb">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterStockForm.aspx.designer.vb">
+      <DependentUpon>MasterStockForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterStockForm.aspx.vb">
+      <DependentUpon>MasterStockForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NoMasterStockForm.aspx.designer.vb">
+      <DependentUpon>NoMasterStockForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoMasterStockForm.aspx.vb">
+      <DependentUpon>NoMasterStockForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderAvgThickSearchForm.aspx.designer.vb">
+      <DependentUpon>OrderAvgThickSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderAvgThickSearchForm.aspx.vb">
+      <DependentUpon>OrderAvgThickSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderMonthAnalysisControlForm.aspx.designer.vb">
+      <DependentUpon>OrderMonthAnalysisControlForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderMonthAnalysisControlForm.aspx.vb">
+      <DependentUpon>OrderMonthAnalysisControlForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderMonthBuyAnalysisForm.aspx.designer.vb">
+      <DependentUpon>OrderMonthBuyAnalysisForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderMonthBuyAnalysisForm.aspx.vb">
+      <DependentUpon>OrderMonthBuyAnalysisForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderNotSendForm.aspx.designer.vb">
+      <DependentUpon>OrderNotSendForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderNotSendForm.aspx.vb">
+      <DependentUpon>OrderNotSendForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderRealBuyAnalysisForm.aspx.designer.vb">
+      <DependentUpon>OrderRealBuyAnalysisForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderRealBuyAnalysisForm.aspx.vb">
+      <DependentUpon>OrderRealBuyAnalysisForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderSendedForm.aspx.designer.vb">
+      <DependentUpon>OrderSendedForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSendedForm.aspx.vb">
+      <DependentUpon>OrderSendedForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderSummaryPrintForm.aspx.designer.vb">
+      <DependentUpon>OrderSummaryPrintForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderSummaryPrintForm.aspx.vb">
+      <DependentUpon>OrderSummaryPrintForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="PickGoodDetailSearchForm.aspx.designer.vb">
+      <DependentUpon>PickGoodDetailSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PickGoodDetailSearchForm.aspx.vb">
+      <DependentUpon>PickGoodDetailSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ProductOutCheckForm.aspx.designer.vb">
+      <DependentUpon>ProductOutCheckForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductOutCheckForm.aspx.vb">
+      <DependentUpon>ProductOutCheckForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TakeGoodSearchForm.aspx.designer.vb">
+      <DependentUpon>TakeGoodSearchForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TakeGoodSearchForm.aspx.vb">
+      <DependentUpon>TakeGoodSearchForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WeightProcessForm.aspx.designer.vb">
+      <DependentUpon>WeightProcessForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeightProcessForm.aspx.vb">
+      <DependentUpon>WeightProcessForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WeightProcessForm2.aspx.designer.vb">
+      <DependentUpon>WeightProcessForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeightProcessForm2.aspx.vb">
+      <DependentUpon>WeightProcessForm2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="WeightProcessReportWebForm.aspx.designer.vb">
+      <DependentUpon>WeightProcessReportWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WeightProcessReportWebForm.aspx.vb">
+      <DependentUpon>WeightProcessReportWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\OrderNotSend\OrderNotSendReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controls\OrderSummaryPrint\OrderSummaryReport.rdlc" />
+    <Content Include="Controls\WeightProcessReport\WeightProcessReportDoc.rdlc" />
+    <Content Include="Controls\OrderSummaryPrint\OrderSummaryReportF2.rdlc" />
+    <Content Include="Controls\BillSended\BillSendedReport.rdlc" />
+    <Content Include="Controls\OrderSended\OrderSendededReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controls\OrderMonthAnalysis\OrderMonthAnalysisReport.rdlc" />
+    <EmbeddedResource Include="Controls\LabelPrint\LabelPrintReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LabelPrint\LabelPrintReportSub.rdlc" />
+    <Content Include="Controls\MasterStock\MasterStockReport.rdlc" />
+    <EmbeddedResource Include="Controls\NoMasterStock\NoMasterStockReport.rdlc" />
+    <Content Include="Controls\OrderRealBuyAnalysis\OrderRealBuyAnalysisReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controls\OrderMonthBuyAnalysis\OrderMonthBuyAnalysisReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Controls\OverPayReport\OverPayReportReportReport1.rdlc" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BillSendedForm.aspx" />
+    <Content Include="Controls\BillSended\BillSended.ascx" />
+    <Content Include="Controls\CustomerBasicDataSearch.ascx" />
+    <Content Include="Controls\CustumerSellWeightMoneyAmouont\CustumerSellWeightMoneyAmouont.ascx" />
+    <Content Include="Controls\LabelPrint\LabelPrint.ascx" />
+    <Content Include="Controls\OrderMonthAnalysis\OrderMonthAnalysisControl.ascx" />
+    <Content Include="Controls\OrderNotSend\OrderNotSend.ascx" />
+    <Content Include="Controls\OrderSended\OrderSended.ascx" />
+    <Content Include="Controls\OrderSummaryPrint\OrderSummaryPrint.ascx" />
+    <Content Include="Controls\OverPayReport\OverPayReport.ascx" />
+    <Content Include="Controls\ProductOutCheck\ProductOutCheck.ascx" />
+    <Content Include="Controls\TakeGoodSearch.ascx" />
+    <Content Include="Controls\WeightProcessReport\WeightProcessReport.ascx" />
+    <Content Include="Controls\WeightProcess\WeightProcess.ascx" />
+    <Content Include="CustomerBasicDataSearchForm.aspx" />
+    <Content Include="CustumerSellWeightMoneyAmouontForm.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Icons\16-arrow-right.png" />
+    <Content Include="Icons\16-circle-blue.png" />
+    <Content Include="Icons\collapse.jpg" />
+    <Content Include="Icons\expand.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LabelPrintForm.aspx" />
+    <Content Include="MainMaster.Master" />
+    <Content Include="NoMasterStockForm.aspx" />
+    <Content Include="OrderMonthAnalysisControlForm.aspx" />
+    <Content Include="OrderNotSendForm.aspx" />
+    <Content Include="OrderSendedForm.aspx" />
+    <Content Include="OrderSummaryPrintForm.aspx" />
+    <Content Include="ProductOutCheckForm.aspx" />
+    <None Include="My Project\PublishProfiles\設定檔1.pubxml" />
+    <None Include="Resources\TangengImage.jpg" />
+    <None Include="Resources\CNSImage.jpg" />
+    <Content Include="TakeGoodSearchForm.aspx" />
+    <Content Include="WeightProcessForm.aspx" />
+    <Content Include="WeightProcessForm2.aspx" />
+    <Content Include="WeightProcessReportWebForm.aspx" />
+    <None Include="Controls\SLS300LB.xsc">
+      <DependentUpon>SLS300LB.xsd</DependentUpon>
+    </None>
+    <None Include="Controls\SLS300LB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SLS300LB.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Controls\SLS300LB.xss">
+      <DependentUpon>SLS300LB.xsd</DependentUpon>
+    </None>
+    <None Include="Controls\WeightProcessReport\WeightProcessDataSet.xsc">
+      <DependentUpon>WeightProcessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Controls\WeightProcessReport\WeightProcessDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WeightProcessDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Controls\WeightProcessReport\WeightProcessDataSet.xss">
+      <DependentUpon>WeightProcessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyLINQDB\CompanyLINQDB.vbproj">
+      <Project>{F24E97F1-D320-4779-8C6C-8C7CC65E170D}</Project>
+      <Name>CompanyLINQDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CompanyORMDB\CompanyORMDB.vbproj">
+      <Project>{AC01C38E-B385-4AF8-B595-10E78CE211AD}</Project>
+      <Name>CompanyORMDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExWindowControlLibrary\ExWindowControlLibrary.vbproj">
+      <Project>{e1067eec-8c48-43d0-b893-569679730a63}</Project>
+      <Name>ExWindowControlLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PublicClassLibrary\PublicClassLibrary.vbproj">
+      <Project>{C30FB035-8308-4AAA-A9DC-3453A08F5411}</Project>
+      <Name>PublicClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UCAjaxServerControl1\UCAjaxServerControl1.vbproj">
+      <Project>{2790148A-6BBF-49CF-B2F3-E3966798BCED}</Project>
+      <Name>UCAjaxServerControl1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebAppAuthority\WebAppAuthority.vbproj">
+      <Project>{A2648750-FB34-452A-B768-FE800FF6622A}</Project>
+      <Name>WebAppAuthority</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57519</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Business</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

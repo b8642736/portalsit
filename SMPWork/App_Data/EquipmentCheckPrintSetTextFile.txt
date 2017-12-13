@@ -1,0 +1,6 @@
+Metalys1表頭參數設定|Metalys #1@SQ-F-09@分02
+Metalys2表頭參數設定|Metalys #2@SQ-F-10@分03
+NO表頭參數設定|TC-136,TC-436@SQ-F-1,SQ-F-2@分13,分25
+CS表頭參數設定|CS-400@SQ-F-30@分12
+XRF表頭參數設定|Rigaku 3550@SQ-F-25@分30
+JY56E表頭參數設定|JY-56E@SQ-F-08@分01

@@ -1,0 +1,35 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="EAF.master.vb" Inherits="EAFWeb.EAF" %>
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>未命名頁面</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+               <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" 
+            Width="244px" style="margin-bottom: 0px">
+                    <Items>
+                        <asp:MenuItem Text="日報表" Value="EAF@EAF0101" 
+                            ImageUrl="~/Icons/16-circle-blue.png" NavigateUrl="~/DailyReport.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/MoniterSoftware.aspx" Text="EAF(Excel)作業監控軟體" 
+                            Value="EAF@EAF0101" ImageUrl="~/Icons/16-circle-blue.png"></asp:MenuItem>
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="返回首頁" Value="EAF">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

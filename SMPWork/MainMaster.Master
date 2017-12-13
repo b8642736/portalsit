@@ -1,0 +1,77 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MainMaster.master.vb" Inherits="SMPWork.MainMaster" %>
+<%@ Register Assembly="UCAjaxServerControl1" Namespace="UCAjaxServerControl1" TagPrefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="CSS/MainMaster.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+        <cc1:ucAuthorizeButton ID="UcAuthorizeButton1" runat="server" 
+                OpenControlPath="Portalsit@StartContent.aspx" Text="返回主選單" 
+                CssClass="Button1" />
+        <cc1:ucAuthorizeButton ID="UcAuthorizeButton2" runat="server" 
+                OpenControlPath="SMPWork@Default.aspx" Text="返回系統選單" CssClass="Button1" />
+        <%--<asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="煉鋼即時通工作平台" 
+                    Value="1,SMPWRK01@SMPWRK0107">
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="查詢" 
+                    Value="查詢" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="儀器檢測資料查詢" 
+                        Value="儀器檢測資料查詢" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="分光儀儀器檢測資料查詢" 
+                            Value="1,SMPWRK01@SMPWRK0101"></asp:MenuItem>
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="氮氧儀儀器檢測資料查詢" 
+                            Value="2,SMPWRK01@SMPWRK0101"></asp:MenuItem>
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="碳硫儀儀器檢測資料查詢" 
+                            Value="3,SMPWRK01@SMPWRK0101"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="樣本取樣品質" 
+                        Value="樣本取樣品質" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="樣本取樣品質統計表" 
+                            Value="SMPWRK01@SMPWRK0102"></asp:MenuItem>
+                        <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="樣本取樣品質細目查詢" 
+                            Value="2,SMPWRK01@SMPWRK0103"></asp:MenuItem>
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="編修" 
+                    Value="編修" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="煉鋼配料排程編修" 
+                        Value="1,SMPWRK01@SMPWRK0105"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="標準樣本上下限編修" 
+                        Value="1,SMPWRK01@SMPWRK0110"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="溫濕度編修" 
+                        Value="1,SMPWRK01@SMPWRK0111"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="報表" 
+                    Value="報表" PopOutImageUrl="~/Icons/16-arrow-right.png">
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="成品輻射劑量檢測紀錄表" 
+                        Value="1,SMPWRK01@SMPWRK0104"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="儀器校驗記錄A" 
+                        Value="1,SMPWRK01@SMPWRK0108"></asp:MenuItem>
+                    <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="化驗報告單印表" 
+                        Value="1,SMPWRK01@SMPWRK0109"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem ImageUrl="~/Icons/16-circle-blue.png" Text="返回首頁" 
+                    Value="99,SMPWRK01">
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>--%>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

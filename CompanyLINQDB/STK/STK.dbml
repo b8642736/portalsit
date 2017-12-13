@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="STK" Class="STKDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SERVER0SM;Initial Catalog=STK;Persist Security Info=True;User ID=30276" SettingsObjectName="CompanyLINQDB.My.MySettings" SettingsPropertyName="Server1_STK" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ToWeight" Member="ToWeight">
+    <Type Name="ToWeight">
+      <Column Name="CoilNumber" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CoilSubNumber" Type="System.String" DbType="NVarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SaveTime" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Weight" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SaveState" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

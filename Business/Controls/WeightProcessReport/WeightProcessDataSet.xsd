@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WeightProcessDataSet" targetNamespace="http://tempuri.org/WeightProcessDataSet.xsd" xmlns:mstns="http://tempuri.org/WeightProcessDataSet.xsd" xmlns="http://tempuri.org/WeightProcessDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WeightProcessDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="WeightProcessDataSet" msprop:Generator_DataSetName="WeightProcessDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="WeightProcessDataTable" msprop:Generator_UserTableName="WeightProcessDataTable" msprop:Generator_RowDeletedName="WeightProcessDataTableRowDeleted" msprop:Generator_RowChangedName="WeightProcessDataTableRowChanged" msprop:Generator_RowClassName="WeightProcessDataTableRow" msprop:Generator_RowChangingName="WeightProcessDataTableRowChanging" msprop:Generator_RowEvArgName="WeightProcessDataTableRowChangeEvent" msprop:Generator_RowEvHandlerName="WeightProcessDataTableRowChangeEventHandler" msprop:Generator_TableClassName="WeightProcessDataTableDataTable" msprop:Generator_TableVarName="tableWeightProcessDataTable" msprop:Generator_RowDeletingName="WeightProcessDataTableRowDeleting" msprop:Generator_TablePropName="WeightProcessDataTable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="繳庫單位" msprop:Generator_UserColumnName="繳庫單位" msprop:Generator_ColumnVarNameInTable="column繳庫單位" msprop:Generator_ColumnPropNameInRow="繳庫單位" msprop:Generator_ColumnPropNameInTable="繳庫單位Column" type="xs:string" minOccurs="0" />
+              <xs:element name="鋼捲號碼" msprop:Generator_UserColumnName="鋼捲號碼" msprop:Generator_ColumnVarNameInTable="column鋼捲號碼" msprop:Generator_ColumnPropNameInRow="鋼捲號碼" msprop:Generator_ColumnPropNameInTable="鋼捲號碼Column" type="xs:string" minOccurs="0" />
+              <xs:element name="紙別" msprop:Generator_UserColumnName="紙別" msprop:Generator_ColumnVarNameInTable="column紙別" msprop:Generator_ColumnPropNameInRow="紙別" msprop:Generator_ColumnPropNameInTable="紙別Column" type="xs:string" minOccurs="0" />
+              <xs:element name="序號" msprop:Generator_UserColumnName="序號" msprop:Generator_ColumnVarNameInTable="column序號" msprop:Generator_ColumnPropNameInRow="序號" msprop:Generator_ColumnPropNameInTable="序號Column" type="xs:string" minOccurs="0" />
+              <xs:element name="毛重" msprop:Generator_UserColumnName="毛重" msprop:Generator_ColumnPropNameInRow="毛重" msprop:Generator_ColumnVarNameInTable="column毛重" msprop:Generator_ColumnPropNameInTable="毛重Column" type="xs:double" minOccurs="0" />
+              <xs:element name="扣重" msprop:Generator_UserColumnName="扣重" msprop:Generator_ColumnPropNameInRow="扣重" msprop:Generator_ColumnVarNameInTable="column扣重" msprop:Generator_ColumnPropNameInTable="扣重Column" type="xs:string" minOccurs="0" />
+              <xs:element name="儲區" msprop:Generator_UserColumnName="儲區" msprop:Generator_ColumnVarNameInTable="column儲區" msprop:Generator_ColumnPropNameInRow="儲區" msprop:Generator_ColumnPropNameInTable="儲區Column" type="xs:string" minOccurs="0" />
+              <xs:element name="備註" msprop:Generator_UserColumnName="備註" msprop:Generator_ColumnVarNameInTable="column備註" msprop:Generator_ColumnPropNameInRow="備註" msprop:Generator_ColumnPropNameInTable="備註Column" type="xs:string" minOccurs="0" />
+              <xs:element name="厚度" msprop:Generator_UserColumnName="厚度" msprop:Generator_ColumnPropNameInRow="厚度" msprop:Generator_ColumnVarNameInTable="column厚度" msprop:Generator_ColumnPropNameInTable="厚度Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,2424 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+WebAppAuthority
+</name>
+</assembly>
+<members>
+<member name="F:WebAppAuthority.CCMailExcute_Main.linkBtnLoginInfo">
+	<summary>
+linkBtnLoginInfo 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.MultiView1">
+	<summary>
+MultiView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.View1">
+	<summary>
+View1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.txtLoginUser">
+	<summary>
+txtLoginUser 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.txtLoginPW">
+	<summary>
+txtLoginPW 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.btnLoginOK">
+	<summary>
+btnLoginOK 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.btnLoginCancel">
+	<summary>
+btnLoginCancel 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.lbLoginMessage">
+	<summary>
+lbLoginMessage 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.View2">
+	<summary>
+View2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.TabContainer1">
+	<summary>
+TabContainer1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.TabPanel2">
+	<summary>
+TabPanel2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.CCMailExcute_Synchronize1">
+	<summary>
+CCMailExcute_Synchronize1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.TabPanel3">
+	<summary>
+TabPanel3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.CCMailExcute_Edit1">
+	<summary>
+CCMailExcute_Edit1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.TabPanel4">
+	<summary>
+TabPanel4 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Main.CCMailExcute_LogView1">
+	<summary>
+CCMailExcute_LogView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="M:WebAppAuthority.CCMailPWD_Edit.MakQryStringToControl">
+	<summary>
+ 產生查詢字串至控制項
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WebAppAuthority.CCMailPWD_Edit.Search(System.String)">
+	<summary>
+ 查詢
+ </summary>
+	<param name="SQLString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.UpdatePanel1">
+	<summary>
+UpdatePanel1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.ClientPCSearch1">
+	<summary>
+ClientPCSearch1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.UpdatePanel2">
+	<summary>
+UpdatePanel2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.Panel1">
+	<summary>
+Panel1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.lblSelectSystem">
+	<summary>
+lblSelectSystem 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.LDSWebSystem">
+	<summary>
+LDSWebSystem 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.GridView2">
+	<summary>
+GridView2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.LDSWebSystemFunctionNotAuthority">
+	<summary>
+LDSWebSystemFunctionNotAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.GridView3">
+	<summary>
+GridView3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.LDSWebSystemFunctionYesAuthority">
+	<summary>
+LDSWebSystemFunctionYesAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.GridView4">
+	<summary>
+GridView4 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.ConfirmButtonExtender3">
+	<summary>
+ConfirmButtonExtender3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.btnClearAllSysAuthority">
+	<summary>
+btnClearAllSysAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.btnClearAllSysFunAuthority">
+	<summary>
+btnClearAllSysFunAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthorityEdit.ConfirmButtonExtender4">
+	<summary>
+ConfirmButtonExtender4 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.UpdatePanel1">
+	<summary>
+UpdatePanel1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.EmployeeSearch1">
+	<summary>
+EmployeeSearch1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.UpdatePanel2">
+	<summary>
+UpdatePanel2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.Panel1">
+	<summary>
+Panel1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.lblSelectSystem">
+	<summary>
+lblSelectSystem 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.LDSWebSystem">
+	<summary>
+LDSWebSystem 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.GridView2">
+	<summary>
+GridView2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.LDSWebSystemFunctionNotAuthority">
+	<summary>
+LDSWebSystemFunctionNotAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.GridView3">
+	<summary>
+GridView3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.LDSWebSystemFunctionYesAuthority">
+	<summary>
+LDSWebSystemFunctionYesAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.GridView4">
+	<summary>
+GridView4 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.ConfirmButtonExtender1">
+	<summary>
+ConfirmButtonExtender1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.btnClearAllSysAuthority">
+	<summary>
+btnClearAllSysAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.btnClearAllSysFunAuthority">
+	<summary>
+btnClearAllSysFunAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority.ConfirmButtonExtender2">
+	<summary>
+ConfirmButtonExtender2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton1">
+	<summary>
+ucAuthorizeButton1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton2">
+	<summary>
+ucAuthorizeButton2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton3">
+	<summary>
+ucAuthorizeButton3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton4">
+	<summary>
+ucAuthorizeButton4 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton5">
+	<summary>
+ucAuthorizeButton5 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton6">
+	<summary>
+ucAuthorizeButton6 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton8">
+	<summary>
+ucAuthorizeButton8 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton7">
+	<summary>
+ucAuthorizeButton7 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton9">
+	<summary>
+ucAuthorizeButton9 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton10">
+	<summary>
+ucAuthorizeButton10 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton11">
+	<summary>
+ucAuthorizeButton11 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton12">
+	<summary>
+ucAuthorizeButton12 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton13">
+	<summary>
+ucAuthorizeButton13 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton15">
+	<summary>
+ucAuthorizeButton15 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority._Default.ucAuthorizeButton16">
+	<summary>
+ucAuthorizeButton16 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearchForm.WebUserOrIPAllAuthoritySearch1">
+	<summary>
+WebUserOrIPAllAuthoritySearch1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.RadioButtonList1">
+	<summary>
+RadioButtonList1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.Label1">
+	<summary>
+Label1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.TextBox1">
+	<summary>
+TextBox1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.UpdatePanel1">
+	<summary>
+UpdatePanel1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.DropDownList1">
+	<summary>
+DropDownList1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.Label2">
+	<summary>
+Label2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.TextBox2">
+	<summary>
+TextBox2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.UpdatePanel2">
+	<summary>
+UpdatePanel2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.DropDownList2">
+	<summary>
+DropDownList2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.Label3">
+	<summary>
+Label3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.TextBox3">
+	<summary>
+TextBox3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.btnSearchClear">
+	<summary>
+btnSearchClear 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.ldsWebSystem">
+	<summary>
+ldsWebSystem 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.ldsWebSystemFunction">
+	<summary>
+ldsWebSystemFunction 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.MultiView1">
+	<summary>
+MultiView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.View1">
+	<summary>
+View1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.ObjectDataSource1">
+	<summary>
+ObjectDataSource1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.GridView1">
+	<summary>
+GridView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.View2">
+	<summary>
+View2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.GridView2">
+	<summary>
+GridView2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserOrIPAllAuthoritySearch.odsSearchResult2">
+	<summary>
+odsSearchResult2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.ClientPCSearch.TextBox1">
+	<summary>
+TextBox1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.ClientPCSearch.TextBox2">
+	<summary>
+TextBox2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.ClientPCSearch.btnClearSearch">
+	<summary>
+btnClearSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.ClientPCSearch.TextBox3">
+	<summary>
+TextBox3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.ClientPCSearch.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.ClientPCSearch.GridView1">
+	<summary>
+GridView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.ClientPCSearch.lblSelectCleintPCIP">
+	<summary>
+lblSelectCleintPCIP 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.ClientPCSearch.LDSWebClientPC">
+	<summary>
+LDSWebClientPC 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCEdit.TextBox1">
+	<summary>
+TextBox1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCEdit.TextBox2">
+	<summary>
+TextBox2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCEdit.btnClearSearch">
+	<summary>
+btnClearSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCEdit.TextBox3">
+	<summary>
+TextBox3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCEdit.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCEdit.FormView1">
+	<summary>
+FormView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebClientPCEdit.LDSWebClientPCAccount">
+	<summary>
+LDSWebClientPCAccount 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.SPMPasswordSearchForm.SPMPasswordSearch1">
+	<summary>
+SPMPasswordSearch1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserEdit.TextBox1">
+	<summary>
+TextBox1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserEdit.TextBox2">
+	<summary>
+TextBox2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserEdit.btnClearSearch">
+	<summary>
+btnClearSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserEdit.TextBox3">
+	<summary>
+TextBox3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserEdit.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserEdit.LDSWebLoginAccount">
+	<summary>
+LDSWebLoginAccount 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserEdit.FormView1">
+	<summary>
+FormView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:WebAppAuthority.WebSystemFunctionEdit.IsUserAlreadyPutSearch">
+	<summary>
+ 使用者是否已按下查詢
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunction.WebSystemFunctionEdit1">
+	<summary>
+WebSystemFunctionEdit1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="T:WebAppAuthority.AllAuthoritySearchDataSet.WebUerAllAuthorityDataTableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WebAppAuthority.AllAuthoritySearchDataSet.WebComputerAllAuthorityDataTableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:WebAppAuthority.AllAuthoritySearchDataSet.WebUerAllAuthorityDataTableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WebAppAuthority.AllAuthoritySearchDataSet.WebComputerAllAuthorityDataTableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:WebAppAuthority.AllAuthoritySearchDataSet.WebUerAllAuthorityDataTableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WebAppAuthority.AllAuthoritySearchDataSet.WebComputerAllAuthorityDataTableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:WebAppAuthority.AllAuthoritySearchDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="M:WebAppAuthority.FilterMenuForAuthority.FilterAuthorityMenu(System.Web.UI.Page,System.Web.UI.WebControls.Menu)">
+	<summary>
+ 篩選顯示已授權選單
+ </summary>
+	<param name="SourceMenu"></param>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.WebClientPCAuthority.WebClientPCAuthorityEdit1">
+	<summary>
+WebClientPCAuthorityEdit1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Synchronize.btSynchronize">
+	<summary>
+btSynchronize 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Synchronize.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Synchronize.odsSearch">
+	<summary>
+odsSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Synchronize.hfSQL">
+	<summary>
+hfSQL 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Synchronize.CustomValidator1">
+	<summary>
+CustomValidator1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Synchronize.ListView1">
+	<summary>
+ListView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Synchronize.tb_result">
+	<summary>
+tb_result 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:WebAppAuthority.GroupSearch.IsUserAlreadyPutSearch">
+	<summary>
+ 使用者是否已按下查詢
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:WebAppAuthority.GroupSearch.SelectedGroupCode">
+	<summary>
+ 選擇群組代碼
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.CCMailExcuteForm.CCMailExcute_Main1">
+	<summary>
+CCMailExcute_Main1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="M:WebAppAuthority.CCMailExcute_LogView.MakQryStringToControl">
+	<summary>
+ 產生查詢字串至控制項
+ </summary>
+	<remarks></remarks>
+</member><member name="P:WebAppAuthority.My.Resources.Resources.ResourceManager">
+	<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member><member name="P:WebAppAuthority.My.Resources.Resources.Culture">
+	<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強型別資源類別的資源查閱。
+</summary>
+</member><member name="T:WebAppAuthority.My.Resources.Resources">
+	<summary>
+  用於查詢當地語系化字串等的強型別資源類別。
+</summary>
+</member><member name="M:WebAppAuthority.ChangeWebSitByAuthority.GoWebSitByWebAPPAuthority(System.Web.UI.Page,System.String,System.String)">
+	<summary>
+ 依權限取得其它系統導灠網址
+ </summary>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.WebGroup.WebGroupEdit1">
+	<summary>
+WebGroupEdit1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthority.WebGroupAuthorityEdit1">
+	<summary>
+WebGroupAuthorityEdit1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.Label7">
+	<summary>
+Label7 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.ddl_department">
+	<summary>
+ddl_department 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.Label4">
+	<summary>
+Label4 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.tbEmpNum">
+	<summary>
+tbEmpNum 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.Label5">
+	<summary>
+Label5 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.tbEmail">
+	<summary>
+tbEmail 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.Label6">
+	<summary>
+Label6 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.hfSQL">
+	<summary>
+hfSQL 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.odsSearch">
+	<summary>
+odsSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.lb_Message">
+	<summary>
+lb_Message 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.ListView1">
+	<summary>
+ListView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Edit.tb_result">
+	<summary>
+tb_result 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:WebAppAuthority.WebGroupEdit.IsUserAlreadyPutSearch">
+	<summary>
+ 使用者是否已按下查詢
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.CCMailPWDForm.CCMailPWD_Main1">
+	<summary>
+CCMailPWD_Main1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebAuthorityMaster.head">
+	<summary>
+head 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebAuthorityMaster.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebAuthorityMaster.UcAuthorizeButton1">
+	<summary>
+UcAuthorizeButton1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebAuthorityMaster.UcAuthorizeButton2">
+	<summary>
+UcAuthorizeButton2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebAuthorityMaster.ScriptManager1">
+	<summary>
+ScriptManager1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebAuthorityMaster.ContentPlaceHolder1">
+	<summary>
+ContentPlaceHolder1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:WebAppAuthority.WebMemberForWebGroup.IsUserAlreadyPutSearch">
+	<summary>
+ 使用者是否已按下查詢
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WebAppAuthority.WebMemberForWebGroup.ClearBeforeSearchFilterInSession">
+	<summary>
+ 清理Session查詢篩選條件
+ </summary>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.WebAuthorityFailPage.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebAuthorityFailPage.btnGoBack">
+	<summary>
+btnGoBack 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystem.WebSystemEdit1">
+	<summary>
+WebSystemEdit1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.UpdatePanel1">
+	<summary>
+UpdatePanel1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.DropDownList1">
+	<summary>
+DropDownList1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.LDSWebSystem">
+	<summary>
+LDSWebSystem 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.UpdatePanel2">
+	<summary>
+UpdatePanel2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.DropDownList2">
+	<summary>
+DropDownList2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.LDSWebSystemFunction">
+	<summary>
+LDSWebSystemFunction 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.TextBox1">
+	<summary>
+TextBox1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.btnClearSearchField">
+	<summary>
+btnClearSearchField 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.TextBox2">
+	<summary>
+TextBox2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.LDSSearchResult">
+	<summary>
+LDSSearchResult 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemFunctionEdit.FormView1">
+	<summary>
+FormView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.linkBtnLoginInfo">
+	<summary>
+linkBtnLoginInfo 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.MultiView1">
+	<summary>
+MultiView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.View1">
+	<summary>
+View1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.txtLoginUser">
+	<summary>
+txtLoginUser 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.txtLoginPW">
+	<summary>
+txtLoginPW 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.btnLoginOK">
+	<summary>
+btnLoginOK 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.btnLoginCancel">
+	<summary>
+btnLoginCancel 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.lbLoginMessage">
+	<summary>
+lbLoginMessage 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.View2">
+	<summary>
+View2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.TabContainer1">
+	<summary>
+TabContainer1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.TabPanel2">
+	<summary>
+TabPanel2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailPWD_Main.CCMailPWD_Edit1">
+	<summary>
+CCMailPWD_Edit1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:WebAppAuthority.EmployeeSearch.IsUserAlreadyPutSearch">
+	<summary>
+ 使用者是否已按下查詢
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:WebAppAuthority.EmployeeSearch.SelectedEmployeeNumber">
+	<summary>
+ 選擇使用者工號
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:WebAppAuthority.EmployeeSearch.BeforeSearchFilter">
+	<summary>
+ 搜尋前篩選
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.MultiView1">
+	<summary>
+MultiView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.DefaultView">
+	<summary>
+DefaultView 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.Label1">
+	<summary>
+Label1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.btnSelectSource">
+	<summary>
+btnSelectSource 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.Label2">
+	<summary>
+Label2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.btnSelectTarget">
+	<summary>
+btnSelectTarget 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.RadioButtonList1">
+	<summary>
+RadioButtonList1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.btnStartCopy">
+	<summary>
+btnStartCopy 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.btnMessageLabel">
+	<summary>
+btnMessageLabel 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.SourceUserSelectView">
+	<summary>
+SourceUserSelectView 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.EmployeeSearch1">
+	<summary>
+EmployeeSearch1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.TargetUserSelectView">
+	<summary>
+TargetUserSelectView 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopy.EmployeeSearch2">
+	<summary>
+EmployeeSearch2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemEdit.TextBox1">
+	<summary>
+TextBox1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemEdit.TextBox2">
+	<summary>
+TextBox2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemEdit.btnClearSearchField">
+	<summary>
+btnClearSearchField 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemEdit.TextBox3">
+	<summary>
+TextBox3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemEdit.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemEdit.FormView1">
+	<summary>
+FormView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebSystemEdit.LDSWebAPPAuthorityDataSource">
+	<summary>
+LDSWebAPPAuthorityDataSource 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="M:WebAppAuthority.CCMailExcute_Edit.MakQryStringToControl">
+	<summary>
+ 產生查詢字串至控制項
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WebAppAuthority.CCMailExcute_Edit.Search(System.String)">
+	<summary>
+ 查詢
+ </summary>
+	<param name="SQLString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WebAppAuthority.CCMailExcute_Synchronize.MakQryStringToControl">
+	<summary>
+ 產生查詢字串至控制項
+ </summary>
+	<remarks></remarks>
+</member><member name="M:WebAppAuthority.CCMailExcute_Synchronize.Search(System.String)">
+	<summary>
+ 查詢
+ </summary>
+	<param name="SQLString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.EmployeeSearch.TextBox1">
+	<summary>
+TextBox1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.EmployeeSearch.btnClearSearch">
+	<summary>
+btnClearSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.EmployeeSearch.TextBox2">
+	<summary>
+TextBox2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.EmployeeSearch.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.EmployeeSearch.GridView1">
+	<summary>
+GridView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.EmployeeSearch.lblSelectEmployee">
+	<summary>
+lblSelectEmployee 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.EmployeeSearch.LDSWebUserLogin">
+	<summary>
+LDSWebUserLogin 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:WebAppAuthority.ValidAuthorityModule.CurrentWindowsLoginEmployeeNumber">
+	<summary>
+ 目前Windows登入帳號
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:WebAppAuthority.ValidAuthorityModule.CurrentWindowsLoginName">
+	<summary>
+ 目前Windows登入姓名
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:WebAppAuthority.ValidAuthorityModule.CurrentLoginMode">
+	<summary>
+ 目前登入授權模式
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:WebAppAuthority.ValidAuthorityModule.ValidAuthoritySystem(System.String,System.String,System.Web.UI.Page)">
+	<summary>
+ 驗證授權系統
+ </summary>
+	<param name="WebSystemCode"></param>
+	<param name="WebSystemFunctionCode"></param>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.WebClientPC.WebClientPCEdit1">
+	<summary>
+WebClientPCEdit1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:WebAppAuthority.WebSystemEdit.IsUserAlreadyPutSearch">
+	<summary>
+ 使用者是否已按下查詢
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.GroupSearch.TextBox1">
+	<summary>
+TextBox1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.GroupSearch.TextBox2">
+	<summary>
+TextBox2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.GroupSearch.btnClearSearch">
+	<summary>
+btnClearSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.GroupSearch.TextBox3">
+	<summary>
+TextBox3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.GroupSearch.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.GroupSearch.GridView1">
+	<summary>
+GridView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.GroupSearch.lblSelectGroup">
+	<summary>
+lblSelectGroup 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.GroupSearch.LDSEditDataSource">
+	<summary>
+LDSEditDataSource 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.SPMPasswordSearch.tbEmployeeID">
+	<summary>
+tbEmployeeID 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.SPMPasswordSearch.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.SPMPasswordSearch.lbPassword">
+	<summary>
+lbPassword 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.SPMPasswordSearch.btnGotoEIPWeb">
+	<summary>
+btnGotoEIPWeb 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupEdit.TextBox1">
+	<summary>
+TextBox1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupEdit.TextBox2">
+	<summary>
+TextBox2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupEdit.TextBox3">
+	<summary>
+TextBox3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupEdit.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupEdit.btnClearSearch">
+	<summary>
+btnClearSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupEdit.FormView1">
+	<summary>
+FormView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupEdit.LDSEditDataSource">
+	<summary>
+LDSEditDataSource 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.TabContainer1">
+	<summary>
+TabContainer1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.TabPanel1">
+	<summary>
+TabPanel1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.GroupSearch1">
+	<summary>
+GroupSearch1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.TabPanel2">
+	<summary>
+TabPanel2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.ClientPCSearch1">
+	<summary>
+ClientPCSearch1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.LDSClientPC_Member">
+	<summary>
+LDSClientPC_Member 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.GridView2">
+	<summary>
+GridView2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.TabPanel3">
+	<summary>
+TabPanel3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.EmployeeSearch1">
+	<summary>
+EmployeeSearch1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.LDSEmployee_Member">
+	<summary>
+LDSEmployee_Member 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebMemberForWebGroup.GridView1">
+	<summary>
+GridView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:WebAppAuthority.WebUserEdit.IsUserAlreadyPutSearch">
+	<summary>
+ 使用者是否已按下查詢
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.WebMemberForGroup.WebMemberForWebGroup1">
+	<summary>
+WebMemberForWebGroup1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthority1.WebUserAuthorityEdit1">
+	<summary>
+WebUserAuthorityEdit1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUserAuthorityCopys.WebUserAuthorityCopy1">
+	<summary>
+WebUserAuthorityCopy1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="M:WebAppAuthority.WebUserOrIPAllAuthoritySearch.Search(System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ 資料查詢
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:WebAppAuthority.WebUserOrIPAllAuthoritySearch.IsUserAlreadyPutSearch">
+	<summary>
+ 使用者是否已按下查詢
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.ddl_logType">
+	<summary>
+ddl_logType 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.tbStartDate">
+	<summary>
+tbStartDate 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.CalendarExtender1">
+	<summary>
+CalendarExtender1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.tbEndDate">
+	<summary>
+tbEndDate 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.CalendarExtender2">
+	<summary>
+CalendarExtender2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.lb_rule1">
+	<summary>
+lb_rule1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.tb_Rule1">
+	<summary>
+tb_Rule1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.lb_rule2">
+	<summary>
+lb_rule2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.tb_Rule2">
+	<summary>
+tb_Rule2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.cb_decode">
+	<summary>
+cb_decode 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.cb_hideResult">
+	<summary>
+cb_hideResult 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.hfSQL">
+	<summary>
+hfSQL 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.odsSearch">
+	<summary>
+odsSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_LogView.GridView1">
+	<summary>
+GridView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.Label7">
+	<summary>
+Label7 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.ddl_department">
+	<summary>
+ddl_department 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.Label4">
+	<summary>
+Label4 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.tbEmpNum">
+	<summary>
+tbEmpNum 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.Label5">
+	<summary>
+Label5 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.tbEmail">
+	<summary>
+tbEmail 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.Label6">
+	<summary>
+Label6 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.Label8">
+	<summary>
+Label8 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.ddl_kind">
+	<summary>
+ddl_kind 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.btnSearch">
+	<summary>
+btnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.hfSQL">
+	<summary>
+hfSQL 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.odsSearch">
+	<summary>
+odsSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.lb_Message">
+	<summary>
+lb_Message 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.ListView1">
+	<summary>
+ListView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.CCMailExcute_Edit.tb_result">
+	<summary>
+tb_result 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:WebAppAuthority.ClientPCSearch.IsUserAlreadyPutSearch">
+	<summary>
+ 使用者是否已按下查詢
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:WebAppAuthority.ClientPCSearch.SelectedClientPCIP">
+	<summary>
+ 選擇使用戶端IP
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:WebAppAuthority.ClientPCSearch.BeforeSearchFilter">
+	<summary>
+ 搜尋前篩選
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:WebAppAuthority.WebClientPCEdit.IsUserAlreadyPutSearch">
+	<summary>
+ 使用者是否已按下查詢
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.GroupSearch1">
+	<summary>
+GroupSearch1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.UpdatePanel2">
+	<summary>
+UpdatePanel2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.Panel1">
+	<summary>
+Panel1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.lblSelectSystem">
+	<summary>
+lblSelectSystem 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.LDSWebSystem">
+	<summary>
+LDSWebSystem 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.GridView2">
+	<summary>
+GridView2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.LDSWebSystemFunctionNotAuthority">
+	<summary>
+LDSWebSystemFunctionNotAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.GridView3">
+	<summary>
+GridView3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.LDSWebSystemFunctionYesAuthority">
+	<summary>
+LDSWebSystemFunctionYesAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.GridView4">
+	<summary>
+GridView4 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.ConfirmButtonExtender3">
+	<summary>
+ConfirmButtonExtender3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.btnClearAllSysAuthority">
+	<summary>
+btnClearAllSysAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.btnClearAllSysFunAuthority">
+	<summary>
+btnClearAllSysFunAuthority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebGroupAuthorityEdit.ConfirmButtonExtender4">
+	<summary>
+ConfirmButtonExtender4 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:WebAppAuthority.WebUser.WebUserEdit1">
+	<summary>
+WebUserEdit1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member>
+</members>
+</doc>
